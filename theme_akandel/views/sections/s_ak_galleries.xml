@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="s_ak_gallery_01" name="Akandel Gallery 01 - Classic Grid">
+    <section class="s_ak_gallery ak-ga-grid o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_02" name="Akandel Gallery 02 - Masonry Columns">
+    <section class="s_ak_gallery ak-ga-masonry o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_03" name="Akandel Gallery 03 - Bento Feature">
+    <section class="s_ak_gallery ak-ga-bento o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_04" name="Akandel Gallery 04 - Scroll Strip">
+    <section class="s_ak_gallery ak-ga-strip o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_05" name="Akandel Gallery 05 - Polaroid Scatter">
+    <section class="s_ak_gallery ak-ga-polaroid o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_06" name="Akandel Gallery 06 - Circles">
+    <section class="s_ak_gallery ak-ga-circles o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_07" name="Akandel Gallery 07 - Hover Captions">
+    <section class="s_ak_gallery ak-ga-captions o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_08" name="Akandel Gallery 08 - Full-bleed Film">
+    <section class="s_ak_gallery ak-ga-film o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_09" name="Akandel Gallery 09 - Staggered">
+    <section class="s_ak_gallery ak-ga-stagger o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_10" name="Akandel Gallery 10 - Offset Rows">
+    <section class="s_ak_gallery ak-ga-offset o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_11" name="Akandel Gallery 11 - Mosaic">
+    <section class="s_ak_gallery ak-ga-mosaic o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_12" name="Akandel Gallery 12 - Edge Squares">
+    <section class="s_ak_gallery ak-ga-squares o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_13" name="Akandel Gallery 13 - Framed Prints">
+    <section class="s_ak_gallery ak-ga-framed o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_14" name="Akandel Gallery 14 - Tall Pills">
+    <section class="s_ak_gallery ak-ga-pills o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_15" name="Akandel Gallery 15 - Slanted">
+    <section class="s_ak_gallery ak-ga-slant o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_16" name="Akandel Gallery 16 - Grayscale Reveal">
+    <section class="s_ak_gallery ak-ga-mono o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_17" name="Akandel Gallery 17 - Caption Cards">
+    <section class="s_ak_gallery ak-ga-cards o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_18" name="Akandel Gallery 18 - Big Left">
+    <section class="s_ak_gallery ak-ga-bigleft o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_19" name="Akandel Gallery 19 - Collage Overlap">
+    <section class="s_ak_gallery ak-ga-collage o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_20" name="Akandel Gallery 20 - Hexagons">
+    <section class="s_ak_gallery ak-ga-hexagon o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_21" name="Akandel Gallery 21 - Arch Row">
+    <section class="s_ak_gallery ak-ga-arch o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_22" name="Akandel Gallery 22 - Large Duo">
+    <section class="s_ak_gallery ak-ga-duo o_cc o_cc1 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_23" name="Akandel Gallery 23 - Organic Shapes">
+    <section class="s_ak_gallery ak-ga-blob o_cc o_cc2 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_gallery_24" name="Akandel Gallery 24 - Dark Gallery">
+    <section class="s_ak_gallery ak-ga-dark o_cc o_cc5 pt80 pb80" data-snippet="s_ak_gallery" data-name="Gallery">
+        <div class="container">
+            <div class="ak-ga-head">
+                <div>
+                    <p class="ak-eyebrow">Gallery</p>
+                    <h2 class="ak-ga-title">Moments from our <span class="ak-hl">community</span></h2>
+                </div>
+                <a href="/website/social/instagram" class="ak-link-arrow" target="_blank">Follow us <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="ak-ga-grid">
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Rich colour" loading="lazy"/><figcaption class="ak-ga-cap">Rich colour</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Morning light" loading="lazy"/><figcaption class="ak-ga-cap">Morning light</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Pure shapes" loading="lazy"/><figcaption class="ak-ga-cap">Pure shapes</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Work corner" loading="lazy"/><figcaption class="ak-ga-cap">Work corner</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Earth tones" loading="lazy"/><figcaption class="ak-ga-cap">Earth tones</figcaption></figure>
+                <figure class="ak-ga-item"><img class="ak-ga-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Soft curves" loading="lazy"/><figcaption class="ak-ga-cap">Soft curves</figcaption></figure>
+            </div>
+        </div>
+    </section>
+</template>
+</odoo>

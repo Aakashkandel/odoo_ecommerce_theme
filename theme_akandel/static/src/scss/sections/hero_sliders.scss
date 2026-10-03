@@ -1,0 +1,849 @@
+//------------------------------------------------------------------------------
+// Akandel - Hero sliders (24 designs on one shared slide structure)
+// .s_ak_hero_slider.ak-hs-<design>
+//------------------------------------------------------------------------------
+
+$ak-primary: o-color('o-color-1');
+$ak-gold: o-color('o-color-2');
+$ak-light: o-color('o-color-3');
+$ak-ink: o-color('o-color-5');
+$ak-ease: cubic-bezier(.2, .7, .2, 1);
+
+// Full-bleed image behind the content.
+@mixin ak-hs-cover($overlay: linear-gradient(90deg, rgba(10, 16, 28, .8) 0%, rgba(10, 16, 28, .45) 55%, rgba(10, 16, 28, .12) 100%)) {
+    .ak-slide {
+        padding: 0;
+    }
+
+    .ak-slide-inner {
+        position: static;
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 6rem;
+        padding-bottom: 6.5rem;
+    }
+
+    .ak-slide-media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        order: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: $overlay;
+        }
+    }
+
+    .ak-slide-img {
+        height: 100%;
+        aspect-ratio: auto;
+        border-radius: 0;
+    }
+
+    .ak-slide-content {
+        color: #fff;
+    }
+
+    .ak-slide-text {
+        opacity: .88;
+    }
+}
+
+.s_ak_hero_slider {
+    --ak-hs-min: 34rem;
+    position: relative;
+    overflow: hidden;
+
+    .ak-slide {
+        padding: 3.5rem 0 4.75rem;
+    }
+
+    .ak-slide-inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        gap: 3.5rem;
+        align-items: center;
+        min-height: var(--ak-hs-min);
+
+        // Odoo's .container clearfix pseudo-elements would become grid items.
+        &::before,
+        &::after {
+            content: none !important;
+            display: none !important;
+        }
+    }
+
+    .ak-slide-content {
+        position: relative;
+        z-index: 2;
+        max-width: 37rem;
+    }
+
+    .ak-slide-index {
+        display: none;
+    }
+
+    .ak-slide-title {
+        margin-bottom: 1.1rem;
+        font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+        font-weight: 700;
+        line-height: 1.07;
+        letter-spacing: -.03em;
+    }
+
+    .ak-slide-text {
+        max-width: 33rem;
+        margin-bottom: 0;
+        font-size: 1.125rem;
+        line-height: 1.65;
+        opacity: .78;
+    }
+
+    .ak-slide-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .75rem;
+        margin: 2rem 0 0;
+    }
+
+    .ak-slide-points {
+        display: none;
+        flex-wrap: wrap;
+        gap: .6rem 1.5rem;
+        margin: 1.75rem 0 0;
+        font-weight: 500;
+        font-size: .95rem;
+
+        li {
+            display: inline-flex;
+            align-items: center;
+            gap: .55rem;
+        }
+
+        .fa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: rgba($ak-gold, .16);
+            color: darken($ak-gold, 12%);
+            font-size: .7rem;
+        }
+    }
+
+    .ak-slide-media {
+        position: relative;
+        z-index: 1;
+    }
+
+    .ak-slide-img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 5 / 4;
+        object-fit: cover;
+        border-radius: var(--ak-radius-xl);
+    }
+
+    .ak-slide-tag {
+        position: absolute;
+        top: 1.5rem;
+        right: -1rem;
+        z-index: 3;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        background-color: $ak-gold;
+        color: #fff;
+        font-family: var(--ak-headings-font);
+        text-align: center;
+        box-shadow: var(--ak-shadow-soft);
+    }
+
+    .ak-slide-tag-label {
+        font-size: .7rem;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        opacity: .9;
+    }
+
+    .ak-slide-tag-value {
+        font-size: 1.3rem;
+        font-weight: 800;
+        line-height: 1.05;
+    }
+
+    // Controls
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 50%;
+        bottom: auto;
+        z-index: 6;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 1.25rem;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 1;
+        box-shadow: var(--ak-shadow-soft);
+        transform: translateY(-50%);
+        transition: transform .3s $ak-ease, background-color .2s;
+
+        &:hover {
+            transform: translateY(-50%) scale(1.06);
+        }
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 1rem;
+        height: 1rem;
+        filter: invert(1) brightness(.25);
+    }
+
+    .carousel-indicators {
+        z-index: 6;
+        margin-bottom: 1.4rem;
+
+        [data-bs-slide-to] {
+            width: .55rem;
+            height: .55rem;
+            margin: 0 .3rem;
+            border: 0;
+            border-radius: 1rem;
+            background-color: currentColor;
+            opacity: .3;
+            transition: width .35s $ak-ease, opacity .3s, background-color .3s;
+        }
+
+        .active {
+            width: 2rem;
+            background-color: $ak-primary;
+            opacity: 1;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide {
+            padding: 2rem 0 3.75rem;
+        }
+
+        .ak-slide-inner {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 2rem;
+            min-height: 0;
+        }
+
+        .ak-slide-media {
+            order: -1;
+        }
+
+        .ak-slide-tag {
+            right: .75rem;
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Designs
+//------------------------------------------------------------------------------
+
+// 01 Split classic
+.s_ak_hero_slider.ak-hs-split {
+    .ak-slide-tag { display: flex; }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10rem;
+        right: -8rem;
+        width: 32rem;
+        height: 32rem;
+        border-radius: 50%;
+        background-color: rgba($ak-gold, .08);
+    }
+}
+
+// 02 Split reverse
+.s_ak_hero_slider.ak-hs-reverse {
+    .ak-slide-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+    .ak-slide-media { order: -1; }
+    .ak-slide-img { aspect-ratio: 4 / 4.4; }
+    .ak-slide-points { display: flex; }
+}
+
+// 03 Full cover
+.s_ak_hero_slider.ak-hs-cover {
+    --ak-hs-min: 38rem;
+    @include ak-hs-cover;
+}
+
+// 04 Centered cover
+.s_ak_hero_slider.ak-hs-center {
+    --ak-hs-min: 38rem;
+    @include ak-hs-cover(linear-gradient(180deg, rgba(10, 16, 28, .35), rgba(10, 16, 28, .7)));
+
+    .ak-slide-content {
+        max-width: 48rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .ak-slide-text { margin-left: auto; margin-right: auto; }
+    .ak-slide-actions { justify-content: center; }
+
+    .ak-eyebrow::after {
+        content: "";
+        width: 2.25rem;
+        height: 1px;
+        background-color: currentColor;
+        opacity: .7;
+    }
+}
+
+// 05 Cover with card
+.s_ak_hero_slider.ak-hs-cardcover {
+    --ak-hs-min: 36rem;
+    @include ak-hs-cover(linear-gradient(90deg, rgba(10, 16, 28, .25), rgba(10, 16, 28, 0)));
+
+    .ak-slide-content {
+        max-width: 33rem;
+        padding: 2.75rem;
+        border-radius: var(--ak-radius-xl);
+        background-color: #fff;
+        color: $ak-ink;
+        box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .35);
+
+        .ak-eyebrow { color: darken($ak-gold, 12%); }
+        .ak-slide-title { font-size: clamp(2rem, 3.4vw, 3rem); color: $ak-ink; }
+        .ak-hl { color: $ak-gold; }
+        .ak-slide-text { opacity: .75; }
+        .ak-btn-ghost { color: $ak-primary; border-color: $ak-primary; }
+    }
+}
+
+// 06 Framed panel
+.s_ak_hero_slider.ak-hs-framed {
+    .ak-slide { padding: 2rem 0 4rem; }
+
+    .ak-slide-inner {
+        display: block;
+        min-height: 0;
+    }
+
+    .ak-slide-img { aspect-ratio: 21 / 9; }
+
+    .ak-slide-content {
+        position: absolute;
+        right: 3rem;
+        bottom: 3rem;
+        max-width: 29rem;
+        padding: 2.5rem;
+        border-radius: var(--ak-radius-lg);
+        background-color: #fff;
+        box-shadow: var(--ak-shadow-soft);
+
+        .ak-slide-title { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-img { aspect-ratio: 4 / 3; }
+
+        .ak-slide-content {
+            position: relative;
+            right: auto;
+            bottom: auto;
+            margin: -3rem 1rem 0;
+            padding: 1.75rem;
+        }
+    }
+}
+
+// 07 Circle spotlight
+.s_ak_hero_slider.ak-hs-circle {
+    .ak-slide-media {
+        justify-self: center;
+        width: unquote("min(100%, 30rem)");
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: -1.25rem;
+            border-radius: 50%;
+            border: 2px solid rgba($ak-gold, .5);
+        }
+    }
+
+    .ak-slide-img {
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+
+    .ak-slide-tag { display: flex; top: 1rem; right: 0; }
+}
+
+// 08 Arch window (gold outline like the "who we are" layout)
+.s_ak_hero_slider.ak-hs-arch {
+    .ak-slide-media {
+        justify-self: center;
+        width: unquote("min(100%, 27rem)");
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+            border: 2px solid rgba($ak-gold, .55);
+            border-radius: 999px 999px var(--ak-radius-xl) var(--ak-radius-xl);
+            z-index: -1;
+        }
+    }
+
+    .ak-slide-img {
+        aspect-ratio: 4 / 5;
+        border-radius: 999px 999px var(--ak-radius-xl) var(--ak-radius-xl);
+    }
+
+    .ak-slide-points { display: flex; }
+}
+
+// 09 Product stage
+.s_ak_hero_slider.ak-hs-stage {
+    .ak-slide-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 6% 6%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 30%, #fff 0%, rgba($ak-primary, .12) 70%, rgba($ak-primary, .18) 100%);
+        }
+    }
+
+    .ak-slide-img {
+        position: relative;
+        width: 78%;
+        aspect-ratio: 1;
+        border-radius: var(--ak-radius-xl);
+        box-shadow: 0 40px 60px -30px rgba(20, 32, 51, .45);
+    }
+
+    .ak-slide-tag { display: flex; top: 8%; right: 4%; background-color: $ak-primary; }
+}
+
+// 10 Big typography
+.s_ak_hero_slider.ak-hs-type {
+    .ak-slide-inner {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: 30rem;
+    }
+
+    .ak-slide-content { max-width: 62rem; }
+
+    .ak-slide-title {
+        font-size: clamp(2.8rem, 7.2vw, 6.25rem);
+        line-height: .98;
+        letter-spacing: -.045em;
+    }
+
+    .ak-hl {
+        text-decoration: underline;
+        text-decoration-color: rgba($ak-gold, .45);
+        text-decoration-thickness: .12em;
+        text-underline-offset: .12em;
+    }
+
+    .ak-slide-media {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 26%;
+    }
+
+    .ak-slide-img { aspect-ratio: 3 / 4; }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-media { position: relative; width: 100%; }
+        .ak-slide-img { aspect-ratio: 16 / 9; }
+    }
+}
+
+// 11 Image over text
+.s_ak_hero_slider.ak-hs-stacked {
+    .ak-slide { padding-top: 1.5rem; }
+
+    .ak-slide-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+        min-height: 0;
+    }
+
+    .ak-slide-media { order: -1; }
+    .ak-slide-img { aspect-ratio: 21 / 8; }
+
+    .ak-slide-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        column-gap: 3rem;
+        max-width: none;
+
+        > * { grid-column: 2; }
+        > .ak-eyebrow { grid-column: 1; grid-row: 1; justify-self: start; }
+        > .ak-slide-title { grid-column: 1; grid-row: 2 / span 3; }
+        > .ak-slide-text { grid-row: 2; }
+        > .ak-slide-actions { grid-row: 3; margin-top: 1.25rem; }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-content { display: block; }
+    }
+}
+
+// 12 Diagonal cut
+.s_ak_hero_slider.ak-hs-diagonal {
+    .ak-slide { position: relative; }
+    .ak-slide-inner { position: static; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+
+    .ak-slide-media {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+    }
+
+    .ak-slide-img {
+        height: 100%;
+        aspect-ratio: auto;
+        border-radius: 0;
+        clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-media { position: relative; width: 100%; }
+        .ak-slide-img { aspect-ratio: 16 / 10; clip-path: none; border-radius: var(--ak-radius-xl); }
+    }
+}
+
+// 13 Dark luxe
+.s_ak_hero_slider.ak-hs-luxe {
+    .ak-slide-title { font-weight: 500; letter-spacing: -.02em; }
+    .ak-hl { color: lighten($ak-gold, 10%); }
+    .ak-slide-points { display: flex; }
+    .ak-slide-points .fa { background-color: rgba($ak-gold, .25); color: lighten($ak-gold, 15%); }
+
+    .ak-slide-media::before {
+        content: "";
+        position: absolute;
+        inset: 1.5rem -1.5rem -1.5rem 1.5rem;
+        border: 1px solid rgba($ak-gold, .7);
+        border-radius: var(--ak-radius-xl);
+        z-index: -1;
+    }
+
+    .ak-slide-img { aspect-ratio: 4 / 4.3; filter: saturate(.85) contrast(1.05); }
+    .btn-primary { background-color: $ak-gold; border-color: $ak-gold; color: #fff; }
+}
+
+// 14 Offset card
+.s_ak_hero_slider.ak-hs-offset {
+    .ak-slide-inner { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0; }
+
+    .ak-slide-content {
+        grid-column: 1 / span 6;
+        grid-row: 1;
+        padding: 3rem;
+        border-radius: var(--ak-radius-xl);
+        background-color: #fff;
+        box-shadow: var(--ak-shadow-soft);
+    }
+
+    .ak-slide-media { grid-column: 6 / -1; grid-row: 1; }
+    .ak-slide-img { aspect-ratio: 4 / 3.2; }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-inner { grid-template-columns: minmax(0, 1fr); gap: 0; }
+        .ak-slide-content, .ak-slide-media { grid-column: 1; grid-row: auto; }
+        .ak-slide-content { margin: -2.5rem 1rem 0; padding: 1.75rem; }
+    }
+}
+
+// 15 Ken Burns zoom
+.s_ak_hero_slider.ak-hs-zoom {
+    --ak-hs-min: 40rem;
+    @include ak-hs-cover;
+
+    .ak-slide-media { overflow: hidden; }
+    .carousel-item.active .ak-slide-img { animation: ak-kenburns 9s ease-out both; }
+}
+
+@keyframes ak-kenburns {
+    from { transform: scale(1); }
+    to { transform: scale(1.12); }
+}
+
+// 16 Half bleed
+.s_ak_hero_slider.ak-hs-bleed {
+    .ak-slide { position: relative; padding: 4.5rem 0; }
+    .ak-slide-inner { position: static; }
+
+    .ak-slide-media {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 47%;
+    }
+
+    .ak-slide-img {
+        height: 100%;
+        aspect-ratio: auto;
+        border-radius: var(--ak-radius-xl) 0 0 var(--ak-radius-xl);
+    }
+
+    .ak-slide-points { display: flex; }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-media { position: relative; width: 100%; }
+        .ak-slide-img { aspect-ratio: 16 / 10; border-radius: var(--ak-radius-xl); }
+    }
+}
+
+// 17 Compact promo
+.s_ak_hero_slider.ak-hs-promo {
+    --ak-hs-min: 21rem;
+
+    .ak-slide { padding: 2.5rem 0 3.5rem; }
+    .ak-slide-inner { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
+    .ak-slide-title { font-size: clamp(1.8rem, 3.2vw, 2.8rem); }
+    .ak-slide-media { justify-self: center; width: unquote("min(100%, 20rem)"); }
+    .ak-slide-img { aspect-ratio: 1; border-radius: 50%; border: 6px solid rgba(255, 255, 255, .25); }
+    .ak-slide-tag { display: flex; background-color: $ak-gold; top: -.5rem; right: -.5rem; }
+    .btn-primary { background-color: #fff; border-color: #fff; color: $ak-primary; }
+
+    .carousel-control-prev,
+    .carousel-control-next { display: none; }
+}
+
+// 18 Numbered slides
+.s_ak_hero_slider.ak-hs-numbered {
+    .ak-slide-index {
+        display: block;
+        margin-bottom: .5rem;
+        font-family: var(--ak-headings-font);
+        font-size: clamp(4rem, 8vw, 6.5rem);
+        font-weight: 800;
+        line-height: 1;
+        color: transparent;
+        -webkit-text-stroke: 1.5px rgba($ak-gold, .75);
+    }
+
+    .ak-slide-content { padding-left: 2.5rem; }
+    .ak-slide-img { aspect-ratio: 4 / 3.6; }
+
+    .carousel-indicators {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 1.5rem;
+        flex-direction: column;
+        gap: .5rem;
+        margin: 0;
+        transform: translateY(-50%);
+
+        [data-bs-slide-to] { width: .3rem; height: 1.75rem; margin: 0; }
+        .active { width: .3rem; height: 3.25rem; background-color: $ak-gold; }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next { display: none; }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-content { padding-left: 0; }
+        .carousel-indicators { display: none; }
+    }
+}
+
+// 19 Glass card
+.s_ak_hero_slider.ak-hs-glass {
+    --ak-hs-min: 38rem;
+    @include ak-hs-cover(linear-gradient(180deg, rgba(10, 16, 28, .2), rgba(10, 16, 28, .45)));
+
+    .ak-slide-inner { place-items: center; }
+
+    .ak-slide-content {
+        max-width: 40rem;
+        padding: 3rem;
+        border: 1px solid rgba(255, 255, 255, .35);
+        border-radius: var(--ak-radius-xl);
+        background-color: rgba(255, 255, 255, .14);
+        text-align: center;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
+
+    .ak-slide-text { margin-left: auto; margin-right: auto; }
+    .ak-slide-actions { justify-content: center; }
+}
+
+// 20 Rounded inset panel
+.s_ak_hero_slider.ak-hs-inset {
+    .ak-slide { padding: 1.5rem 0 3.5rem; }
+
+    .ak-slide-inner {
+        overflow: hidden;
+        padding: 3rem 0 0 3.5rem;
+        border-radius: 2rem;
+        background: linear-gradient(135deg, rgba($ak-primary, .1), rgba($ak-gold, .12));
+        align-items: end;
+        gap: 2rem;
+    }
+
+    .ak-slide-content { align-self: center; padding-bottom: 3rem; }
+    .ak-slide-img { aspect-ratio: 1; border-radius: var(--ak-radius-xl) 0 0 0; }
+
+    @include media-breakpoint-down(lg) {
+        .ak-slide-inner { padding: 1.5rem 1.5rem 0; }
+        .ak-slide-img { border-radius: var(--ak-radius-lg); }
+    }
+}
+
+// 21 Feature checklist
+.s_ak_hero_slider.ak-hs-checklist {
+    .ak-slide-points {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .75rem;
+
+        li {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1rem;
+            border-radius: var(--ak-radius);
+            background-color: #fff;
+            box-shadow: var(--ak-shadow-card);
+            font-size: .85rem;
+            line-height: 1.35;
+        }
+
+        .fa { background-color: rgba($ak-primary, .1); color: $ak-primary; }
+    }
+
+    .ak-slide-img { aspect-ratio: 4 / 4.6; }
+}
+
+// 22 Dashed ring
+.s_ak_hero_slider.ak-hs-ring {
+    .ak-slide-media {
+        justify-self: center;
+        width: unquote("min(100%, 28rem)");
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: -1.5rem;
+            border: 2px dashed rgba($ak-primary, .45);
+            border-radius: 50%;
+            animation: ak-spin 40s linear infinite;
+        }
+    }
+
+    .ak-slide-img { aspect-ratio: 1; border-radius: 50%; }
+    .ak-slide-tag { display: flex; background-color: $ak-primary; }
+    .ak-slide-points { display: flex; }
+}
+
+@keyframes ak-spin {
+    to { transform: rotate(360deg); }
+}
+
+// 23 Tilted frames
+.s_ak_hero_slider.ak-hs-tilt {
+    .ak-slide-media {
+        justify-self: center;
+        width: unquote("min(100%, 27rem)");
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: var(--ak-radius-lg);
+            background-color: rgba($ak-gold, .25);
+            transform: rotate(-6deg);
+            z-index: -1;
+        }
+    }
+
+    .ak-slide-img {
+        aspect-ratio: 4 / 5;
+        padding: .75rem .75rem 2.5rem;
+        border-radius: var(--ak-radius-lg);
+        background-color: #fff;
+        box-shadow: var(--ak-shadow-soft);
+        transform: rotate(3deg);
+    }
+
+    .ak-slide-tag { display: flex; top: auto; bottom: 2rem; right: -1.5rem; }
+}
+
+// 24 Progress bars
+.s_ak_hero_slider.ak-hs-progress {
+    --ak-hs-min: 38rem;
+    @include ak-hs-cover;
+
+    .carousel-indicators {
+        justify-content: flex-start;
+        gap: .6rem;
+        max-width: map-get($container-max-widths, xxl);
+        margin: 0 auto 2.25rem;
+        padding: 0 calc(var(--bs-gutter-x, 1.5rem) * .5 + 1rem);
+
+        [data-bs-slide-to] {
+            position: relative;
+            width: 4.5rem;
+            height: 3px;
+            margin: 0;
+            overflow: hidden;
+            border-radius: 0;
+            background-color: rgba(255, 255, 255, .35);
+            opacity: 1;
+        }
+
+        .active {
+            width: 4.5rem;
+            background-color: rgba(255, 255, 255, .35);
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-color: $ak-gold;
+                transform-origin: left;
+                animation: ak-progress 7s linear both;
+            }
+        }
+    }
+}
+
+@keyframes ak-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}

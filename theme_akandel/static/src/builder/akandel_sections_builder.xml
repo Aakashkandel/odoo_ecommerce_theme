@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="theme_akandel.DesignOption">
+        <BuilderRow label="designLabel">
+            <BuilderSelect>
+                <t t-foreach="designs" t-as="design" t-key="design.cls">
+                    <BuilderSelectItem classAction="design.cls" title="design.title" t-out="design.title"/>
+                </t>
+            </BuilderSelect>
+        </BuilderRow>
+    </t>
+
+    <!-- Category sections: core dynamic snippet option, with the template
+         picker always visible and a parent category filter. -->
+    <t t-name="theme_akandel.CategoriesOption" t-inherit="website.DynamicSnippetOption" t-inherit-mode="primary">
+        <xpath expr="//BuilderRow[@id='template_opt_row']" position="attributes">
+            <attribute name="t-if">filteredTemplates.length &gt; 1</attribute>
+        </xpath>
+        <xpath expr="//BuilderRow[@id='template_opt_row']" position="after">
+            <BuilderRow label.translate="Parent Category">
+                <BuilderSelect dataAttributeAction="'parentCategoryId'" preview="false">
+                    <BuilderSelectItem dataAttributeActionValue="''">Top-level categories</BuilderSelectItem>
+                    <t t-foreach="state.categories" t-as="category" t-key="category.id">
+                        <BuilderSelectItem dataAttributeActionValue="`${category.id}`" t-out="category.display_name"/>
+                    </t>
+                </BuilderSelect>
+            </BuilderRow>
+        </xpath>
+    </t>
+
+</templates>

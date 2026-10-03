@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="s_ak_offers_01" name="Akandel Offers 01 - Image Cards">
+    <section class="s_ak_offers ak-of-cards o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_02" name="Akandel Offers 02 - Overlay Tiles">
+    <section class="s_ak_offers ak-of-overlay o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_03" name="Akandel Offers 03 - Feature + Two">
+    <section class="s_ak_offers ak-of-feature o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_04" name="Akandel Offers 04 - Coupon Tickets">
+    <section class="s_ak_offers ak-of-coupon o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_05" name="Akandel Offers 05 - Gradient Tiles">
+    <section class="s_ak_offers ak-of-gradient o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_06" name="Akandel Offers 06 - Dark Deals">
+    <section class="s_ak_offers ak-of-dark o_cc o_cc5 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_07" name="Akandel Offers 07 - Circle Badges">
+    <section class="s_ak_offers ak-of-circles o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_08" name="Akandel Offers 08 - Minimal Rows">
+    <section class="s_ak_offers ak-of-rows o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_09" name="Akandel Offers 09 - Horizontal Cards">
+    <section class="s_ak_offers ak-of-horizontal o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_10" name="Akandel Offers 10 - Polaroid Tilt">
+    <section class="s_ak_offers ak-of-polaroid o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_11" name="Akandel Offers 11 - Deal of the Day">
+    <section class="s_ak_offers ak-of-dotd o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_12" name="Akandel Offers 12 - Icon Offers">
+    <section class="s_ak_offers ak-of-icons o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_13" name="Akandel Offers 13 - Gold Border">
+    <section class="s_ak_offers ak-of-gold o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_14" name="Akandel Offers 14 - Full-width Stripes">
+    <section class="s_ak_offers ak-of-stripes o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_15" name="Akandel Offers 15 - Image Left Rows">
+    <section class="s_ak_offers ak-of-imgleft o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_16" name="Akandel Offers 16 - Mosaic">
+    <section class="s_ak_offers ak-of-mosaic o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_17" name="Akandel Offers 17 - Corner Ribbons">
+    <section class="s_ak_offers ak-of-ribbon o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_18" name="Akandel Offers 18 - Glass on Image">
+    <section class="s_ak_offers ak-of-glass o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_19" name="Akandel Offers 19 - Color Blocks">
+    <section class="s_ak_offers ak-of-blocks o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_20" name="Akandel Offers 20 - Big Percent">
+    <section class="s_ak_offers ak-of-percent o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_21" name="Akandel Offers 21 - Stacked Banners">
+    <section class="s_ak_offers ak-of-stack o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_22" name="Akandel Offers 22 - Arch Images">
+    <section class="s_ak_offers ak-of-arch o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_23" name="Akandel Offers 23 - Offset Duo">
+    <section class="s_ak_offers ak-of-duo o_cc o_cc1 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_offers_24" name="Akandel Offers 24 - Floating Badges">
+    <section class="s_ak_offers ak-of-floating o_cc o_cc2 pt80 pb80" data-snippet="s_ak_offers" data-name="Offers">
+        <div class="container">
+            <div class="ak-of-head">
+                <p class="ak-eyebrow">Limited offers</p>
+                <h2 class="ak-of-title">Deals you will <span class="ak-hl">love</span></h2>
+                <p class="ak-of-sub">Fresh savings every week on the products you use every day.</p>
+            </div>
+            <div class="ak-of-grid">
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Flat 50% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-50%</span>
+                        <h3 class="ak-of-name">Flat 50% Off</h3>
+                        <p class="ak-of-text">On selected essentials, this week only.</p>
+                        <p class="ak-of-code">Use code <strong>SAVE50</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Up to 60% Off" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">-60%</span>
+                        <h3 class="ak-of-name">Up to 60% Off</h3>
+                        <p class="ak-of-text">Last pieces of the season at their lowest price.</p>
+                        <p class="ak-of-code">Use code <strong>LAST60</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+                <div class="ak-of-item">
+                    <div class="ak-of-media"><img class="ak-of-img" src="/website/static/src/img/library/gift.webp" alt="Complimentary Gift" loading="lazy"/></div>
+                    <div class="ak-of-body">
+                        <span class="ak-of-badge">Gift</span>
+                        <h3 class="ak-of-name">Complimentary Gift</h3>
+                        <p class="ak-of-text">Free gift with every order over $75.</p>
+                        <p class="ak-of-code">Use code <strong>GIFT75</strong></p>
+                        <a href="/shop" class="ak-of-link">+ Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+</odoo>

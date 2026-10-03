@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Promotion strip: one line message with a link -->
+<template id="s_ak_promo_strip" name="Akandel Promo Strip">
+    <section class="s_ak_promo_strip o_cc o_cc4 pt16 pb16" data-snippet="s_ak_promo_strip" data-name="Promo Strip">
+        <div class="container">
+            <p class="ak-promo-strip-text mb-0 text-center">
+                <i class="fa fa-gift me-2" aria-hidden="true"/><strong>Members save 15%</strong> on their first order with code <span class="ak-code">WELCOME15</span> · <a href="/shop">Shop now</a>
+            </p>
+        </div>
+    </section>
+</template>
+
+<!-- Promotion marquee: continuously scrolling messages (paused for reduced motion) -->
+<template id="s_ak_promo_marquee" name="Akandel Promo Marquee">
+    <section class="s_ak_promo_marquee o_cc o_cc5 pt16 pb16" data-snippet="s_ak_promo_marquee" data-name="Promo Marquee">
+        <div class="ak-marquee" role="marquee" aria-label="Store announcements">
+            <div class="ak-marquee-track">
+                <p class="ak-marquee-item mb-0"><span>Free delivery over $150</span><span class="ak-dot" aria-hidden="true">✦</span><span>30-day returns</span><span class="ak-dot" aria-hidden="true">✦</span><span>Made by independent workshops</span><span class="ak-dot" aria-hidden="true">✦</span><span>10-year frame guarantee</span><span class="ak-dot" aria-hidden="true">✦</span></p>
+                <p class="ak-marquee-item mb-0" aria-hidden="true"><span>Free delivery over $150</span><span class="ak-dot">✦</span><span>30-day returns</span><span class="ak-dot">✦</span><span>Made by independent workshops</span><span class="ak-dot">✦</span><span>10-year frame guarantee</span><span class="ak-dot">✦</span></p>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Offer tiles: three promotional cards -->
+<template id="s_ak_promo_tiles" name="Akandel Offer Tiles">
+    <section class="s_ak_promo_tiles o_cc o_cc1 pt48 pb48" data-snippet="s_ak_promo_tiles" data-name="Offer Tiles">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-4">
+                    <div class="ak-offer-tile o_cc o_cc4 h-100 position-relative">
+                        <span class="ak-eyebrow">Limited time</span>
+                        <span class="ak-offer-value">-30%</span>
+                        <span class="ak-offer-title">Living room favourites</span>
+                        <a href="/shop" class="ak-link-arrow stretched-link">Shop the sale <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ak-offer-tile o_cc o_cc2 h-100 position-relative">
+                        <span class="ak-eyebrow">Bundle &amp; save</span>
+                        <span class="ak-offer-value">2 for $99</span>
+                        <span class="ak-offer-title">Linen cushion covers</span>
+                        <a href="/shop" class="ak-link-arrow stretched-link">Build your set <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ak-offer-tile o_cc o_cc5 h-100 position-relative">
+                        <span class="ak-eyebrow">Gift card</span>
+                        <span class="ak-offer-value">From $25</span>
+                        <span class="ak-offer-title">The present they will love</span>
+                        <a href="/shop" class="ak-link-arrow stretched-link">Choose an amount <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+</odoo>

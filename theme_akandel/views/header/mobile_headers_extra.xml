@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Akandel mobile navigation variants 13-24 (additive, see mobile_headers.xml). -->
+
+<template id="template_header_mobile_ak_brand" inherit_id="website.template_header_mobile" name="Akandel Mobile: Brand Color Bar" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-brand</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_darkbar" inherit_id="website.template_header_mobile" name="Akandel Mobile: Dark Bar" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-darkbar</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_glass" inherit_id="website.template_header_mobile" name="Akandel Mobile: Frosted Glass" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-glass</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_bordered" inherit_id="website.template_header_mobile" name="Akandel Mobile: Accent Border" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-bordered</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_gold" inherit_id="website.template_header_mobile" name="Akandel Mobile: Gold Accent" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-gold</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_rounded" inherit_id="website.template_header_mobile" name="Akandel Mobile: Rounded Drawer" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-rounded</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_bigtype" inherit_id="website.template_header_mobile" name="Akandel Mobile: Big Type Drawer" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-bigtype</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_iconpills" inherit_id="website.template_header_mobile" name="Akandel Mobile: Icon Pills" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-iconpills</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_leftdark" inherit_id="website.template_header_mobile" name="Akandel Mobile: Dark Left Drawer" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-leftdark</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="before">
+        <t t-set="_side" t-valuef="offcanvas-start"/>
+    </xpath>
+    <xpath expr="//t[@t-set='offcanvas_is_leftside']" position="attributes">
+        <attribute name="t-valuef">True</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="attributes">
+        <attribute name="t-attf-class" add="o_cc o_cc5" separator=" "/>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_sheetdark" inherit_id="website.template_header_mobile" name="Akandel Mobile: Dark Bottom Sheet" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-sheetdark ak-m-sheet</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="before">
+        <t t-set="_side" t-valuef="offcanvas-bottom"/>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']/div[hasclass('offcanvas-header')]" position="inside">
+        <span class="ak-sheet-handle" aria-hidden="true"/>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="attributes">
+        <attribute name="t-attf-class" add="o_cc o_cc5" separator=" "/>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_cards" inherit_id="website.template_header_mobile" name="Akandel Mobile: Card Menu" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-cards</attribute>
+    </xpath>
+</template>
+
+<template id="template_header_mobile_ak_clean" inherit_id="website.template_header_mobile" name="Akandel Mobile: Clean Minimal" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-clean</attribute>
+    </xpath>
+</template>
+
+</odoo>

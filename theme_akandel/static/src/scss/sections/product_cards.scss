@@ -1,0 +1,754 @@
+//------------------------------------------------------------------------------
+// Akandel - Product carousels: 24 card templates (.ak-pc-<design>) rendered by
+// Odoo's "Products" dynamic snippet, and 8 section heading styles (.ak-ph-*).
+//------------------------------------------------------------------------------
+
+$ak-primary: o-color('o-color-1');
+$ak-gold: o-color('o-color-2');
+$ak-light: o-color('o-color-3');
+$ak-ink: o-color('o-color-5');
+$ak-sale: #C2410C;
+$ak-ease: cubic-bezier(.2, .7, .2, 1);
+
+//------------------------------------------------------------------------------
+// Section headings shared by product & category sections
+//------------------------------------------------------------------------------
+
+.s_ak_products,
+.s_ak_categories {
+    .s_dynamic_snippet_title {
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+
+        h2 {
+            margin-bottom: 0;
+            font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+            font-weight: 700;
+        }
+
+        .ak-eyebrow {
+            margin-bottom: .5rem;
+        }
+    }
+
+    // Dynamic carousel arrows
+    .carousel-control-prev,
+    .carousel-control-next {
+        opacity: 1;
+
+        > .oi {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.75rem;
+            padding: 0 !important;
+            border: 1px solid var(--ak-line);
+            background-color: #fff !important;
+            color: $ak-ink;
+            box-shadow: var(--ak-shadow-card);
+            transition: background-color .2s, color .2s;
+        }
+
+        &:hover > .oi {
+            background-color: $ak-primary !important;
+            border-color: $ak-primary;
+            color: #fff;
+        }
+    }
+
+    .missing_option_warning {
+        border-radius: var(--ak-radius);
+    }
+}
+
+// Heading styles
+.ak-ph-line .s_dynamic_snippet_title {
+    align-items: center !important;
+
+    > div:first-child {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        gap: 1.5rem;
+
+        .ak-eyebrow { display: none; }
+
+        &::after {
+            content: "";
+            flex: 1 1 auto;
+            height: 1px;
+            background-color: var(--ak-line);
+        }
+
+        h2 { font-weight: 500; white-space: nowrap; }
+    }
+}
+
+.ak-ph-center .s_dynamic_snippet_title {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+
+    .ak-eyebrow::after {
+        content: "";
+        width: 2.25rem;
+        height: 1px;
+        background-color: currentColor;
+        opacity: .7;
+    }
+}
+
+.ak-ph-underline .s_dynamic_snippet_title {
+    h2::after {
+        content: "";
+        display: block;
+        width: 3.5rem;
+        height: 3px;
+        margin-top: .75rem;
+        border-radius: 3px;
+        background-color: $ak-gold;
+    }
+
+    .ak-eyebrow { display: none; }
+}
+
+.ak-ph-split .s_dynamic_snippet_title {
+    > div:first-child {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .ak-eyebrow {
+            margin: .4rem 0 0;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            text-transform: none;
+            color: inherit;
+            opacity: .7;
+
+            &::before { display: none; }
+        }
+    }
+}
+
+.ak-ph-pill .s_dynamic_snippet_title .ak-eyebrow {
+    padding: .3rem .85rem;
+    border-radius: 999px;
+    background-color: rgba($ak-gold, .14);
+    letter-spacing: .12em;
+
+    &::before { display: none; }
+}
+
+.ak-ph-bar .s_dynamic_snippet_title > div:first-child {
+    padding-left: 1.1rem;
+    border-left: 4px solid $ak-gold;
+
+    .ak-eyebrow::before { display: none; }
+}
+
+.ak-ph-minimal .s_dynamic_snippet_title {
+    h2 {
+        font-size: 1.1rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+    .ak-eyebrow { display: none; }
+}
+
+//------------------------------------------------------------------------------
+// Product card base
+//------------------------------------------------------------------------------
+
+.ak-pc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--ak-radius-lg);
+    background-color: #fff;
+    color: $ak-ink;
+    transition: transform .35s $ak-ease, box-shadow .35s $ak-ease, border-color .25s;
+
+    .ak-pc-index { display: none; }
+
+    .ak-pc-media-wrap {
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .ak-pc-media {
+        display: block;
+        overflow: hidden;
+        background-color: #F5F7FA;
+    }
+
+    .ak-pc-img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        padding: 1rem;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+        transition: transform .6s $ak-ease;
+    }
+
+    &:hover .ak-pc-img {
+        transform: scale(1.05);
+    }
+
+    .ak-pc-body {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        gap: .3rem;
+        padding: 1rem 1.1rem 1.15rem;
+    }
+
+    .ak-pc-cat {
+        font-size: .7rem;
+        font-weight: 600;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        opacity: .6;
+    }
+
+    .ak-pc-name {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.35;
+
+        a {
+            display: -webkit-box;
+            overflow: hidden;
+            color: inherit;
+            text-decoration: none;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+            &:hover { color: $ak-primary; }
+        }
+    }
+
+    .ak-pc-desc {
+        display: -webkit-box;
+        margin: 0;
+        overflow: hidden;
+        font-size: .85rem;
+        line-height: 1.5;
+        opacity: .7;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .ak-pc-price {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: .2rem .55rem;
+        font-family: var(--ak-headings-font);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $ak-primary;
+
+        del {
+            order: 2;
+            margin: 0 !important;
+            font-size: .82rem;
+            font-weight: 400;
+            color: $ak-ink;
+            opacity: .5;
+        }
+    }
+
+    .ak-pc-rating {
+        font-size: .8rem;
+        color: #E0A526;
+    }
+
+    .ak-pc-actions {
+        margin-top: auto;
+        padding-top: .8rem;
+    }
+
+    .ak-pc-cart {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        width: 100%;
+        padding: .6rem 1rem;
+        border-radius: 999px;
+        font-size: .8rem;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .ak-pc-cart-fab {
+        position: absolute;
+        right: .75rem;
+        bottom: .75rem;
+        z-index: 2;
+        width: 2.6rem;
+        height: 2.6rem;
+        padding: 0;
+        border-radius: 50%;
+        box-shadow: var(--ak-shadow-soft);
+    }
+
+    .ak-pc-wish {
+        position: absolute;
+        top: .7rem;
+        right: .7rem;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background-color: #fff;
+        color: $ak-ink;
+        box-shadow: var(--ak-shadow-card);
+        transition: color .2s, transform .2s;
+
+        &:hover { color: #D6336C; transform: scale(1.08); }
+        &[disabled] { color: #D6336C; opacity: 1; }
+    }
+
+    .ak-pc-badge {
+        position: absolute;
+        top: .7rem;
+        left: .7rem;
+        z-index: 2;
+        padding: .25rem .6rem;
+        border-radius: 999px;
+        background-color: $ak-sale;
+        color: #fff;
+        font-family: var(--ak-headings-font);
+        font-size: .72rem;
+        font-weight: 700;
+    }
+
+    .ak-pc-badge-sample { background-color: $ak-ink; }
+
+    .ak-pc-view {
+        font-weight: 600;
+        text-decoration: none;
+
+        .fa { transition: transform .3s $ak-ease; }
+        &:hover .fa { transform: translateX(.25rem); }
+    }
+}
+
+// Kits ------------------------------------------------------------------------
+
+.ak-pc-kit-horizontal {
+    flex-direction: row;
+
+    .ak-pc-media-wrap { flex: 0 0 38%; }
+    .ak-pc-media { height: 100%; }
+    .ak-pc-img { height: 100%; min-height: 8rem; }
+
+    .ak-pc-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .75rem;
+        margin-top: auto;
+        padding-top: .75rem;
+    }
+
+    .ak-pc-cart { width: auto; }
+}
+
+.ak-pc-overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .9rem;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity .3s, transform .35s $ak-ease;
+
+    .ak-pc & .ak-pc-wish { position: static; }
+    .ak-pc & .ak-pc-cart { width: auto; }
+
+    .ak-pc:hover &,
+    .ak-pc:focus-within & {
+        opacity: 1;
+        transform: none;
+    }
+
+    @media (hover: none) {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.ak-pc-kit-feature {
+    flex-direction: row;
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-media-wrap { flex: 0 0 44%; }
+    .ak-pc-media { height: 100%; }
+    .ak-pc-img { height: 100%; padding: 1.75rem; }
+    .ak-pc-body { gap: .55rem; padding: 2rem; }
+    .ak-pc-name { font-size: 1.35rem; }
+    .ak-pc-price { font-size: 1.5rem; }
+    .ak-pc-desc { -webkit-line-clamp: 3; font-size: .95rem; }
+
+    .ak-pc-actions {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+
+        .ak-pc-cart { width: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+        .ak-pc-wish { position: static; box-shadow: none; border: 1px solid var(--ak-line); }
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+}
+
+.ak-pc-kit-list {
+    flex-direction: row;
+    align-items: center;
+    gap: .9rem;
+    padding: .6rem;
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-media-wrap { flex: 0 0 4.75rem; }
+    .ak-pc-media { border-radius: var(--ak-radius); }
+    .ak-pc-img { padding: .4rem; }
+    .ak-pc-body { padding: 0; gap: .15rem; }
+    .ak-pc-name { font-size: .9rem; }
+    .ak-pc-price { font-size: .95rem; }
+
+    .ak-pc-cart {
+        flex: 0 0 auto;
+        width: 2.4rem;
+        height: 2.4rem;
+        padding: 0;
+        border-radius: 50%;
+    }
+}
+
+//------------------------------------------------------------------------------
+// 24 designs
+//------------------------------------------------------------------------------
+
+// 01 Classic card (centered, full-width button)
+.ak-pc-classic {
+    border: 1px solid var(--ak-line);
+    text-align: center;
+
+    .ak-pc-price { justify-content: center; }
+    &:hover { box-shadow: var(--ak-shadow-card); transform: translateY(-4px); }
+}
+
+// 02 Horizontal rows (icon cart pill)
+.ak-pc-rows {
+    box-shadow: var(--ak-shadow-card);
+
+    .ak-pc-name { font-weight: 500; font-size: 1.05rem; }
+    .ak-pc-cart { width: 5rem; padding: .65rem; border-radius: .9rem; }
+    .ak-pc-cart-label { display: none; }
+}
+
+// 03 Minimal clean
+.ak-pc-minimal {
+    background-color: transparent;
+    border-radius: 0;
+
+    .ak-pc-media { border-radius: var(--ak-radius-lg); }
+    .ak-pc-body { padding: .9rem .1rem 0; }
+    .ak-pc-cat { display: none; }
+    .ak-pc-cart-fab { opacity: 0; transform: translateY(.5rem); transition: opacity .25s, transform .3s $ak-ease; }
+    &:hover .ak-pc-cart-fab, &:focus-within .ak-pc-cart-fab { opacity: 1; transform: none; }
+    .ak-pc-actions { display: none; }
+}
+
+// 04 Hover reveal
+.ak-pc-reveal {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-overlay { background: linear-gradient(0deg, rgba(20, 32, 51, .35), transparent); }
+}
+
+// 05 Sale badge card
+.ak-pc-sale {
+    border: 1px solid var(--ak-line);
+    border-top: 3px solid $ak-sale;
+
+    .ak-pc-badge { padding: .4rem .75rem; font-size: .85rem; border-radius: .5rem; }
+    .ak-pc-price { color: $ak-sale; }
+}
+
+// 06 Super deal wide
+.ak-pc-deal {
+    .ak-pc-cat { color: $ak-ink; }
+}
+
+// 07 Round thumbnail
+.ak-pc-round {
+    background-color: transparent;
+    text-align: center;
+
+    .ak-pc-media {
+        width: 84%;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: $ak-light;
+    }
+
+    .ak-pc-img { padding: 1.25rem; }
+    .ak-pc-wish { right: 6%; }
+    .ak-pc-price { justify-content: center; }
+
+    .ak-pc-cart {
+        width: auto;
+        margin: 0 auto;
+        background-color: transparent;
+        color: $ak-primary;
+        border: 1.5px solid currentColor;
+
+        &:hover { background-color: $ak-primary; color: #fff; }
+    }
+}
+
+// 08 Dark card
+.ak-pc-dark {
+    background-color: $ak-ink;
+    color: #fff;
+
+    .ak-pc-media { margin: .6rem .6rem 0; border-radius: calc(var(--ak-radius-lg) - .4rem); background-color: #fff; }
+    .ak-pc-img { mix-blend-mode: multiply; }
+    .ak-pc-name, .ak-pc-name a, .ak-pc-cat { color: #fff; }
+    .ak-pc-price { color: lighten($ak-gold, 12%); }
+    .ak-pc-price del { color: #fff; }
+    .ak-pc-cart { background-color: $ak-gold; border-color: $ak-gold; color: #fff; }
+    .ak-pc-name a:hover { color: lighten($ak-gold, 12%); }
+}
+
+// 09 Mini list
+.ak-pc-mini {
+    &:hover { border-color: $ak-primary; }
+}
+
+// 10 Portrait tall
+.ak-pc-portrait {
+    background-color: transparent;
+    border-radius: 0;
+
+    .ak-pc-media { border-radius: var(--ak-radius-lg); }
+    .ak-pc-img { aspect-ratio: 4 / 5; padding: 0; object-fit: cover; mix-blend-mode: normal; }
+
+    .ak-pc-body {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: start;
+        padding: .9rem .1rem 0;
+    }
+
+    .ak-pc-cat { grid-column: 1 / -1; }
+    .ak-pc-price { grid-column: 2; grid-row: 2; font-size: 1rem; }
+    .ak-pc-actions { grid-column: 1 / -1; }
+    .ak-pc-cart { background-color: transparent; color: $ak-ink; border: 1px solid var(--ak-line); }
+    .ak-pc-cart:hover { background-color: $ak-ink; color: #fff; }
+}
+
+// 11 Price tag
+.ak-pc-pricetag {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-body { position: relative; padding-top: 1.25rem; }
+
+    .ak-pc-price {
+        position: absolute;
+        top: -1.35rem;
+        left: 1rem;
+        padding: .35rem .85rem;
+        border-radius: 999px;
+        background-color: $ak-primary;
+        color: #fff;
+        font-size: .95rem;
+        box-shadow: var(--ak-shadow-soft);
+
+        del { color: #fff; opacity: .75; }
+    }
+
+    .ak-pc-overlay { padding-bottom: 2rem; }
+}
+
+// 12 Rated card
+.ak-pc-rated {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-body { gap: .45rem; }
+    &:hover { box-shadow: var(--ak-shadow-card); }
+}
+
+// 13 Soft gradient
+.ak-pc-gradient {
+    background: linear-gradient(160deg, rgba($ak-primary, .09), rgba($ak-gold, .12));
+
+    .ak-pc-media { background-color: transparent; }
+    .ak-pc-cart { background-color: #fff; color: $ak-primary; border-color: #fff; }
+    .ak-pc-cart:hover { background-color: $ak-primary; color: #fff; }
+}
+
+// 14 Quick add
+.ak-pc-quickadd {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-actions { display: none; }
+    .ak-pc-cart-fab { width: 2.9rem; height: 2.9rem; font-size: 1rem; }
+}
+
+// 15 Category chip
+.ak-pc-chip {
+    box-shadow: var(--ak-shadow-card);
+
+    .ak-pc-cat {
+        align-self: flex-start;
+        padding: .2rem .6rem;
+        border-radius: 999px;
+        background-color: rgba($ak-gold, .14);
+        color: darken($ak-gold, 12%);
+        opacity: 1;
+    }
+}
+
+// 16 Grid two rows
+.ak-pc-tworows {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-img { aspect-ratio: 4 / 3; }
+    .ak-pc-body { padding: .8rem .9rem .9rem; }
+    .ak-pc-name { font-size: .92rem; }
+    .ak-pc-cart { padding: .45rem .8rem; }
+}
+
+// 17 Wide duo
+.ak-pc-duo {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-media-wrap { flex-basis: 42%; }
+    .ak-pc-body { padding: 1.5rem; gap: .5rem; }
+    .ak-pc-name { font-size: 1.2rem; }
+    .ak-pc-price { font-size: 1.3rem; }
+}
+
+// 18 Compact six
+.ak-pc-compact {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-img { padding: .6rem; }
+    .ak-pc-body { padding: .7rem .75rem .8rem; gap: .2rem; }
+    .ak-pc-cat, .ak-pc-wish { display: none; }
+    .ak-pc-name { font-size: .85rem; }
+    .ak-pc-price { font-size: .95rem; }
+    .ak-pc-cart { padding: .4rem; }
+    .ak-pc-cart-label { display: none; }
+}
+
+// 19 Outline hover
+.ak-pc-outline {
+    border: 2px solid var(--ak-line);
+
+    &:hover { border-color: $ak-primary; }
+    .ak-pc-cart { background-color: transparent; color: $ak-primary; border: 1.5px solid $ak-primary; }
+    &:hover .ak-pc-cart { background-color: $ak-primary; color: #fff; }
+}
+
+// 20 Centered link
+.ak-pc-centered {
+    background-color: $ak-light;
+    text-align: center;
+
+    .ak-pc-media { background-color: transparent; }
+    .ak-pc-price { justify-content: center; }
+    .ak-pc-cat { display: none; }
+}
+
+// 21 Floating cart
+.ak-pc-float {
+    overflow: visible;
+    box-shadow: var(--ak-shadow-card);
+    text-align: center;
+
+    .ak-pc-media { border-radius: var(--ak-radius-lg) var(--ak-radius-lg) 0 0; }
+
+    .ak-pc-cart-fab {
+        right: auto;
+        bottom: -1.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .ak-pc-body { padding-top: 1.9rem; }
+    .ak-pc-price { justify-content: center; }
+    .ak-pc-actions { display: none; }
+}
+
+// 22 Gold accent
+.ak-pc-gold {
+    border: 1px solid rgba($ak-gold, .35);
+
+    .ak-pc-cat { color: darken($ak-gold, 12%); opacity: 1; }
+    .ak-pc-price { color: darken($ak-gold, 14%); }
+    .ak-pc-name a:hover { color: darken($ak-gold, 12%); }
+    .ak-pc-cart { background-color: $ak-gold; border-color: $ak-gold; color: #fff; }
+    &:hover { box-shadow: 0 16px 32px -18px rgba($ak-gold, .6); }
+}
+
+// 23 Price first
+.ak-pc-pricefirst {
+    border: 1px solid var(--ak-line);
+
+    .ak-pc-price { font-size: 1.5rem; }
+    .ak-pc-name { font-weight: 500; }
+}
+
+// 24 Indexed showcase
+.ak-pc-indexed {
+    background-color: transparent;
+    border-bottom: 1px solid var(--ak-line);
+    border-radius: 0;
+
+    .ak-pc-index {
+        display: block;
+        position: absolute;
+        top: .25rem;
+        left: 0;
+        z-index: 2;
+        font-family: var(--ak-headings-font);
+        font-size: 2.25rem;
+        font-weight: 800;
+        line-height: 1;
+        color: rgba($ak-gold, .9);
+    }
+
+    .ak-pc-media-wrap { flex-basis: 42%; padding-left: 1.5rem; }
+    .ak-pc-badge { right: .5rem; left: auto; }
+    .ak-pc-media { border-radius: var(--ak-radius-lg); }
+    .ak-pc-cart-label { display: none; }
+    .ak-pc-cart { width: 2.6rem; height: 2.6rem; padding: 0; border-radius: 50%; }
+}

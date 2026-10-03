@@ -1,0 +1,735 @@
+//------------------------------------------------------------------------------
+// Akandel Theme - Desktop headers
+//------------------------------------------------------------------------------
+
+$ak-accent: o-color('o-color-1');
+$ak-deep: o-color('o-color-2');
+$ak-ease: cubic-bezier(.2, .7, .2, 1);
+
+#wrapwrap > header {
+    .ak-header {
+        --ak-nav-gap: .25rem;
+    }
+
+    // Navigation links: calm by default, animated underline on hover/active.
+    .ak-nav {
+        gap: var(--ak-nav-gap);
+
+        > .nav-item > .nav-link {
+            position: relative;
+            padding-left: .85rem;
+            padding-right: .85rem;
+            font-weight: 500;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: .85rem;
+                right: .85rem;
+                bottom: .35rem;
+                height: 1.5px;
+                background-color: currentColor;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .3s $ak-ease;
+            }
+
+            &:hover::after,
+            &:focus-visible::after,
+            &.active::after {
+                transform: scaleX(1);
+            }
+
+            &.dropdown-toggle::after {
+                // Keep Bootstrap's caret for dropdown toggles.
+                position: static;
+                height: auto;
+                background: none;
+                transform: none;
+            }
+        }
+    }
+
+    .ak-nav-spaced {
+        --ak-nav-gap: 1.25rem;
+    }
+
+    .ak-nav-caps > .nav-item > .nav-link {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: .78rem;
+        font-weight: 600;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+    }
+
+    .ak-nav-bold > .nav-item > .nav-link {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        letter-spacing: -.01em;
+    }
+
+    .ak-nav-underline > .nav-item > .nav-link.active::after {
+        height: 2px;
+        background-color: $ak-accent;
+    }
+
+    // Round icon buttons (search, account, wishlist, cart).
+    .ak-icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.5rem;
+        height: 2.5rem;
+        line-height: 1;
+        border: 0;
+
+        .fa, .oi {
+            font-size: 1.05rem;
+        }
+
+        .fa-stack {
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.5em;
+        }
+
+        > div {
+            display: inline-flex;
+        }
+
+        .ak-badge {
+            margin-top: .1rem;
+            margin-right: .05rem;
+        }
+    }
+
+    .ak-header-actions {
+        .o_wsale_my_cart,
+        .o_wsale_my_wish {
+            display: flex;
+        }
+
+        .dropdown-menu {
+            margin-top: .5rem;
+        }
+    }
+
+    .ak-signin-link {
+        border: 1px solid var(--ak-line) !important;
+        font-weight: 600;
+    }
+
+    // Labelled actions (icon above text).
+    .ak-actions-labelled .ak-icon-btn {
+        flex-direction: column;
+        gap: .1rem;
+        height: auto;
+        padding: .35rem .6rem !important;
+        border-radius: .75rem !important;
+    }
+
+    .ak-icon-label {
+        display: block;
+        font-size: .6875rem;
+        font-weight: 600;
+        letter-spacing: .02em;
+    }
+
+    // Secondary rows (menu / category rows below the main row).
+    .ak-header-row {
+        border-top: 1px solid var(--ak-line);
+    }
+
+    // Announcement bar.
+    .ak-announcement {
+        width: 100%;
+        padding: .5rem 0;
+        font-size: .8125rem;
+        letter-spacing: .02em;
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: .2em;
+        }
+    }
+
+    // Promotion strip.
+    .ak-promo-strip {
+        font-size: .875rem;
+
+        .btn {
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+        }
+    }
+
+    // Utility line (luxe / utility headers).
+    .ak-header-utility {
+        font-size: .8125rem;
+        border-bottom: 1px solid var(--ak-line);
+
+        .nav-link {
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+        }
+    }
+
+    .ak-utility-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            opacity: .8;
+
+            &:hover {
+                opacity: 1;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Inline search fields.
+    .ak-search-inline .form-control {
+        min-width: 12rem;
+    }
+
+    .ak-search-wide,
+    .ak-search-hero {
+        .o_searchbar_form,
+        .input-group {
+            width: 100%;
+        }
+
+        .form-control,
+        .btn {
+            min-height: 3rem;
+        }
+    }
+
+    .ak-search-hero {
+        max-width: 40rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .ak-search-compact .form-control {
+        width: 12rem;
+    }
+
+    // Category bar (category header).
+    .ak-category-bar {
+        background-color: $ak-deep;
+        color: color-contrast($ak-deep);
+        border-top: 0;
+
+        .nav-link,
+        .o_nav-link_secondary,
+        .s_text_block {
+            color: inherit;
+        }
+
+        .ak-nav > .nav-item > .nav-link {
+            padding-top: .85rem;
+            padding-bottom: .85rem;
+            opacity: .9;
+
+            &:hover, &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .ak-category-dropdown > .nav-link {
+        padding: .85rem 1.25rem;
+        background-color: rgba(255, 255, 255, .08);
+        border-radius: 0;
+    }
+
+    .ak-category-menu {
+        min-width: 16rem;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    // Minimal header drawer.
+    .ak-menu-label {
+        letter-spacing: .14em;
+    }
+
+    .ak-drawer {
+        --bs-offcanvas-width: #{unquote("min(26rem, 90vw)")};
+
+        .ak-drawer-nav .nav-link {
+            font-family: var(--ak-headings-font);
+            font-size: 1.35rem;
+        }
+
+        .ak-drawer-categories a {
+            text-decoration: none;
+
+            &:hover {
+                color: $ak-accent !important;
+            }
+        }
+    }
+
+    // Floating header.
+    .ak-header-floating {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .ak-floating-shell {
+        padding: .45rem .6rem .45rem 1.5rem;
+        border: 1px solid var(--ak-line);
+        border-radius: 999px;
+        box-shadow: $box-shadow;
+
+        // Keep navbar link colors (not the color-combination link color).
+        .navbar-nav .nav-link {
+            color: var(--bs-navbar-color);
+
+            &:hover, &:focus-visible, &.active, &.show {
+                color: var(--bs-navbar-active-color);
+            }
+        }
+    }
+
+    // Bold header: pill action group.
+    .ak-actions-pill {
+        padding: .2rem;
+        border-radius: 999px;
+        background-color: var(--ak-surface-strong);
+    }
+
+    // Stacked header tagline.
+    .ak-tagline {
+        padding-left: 1.5rem;
+        border-left: 1px solid var(--ak-line);
+        line-height: 1.35;
+        opacity: .75;
+    }
+
+    // Split header keeps both menu halves balanced.
+    .ak-header-split .o_grid_header_3_cols {
+        grid-template-columns: 1fr auto 1fr;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Akandel Theme - Mobile navigation variants
+//------------------------------------------------------------------------------
+
+#wrapwrap > header .o_header_mobile.ak-m {
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+
+    .o_header_mobile_buttons_wrap {
+        .btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .o_navbar_mobile {
+        --bs-offcanvas-width: #{unquote("min(23rem, 88vw)")};
+
+        .top_menu > .nav-item > .nav-link {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+            font-size: 1.0625rem;
+            font-weight: 500;
+        }
+
+        .ak-eyebrow {
+            margin-bottom: .25rem;
+        }
+    }
+
+    .ak-m-categories a,
+    .ak-m-category-item a {
+        text-decoration: none;
+        border-bottom: 1px dashed var(--ak-line);
+
+        &::after {
+            content: "\f105";
+            font-family: FontAwesome;
+            opacity: .5;
+        }
+    }
+}
+
+// Centered: [menu] [logo] [icons]
+#wrapwrap > header .ak-m-centered .o_main_nav {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    > .d-flex {
+        display: contents !important;
+    }
+
+    > button[data-bs-toggle="offcanvas"] {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        margin: 0 !important;
+    }
+
+    .navbar-brand,
+    #o_fake_navbar_brand {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0 !important;
+    }
+
+    .o_header_mobile_buttons_wrap {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        margin: 0 !important;
+    }
+}
+
+// Fullscreen overlay with editorial type.
+#wrapwrap > header .ak-m-fullscreen .o_navbar_mobile {
+    --bs-offcanvas-width: 100vw;
+
+    .offcanvas-body {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
+
+    .top_menu > .nav-item {
+        border: 0 !important;
+
+        > .nav-link {
+            font-family: var(--ak-headings-font);
+            font-size: 2rem;
+            letter-spacing: -.02em;
+            padding-top: .5rem !important;
+            padding-bottom: .5rem !important;
+        }
+    }
+}
+
+// Bottom sheet.
+#wrapwrap > header .ak-m-sheet .offcanvas-bottom {
+    height: auto;
+    max-height: 86vh;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+
+    .offcanvas-header {
+        position: relative;
+        padding-top: 1.5rem;
+    }
+
+    .offcanvas-body {
+        overflow-y: auto;
+    }
+}
+
+.ak-sheet-handle {
+    position: absolute;
+    top: .6rem;
+    left: 50%;
+    width: 2.75rem;
+    height: .3rem;
+    border-radius: 1rem;
+    background-color: var(--ak-line);
+    transform: translateX(-50%);
+}
+
+// Persistent search.
+#wrapwrap > header .ak-m-searchbar {
+    padding-top: .6rem;
+
+    .form-control, .btn {
+        min-height: 2.75rem;
+    }
+}
+
+// Compact.
+#wrapwrap > header .ak-m-compact {
+    padding-top: .25rem !important;
+    padding-bottom: .25rem !important;
+
+    .navbar-brand.logo img {
+        height: 1.75rem !important;
+        width: auto;
+    }
+
+    .o_wsale_my_wish {
+        display: none !important;
+    }
+}
+
+// Promo strip above the mobile bar.
+#wrapwrap > header .ak-m-promo .ak-m-promo-strip {
+    margin-top: -.6rem;
+    margin-bottom: .6rem;
+    padding: .45rem 1rem;
+    font-size: .8125rem;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+// Floating mobile bar.
+#wrapwrap > header .o_header_mobile.ak-m-floating {
+    margin: .5rem .75rem;
+    border: 1px solid var(--ak-line);
+    border-radius: 1rem;
+    box-shadow: $box-shadow;
+}
+
+// Category chips.
+#wrapwrap > header .ak-m-chipbar {
+    overflow-x: auto;
+    padding: .6rem 0 .1rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.ak-chip {
+    display: inline-block;
+    padding: .4rem .95rem;
+    font-size: .8125rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: inherit !important;
+    text-decoration: none;
+    border: 1px solid var(--ak-line);
+    border-radius: 999px;
+
+    &:hover, &:focus-visible {
+        border-color: $ak-accent;
+        color: $ak-accent !important;
+    }
+}
+
+// Bottom tab bar (mobile only).
+.ak-tabbar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-fixed;
+    padding-bottom: env(safe-area-inset-bottom);
+    border-top: 1px solid var(--ak-line);
+    box-shadow: 0 -8px 24px -12px rgba(0, 0, 0, .18);
+
+    .ak-tabbar-list > li {
+        flex: 1 1 0;
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .ak-tabbar-link {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .2rem;
+        width: 100%;
+        padding: .55rem .25rem .45rem;
+        font-size: .6875rem;
+        font-weight: 600;
+        color: inherit !important;
+        text-decoration: none;
+        opacity: .7;
+
+        .fa {
+            font-size: 1.15rem;
+        }
+
+        // Cart / wishlist links come from website_sale templates (fa-stack icons).
+        .fa-stack {
+            width: auto;
+            height: 1.15rem;
+            line-height: 1.15rem;
+        }
+
+        > div {
+            display: inline-flex;
+            height: 1.15rem;
+        }
+
+        &.active, &:hover {
+            opacity: 1;
+            color: $ak-accent !important;
+        }
+    }
+
+    .ak-badge {
+        font-size: .5625rem;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    #wrapwrap:has(> .ak-tabbar) {
+        padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
+
+        .o_footer_scrolltop {
+            bottom: 4.5rem;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Headers 14-24
+//------------------------------------------------------------------------------
+
+#wrapwrap > header {
+    .ak-nav-pill .ak-nav {
+        padding: .3rem;
+        border-radius: 999px;
+        background-color: var(--ak-surface-strong);
+
+        > .nav-item > .nav-link {
+            border-radius: 999px;
+
+            &::after { display: none; }
+            &.active, &:hover { background-color: #fff; box-shadow: var(--ak-shadow-card); }
+        }
+    }
+
+    .ak-header-transparent {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .ak-header-dark,
+    .ak-header-brand {
+        --bs-navbar-color: rgba(255, 255, 255, .82);
+        --bs-navbar-hover-color: #fff;
+        --bs-navbar-active-color: #fff;
+        color: #fff;
+
+        .nav-link, .ak-icon-btn, .ak-signin-link, .o_nav-link_secondary { color: inherit !important; }
+        .ak-signin-link { border-color: rgba(255, 255, 255, .35) !important; }
+    }
+
+    .ak-header-dark { background-color: o-color('o-color-5') !important; }
+    .ak-header-brand { background-color: o-color('o-color-1') !important; }
+
+    .ak-header-brand .btn-primary {
+        background-color: #fff;
+        border-color: #fff;
+        color: o-color('o-color-1');
+    }
+
+    .ak-contact-bar {
+        font-size: .8125rem;
+        border-bottom: 1px solid var(--ak-line);
+
+        .ak-contact-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .25rem 1.5rem;
+
+            a { color: inherit; text-decoration: none; }
+            a:hover { text-decoration: underline; }
+        }
+    }
+
+    .ak-chip-row .ak-chip { background-color: var(--ak-surface); border-color: transparent; }
+
+    .ak-header-boxed {
+        padding-top: .75rem;
+        padding-bottom: .5rem;
+
+        .ak-boxed-row {
+            padding: .5rem .75rem .5rem 1.5rem;
+            border: 1px solid var(--ak-line);
+            border-radius: var(--ak-radius-lg);
+            background-color: var(--ak-surface);
+        }
+    }
+
+    .ak-header-caps {
+        border-bottom: 3px solid o-color('o-color-1');
+
+        .ak-nav-caps > .nav-item > .nav-link { font-weight: 700; }
+    }
+
+    .ak-header-slim {
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+
+        .navbar-brand.logo img { height: 1.85rem !important; width: auto; }
+        .ak-nav > .nav-item > .nav-link { font-size: .875rem; }
+        .ak-icon-btn { min-width: 2.2rem; height: 2.2rem; }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Mobile 13-24
+//------------------------------------------------------------------------------
+
+#wrapwrap > header .o_header_mobile {
+    &.ak-m-brand, &.ak-m-darkbar {
+        color: #fff;
+
+        .btn, .nav-link, .navbar-toggler-icon { color: #fff; }
+        .navbar-toggler-icon, button[data-bs-toggle="offcanvas"] > .navbar-toggler-icon { filter: invert(1) brightness(2); }
+    }
+
+    &.ak-m-brand { background-color: o-color('o-color-1') !important; }
+    &.ak-m-darkbar { background-color: o-color('o-color-5') !important; }
+
+    &.ak-m-glass {
+        background-color: rgba(255, 255, 255, .72) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    &.ak-m-bordered { border-bottom: 3px solid o-color('o-color-1'); box-shadow: none; }
+    &.ak-m-gold { border-bottom: 2px solid o-color('o-color-2'); }
+
+    &.ak-m-rounded .o_navbar_mobile {
+        margin: .6rem;
+        height: calc(100% - 1.2rem);
+        border-radius: 1.25rem;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+    }
+
+    &.ak-m-bigtype .o_navbar_mobile .top_menu > .nav-item > .nav-link {
+        font-family: var(--ak-headings-font);
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &.ak-m-iconpills .o_header_mobile_buttons_wrap .btn {
+        background-color: var(--ak-surface-strong);
+        border-radius: 50% !important;
+    }
+
+    &.ak-m-cards .o_navbar_mobile .top_menu > .nav-item {
+        margin-bottom: .5rem;
+        border: 1px solid var(--ak-line) !important;
+        border-radius: var(--ak-radius);
+        background-color: var(--ak-surface);
+
+        > .nav-link { padding-left: 1rem !important; }
+    }
+
+    &.ak-m-clean { box-shadow: none !important; border-bottom: 1px solid var(--ak-line); }
+}

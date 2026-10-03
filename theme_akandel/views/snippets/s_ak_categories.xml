@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Category grid: four image tiles with labels -->
+<template id="s_ak_categories_grid" name="Akandel Category Grid">
+    <section class="s_ak_categories_grid o_cc o_cc1 pt80 pb80" data-snippet="s_ak_categories_grid" data-name="Category Grid">
+        <div class="container">
+            <div class="ak-section-head d-flex flex-wrap align-items-end justify-content-between gap-3 mb-5">
+                <div>
+                    <p class="ak-eyebrow">Shop by room</p>
+                    <h2 class="mb-0">Find your next favourite piece</h2>
+                </div>
+                <a href="/shop" class="ak-link-arrow">View all categories <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="row g-3 g-lg-4">
+                <div class="col-6 col-lg-3">
+                    <a href="/shop" class="ak-cat-tile d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/library/shop_category_1.webp" alt="Oak frame sofa" loading="lazy"/>
+                        <span class="ak-cat-tile-label">Sofas <i class="fa fa-long-arrow-right" aria-hidden="true"/></span>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <a href="/shop" class="ak-cat-tile d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/library/shop_category_2.webp" alt="Walnut desk" loading="lazy"/>
+                        <span class="ak-cat-tile-label">Desks <i class="fa fa-long-arrow-right" aria-hidden="true"/></span>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <a href="/shop" class="ak-cat-tile d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/library/shop_category_3.webp" alt="Oak sideboard" loading="lazy"/>
+                        <span class="ak-cat-tile-label">Storage <i class="fa fa-long-arrow-right" aria-hidden="true"/></span>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <a href="/shop" class="ak-cat-tile d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/library/shop_category_4.webp" alt="Tripod floor lamp" loading="lazy"/>
+                        <span class="ak-cat-tile-label">Lighting <i class="fa fa-long-arrow-right" aria-hidden="true"/></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Category bento: asymmetric grid with one feature tile -->
+<template id="s_ak_categories_bento" name="Akandel Category Bento">
+    <section class="s_ak_categories_bento o_cc o_cc2 pt80 pb80" data-snippet="s_ak_categories_bento" data-name="Category Bento">
+        <div class="container">
+            <div class="ak-section-head text-center mb-5">
+                <p class="ak-eyebrow">Collections</p>
+                <h2 class="mb-0">Curated for every corner</h2>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-6">
+                    <a href="/shop" class="ak-bento-tile ak-bento-tall d-block h-100">
+                        <img class="img-fluid w-100 h-100" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Green velvet sofa" loading="lazy"/>
+                        <span class="ak-bento-caption">
+                            <span class="ak-eyebrow">Living</span>
+                            <span class="h3 d-block mb-0">Sofas &amp; armchairs</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3 h-100">
+                        <div class="col-12">
+                            <a href="/shop" class="ak-bento-tile ak-bento-wide d-block">
+                                <img class="img-fluid w-100" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Minimal table in a terracotta room" loading="lazy"/>
+                                <span class="ak-bento-caption">
+                                    <span class="ak-eyebrow">Dining</span>
+                                    <span class="h4 d-block mb-0">Tables built to gather</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/shop" class="ak-bento-tile d-block">
+                                <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Ceramic ring vase" loading="lazy"/>
+                                <span class="ak-bento-caption"><span class="h5 d-block mb-0">Ceramics</span></span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/shop" class="ak-bento-tile d-block">
+                                <img class="img-fluid w-100" src="/website/static/src/img/library/shop_category_4.webp" alt="Floor lamp" loading="lazy"/>
+                                <span class="ak-bento-caption"><span class="h5 d-block mb-0">Lighting</span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Category circles: round thumbnails in a row -->
+<template id="s_ak_categories_circles" name="Akandel Category Circles">
+    <section class="s_ak_categories_circles o_cc o_cc1 pt64 pb64" data-snippet="s_ak_categories_circles" data-name="Category Circles">
+        <div class="container">
+            <h2 class="h4 text-center mb-5">Popular right now</h2>
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a href="/shop" class="ak-circle-link d-block">
+                        <img class="img-fluid rounded-circle ak-circle-img" src="/website/static/src/img/library/shop_category_1.webp" alt="Sofas" loading="lazy"/>
+                        <span class="d-block mt-3">Sofas</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a href="/shop" class="ak-circle-link d-block">
+                        <img class="img-fluid rounded-circle ak-circle-img" src="/website/static/src/img/library/shop_category_2.webp" alt="Tables" loading="lazy"/>
+                        <span class="d-block mt-3">Tables</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a href="/shop" class="ak-circle-link d-block">
+                        <img class="img-fluid rounded-circle ak-circle-img" src="/website/static/src/img/library/shop_category_3.webp" alt="Storage" loading="lazy"/>
+                        <span class="d-block mt-3">Storage</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a href="/shop" class="ak-circle-link d-block">
+                        <img class="img-fluid rounded-circle ak-circle-img" src="/website/static/src/img/library/shop_category_4.webp" alt="Lighting" loading="lazy"/>
+                        <span class="d-block mt-3">Lighting</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a href="/shop" class="ak-circle-link d-block">
+                        <img class="img-fluid rounded-circle ak-circle-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Decor" loading="lazy"/>
+                        <span class="d-block mt-3">Decor</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a href="/shop" class="ak-circle-link d-block">
+                        <img class="img-fluid rounded-circle ak-circle-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Textiles" loading="lazy"/>
+                        <span class="d-block mt-3">Textiles</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+</odoo>

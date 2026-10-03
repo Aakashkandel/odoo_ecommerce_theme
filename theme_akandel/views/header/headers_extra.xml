@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Akandel desktop headers 14-24. They share `ak_header_main_row` (brand,
+    single #top_menu navigation, store actions) with options, and follow the
+    same contract as headers.xml.
+-->
+
+<template id="ak_header_main_row" name="Akandel Header Main Row">
+    <div t-attf-class="#{header_content_width} ak-header-main d-flex align-items-center w-100 #{_ak_row_class or 'py-2'}">
+        <t t-call="website.placeholder_header_brand" _link_class.f="me-4 flex-shrink-0"/>
+        <div t-attf-class="ak-nav-wrap #{_ak_nav_wrap_class or 'mx-auto'}">
+            <t t-call="website.navbar_nav" _nav_class="'ak-nav ' + (_ak_nav_class or '')">
+                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                    <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                </t>
+            </t>
+        </div>
+        <ul class="ak-header-actions navbar-nav flex-row align-items-center gap-1 flex-shrink-0 ps-3">
+            <t t-if="_ak_inline_search" t-call="website.placeholder_header_search_box"
+                _classes.f="ak-search-inline"
+                _input_classes.f="rounded-start-pill ps-3 border-0 text-bg-light"
+                _submit_classes.f="rounded-end-pill pe-3 border-0 text-bg-light"/>
+            <t t-call="website.placeholder_header_language_selector"
+                _btn_class.f="nav-link"
+                _dropdown_menu_class.f="dropdown-menu-end"/>
+            <t t-call="theme_akandel.ak_header_actions" _ak_search="'none' if _ak_inline_search else 'modal'"/>
+            <t t-if="_ak_ctas" t-call="theme_akandel.ak_header_cta_pair"/>
+            <t t-call="website.placeholder_header_call_to_action" _item_class.f="ms-2"/>
+        </ul>
+    </div>
+</template>
+
+<!-- Two editable call-to-action buttons. -->
+<template id="ak_header_cta_pair" name="Akandel Header CTA Pair">
+    <li class="ak-header-cta ms-2">
+        <div class="oe_structure oe_structure_solo">
+            <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Buttons">
+                <a href="/contactus" class="btn btn-outline-primary btn-sm px-3 me-1">Contact</a>
+                <a href="/shop" class="btn btn-primary btn-sm px-3">Shop now</a>
+            </section>
+        </div>
+    </li>
+</template>
+
+<!-- Editable contact strip (phone, email, opening hours). -->
+<template id="ak_contact_bar" name="Akandel Contact Bar">
+    <div aria-label="Contact" class="ak-contact-bar o_header_hide_on_scroll w-100">
+        <div t-attf-class="#{header_content_width} d-flex align-items-center justify-content-between gap-3 py-1">
+            <div class="oe_structure oe_structure_solo">
+                <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Contact Details">
+                    <p class="ak-contact-items mb-0">
+                        <a href="tel:+15555555556"><i class="fa fa-phone me-1" aria-hidden="true"/>+1 555-555-5556</a>
+                        <a href="mailto:hello@yourstore.example.com"><i class="fa fa-envelope-o me-1" aria-hidden="true"/>hello@yourstore.example.com</a>
+                        <span><i class="fa fa-clock-o me-1" aria-hidden="true"/>Mon – Sat, 9:00 – 18:00</span>
+                    </p>
+                </section>
+            </div>
+            <ul class="navbar-nav flex-row align-items-center gap-2">
+                <t t-call="website.placeholder_header_social_links"/>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<!-- 14. Pill navigation -->
+<template id="template_header_ak_pill" inherit_id="website.layout" name="Akandel Header: Pill Navigation" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-pill d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_nav_wrap_class.f="mx-auto ak-nav-pill"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 15. Transparent (for pages using "Header overlay") -->
+<template id="template_header_ak_transparent" inherit_id="website.layout" name="Akandel Header: Transparent" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-transparent d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_row_class.f="py-3"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 16. Dark -->
+<template id="template_header_ak_dark" inherit_id="website.layout" name="Akandel Header: Dark" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-dark d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 17. Brand color bar -->
+<template id="template_header_ak_brand" inherit_id="website.layout" name="Akandel Header: Brand Color" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-brand d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 18. Inline search pill -->
+<template id="template_header_ak_searchpill" inherit_id="website.layout" name="Akandel Header: Inline Search" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-searchpill d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_inline_search="True" _ak_nav_wrap_class.f="me-auto"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 19. Contact strip + main row -->
+<template id="template_header_ak_contact" inherit_id="website.layout" name="Akandel Header: Contact Strip" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-contact d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <t t-call="theme_akandel.ak_contact_bar"/>
+                <t t-call="theme_akandel.ak_header_main_row" _ak_row_class.f="py-3"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 20. Category chips row -->
+<template id="template_header_ak_chips" inherit_id="website.layout" name="Akandel Header: Category Chips" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-chips d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_row_class.f="py-2"/>
+                <div aria-label="Categories" class="ak-header-row w-100">
+                    <div t-attf-class="#{header_content_width} py-2">
+                        <ul class="ak-chip-row list-unstyled d-flex flex-wrap gap-2 mb-0 o_not_editable" t-ignore="true">
+                            <t t-call="theme_akandel.ak_category_links" _ak_item_class.f="" _ak_link_class.f="ak-chip" _ak_limit="10"/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 21. Boxed -->
+<template id="template_header_ak_boxed" inherit_id="website.layout" name="Akandel Header: Boxed" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-boxed d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_row_class.f="ak-boxed-row"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 22. Bold caps -->
+<template id="template_header_ak_caps" inherit_id="website.layout" name="Akandel Header: Bold Caps" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-caps d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_nav_class.f="ak-nav-caps" _ak_row_class.f="py-1"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 23. Two calls to action -->
+<template id="template_header_ak_duo" inherit_id="website.layout" name="Akandel Header: Two Buttons" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-duo d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_ctas="True" _ak_nav_wrap_class.f="me-auto"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 24. Slim -->
+<template id="template_header_ak_slim" inherit_id="website.layout" name="Akandel Header: Slim" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-slim d-none d-lg-block">
+            <div id="o_main_nav" class="o_main_nav">
+                <t t-call="theme_akandel.ak_header_main_row" _ak_row_class.f="py-0" _ak_nav_wrap_class.f="ms-auto me-3"/>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+</odoo>

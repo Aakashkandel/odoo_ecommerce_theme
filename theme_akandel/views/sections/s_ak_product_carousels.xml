@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="dynamic_filter_template_product_product_ak_01" name="Akandel 01 · Classic Card">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_01.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-classic" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_02" name="Akandel 02 · Horizontal Rows">
+    <t t-foreach="records" t-as="data" data-number-of-elements="3" data-number-of-elements-sm="1" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_02.svg" data-row-per-slide="2">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-horizontal ak-pc-rows" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-foot"><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_03" name="Akandel 03 · Minimal Clean">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_03.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-minimal" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary ak-pc-cart-fab" title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_04" name="Akandel 04 · Hover Reveal">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_04.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-overlay ak-pc-reveal" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><div class="ak-pc-overlay"><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div><div class="ak-pc-body"><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_05" name="Akandel 05 · Sale Badge Card">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_05.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-sale" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_06" name="Akandel 06 · Super Deal Wide">
+    <t t-foreach="records" t-as="data" data-number-of-elements="2" data-number-of-elements-sm="1" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_06.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-feature ak-pc-deal" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><p t-if="product.description_sale" class="ak-pc-desc" t-out="product.description_sale"/><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_07" name="Akandel 07 · Round Thumbnail">
+    <t t-foreach="records" t-as="data" data-number-of-elements="5" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_07.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-round" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_08" name="Akandel 08 · Dark Card">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_08.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-dark" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_09" name="Akandel 09 · Mini List">
+    <t t-foreach="records" t-as="data" data-number-of-elements="3" data-number-of-elements-sm="1" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_09.svg" data-row-per-slide="3" data-arrow-position="bottom">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-list ak-pc-mini" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a></div><div class="ak-pc-body"><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div></div><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/></button>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_10" name="Akandel 10 · Portrait Tall">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_10.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-portrait" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_11" name="Akandel 11 · Price Tag">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_11.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-overlay ak-pc-pricetag" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><div class="ak-pc-overlay"><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/></button></div></div><div class="ak-pc-body"><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_12" name="Akandel 12 · Rated Card">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_12.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-rated" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div t-if="is_view_active('website_sale.product_comment')" class="ak-pc-rating"><t t-call="portal_rating.rating_widget_stars_static"><t t-set="rating_avg" t-value="record.rating_avg"/><t t-set="rating_count" t-value="record.rating_count"/></t></div><p t-if="product.description_sale" class="ak-pc-desc" t-out="product.description_sale"/><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_13" name="Akandel 13 · Soft Gradient">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_13.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-gradient" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_14" name="Akandel 14 · Quick Add">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_14.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-quickadd" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary ak-pc-cart-fab" title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_15" name="Akandel 15 · Category Chip">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_15.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-chip" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_16" name="Akandel 16 · Grid Two Rows">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_16.svg" data-row-per-slide="2" data-arrow-position="bottom">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-tworows" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_17" name="Akandel 17 · Wide Duo">
+    <t t-foreach="records" t-as="data" data-number-of-elements="2" data-number-of-elements-sm="1" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_17.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-horizontal ak-pc-duo" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><p t-if="product.description_sale" class="ak-pc-desc" t-out="product.description_sale"/><div class="ak-pc-foot"><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_18" name="Akandel 18 · Compact Six">
+    <t t-foreach="records" t-as="data" data-number-of-elements="6" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_18.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-compact" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_19" name="Akandel 19 · Outline Hover">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_19.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-outline" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_20" name="Akandel 20 · Centered Link">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_20.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-centered" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><a t-att-href="product.website_url" class="ak-pc-view">View product <i class="fa fa-long-arrow-right" aria-hidden="true"/></a></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_21" name="Akandel 21 · Floating Cart">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_21.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-float" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary ak-pc-cart-fab" title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_22" name="Akandel 22 · Gold Accent">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_22.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-gold" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div t-if="is_view_active('website_sale.product_comment')" class="ak-pc-rating"><t t-call="portal_rating.rating_widget_stars_static"><t t-set="rating_avg" t-value="record.rating_avg"/><t t-set="rating_count" t-value="record.rating_count"/></t></div><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_23" name="Akandel 23 · Price First">
+    <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="2" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_23.svg">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-vertical ak-pc-pricefirst" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span><button type="button" class="o_add_wishlist ak-pc-wish" data-action="o_wishlist" title="Add to wishlist" aria-label="Add to wishlist" t-att-data-product-template-id="product_template_id" t-att-data-product-product-id="product_id"><span class="fa fa-heart-o" role="presentation"/></button></div><div class="ak-pc-body"><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><div class="ak-pc-actions"><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/><span class="ak-pc-cart-label">Add to cart</span></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_product_ak_24" name="Akandel 24 · Indexed Showcase">
+    <t t-foreach="records" t-as="data" data-number-of-elements="3" data-number-of-elements-sm="1" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/pc_24.svg" data-arrow-position="bottom">
+        <t t-set="record" t-value="data['_record']"/>
+        <t t-set="product" t-value="record"/>
+        <t t-set="product_template_id" t-value="record.id if not record.is_product_variant else record.product_tmpl_id.id"/>
+        <t t-set="product_id" t-value="record.id if record.is_product_variant else record.product_variant_id.id"/>
+        <div class="o_carousel_product_card ak-pc ak-pc-kit-horizontal ak-pc-indexed" role="article" t-att-aria-label="product.display_name" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+            <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+            <span class="ak-pc-index" aria-hidden="true" t-out="'%02d' % (data_index + 1)"/>
+            <div class="ak-pc-media-wrap"><a t-att-href="product.website_url" class="ak-pc-media" contenteditable="false" t-att-title="product.display_name"><img class="ak-pc-img" t-att-src="data['image_512']" t-att-alt="product.display_name" loading="lazy"/></a><span t-if="data.get('has_discounted_price') and data.get('list_price')" class="ak-pc-badge">-<t t-out="int(round(100 - (data['price'] / data['list_price']) * 100))"/>%</span><span t-if="is_sample" class="ak-pc-badge ak-pc-badge-sample">Sample</span></div><div class="ak-pc-body"><span t-if="record.public_categ_ids" class="ak-pc-cat" t-out="record.public_categ_ids[:1].name"/><h3 class="ak-pc-name"><a t-att-href="product.website_url" t-att-title="data.get('display_name')" t-out="data.get('display_name')"/></h3><div class="ak-pc-foot"><div class="ak-pc-price product_price" aria-label="Price information"><t t-call="website_sale.price_dynamic_filter_template_product_product"/></div><button t-if="product._website_show_quick_add()" type="button" class="js_add_cart ak-pc-cart btn btn-primary " title="Add to cart" aria-label="Add to cart" t-att-data-product-id="product_id" t-att-data-product-selected="product.is_product_variant" t-att-data-product-template-id="product_template_id" t-att-data-product-type="product.type" t-att-data-show-quantity="is_view_active('website_sale.product_quantity')"><i class="fa fa-shopping-cart" role="presentation"/></button></div></div>
+        </div>
+    </t>
+</template>
+
+<template id="s_ak_product_carousel_01" name="Akandel Products 01 - Classic Card">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Classic Card"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-line o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_01"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_01"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Hand-picked for you&quot;" _ak_title="&quot;Featured products&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_02" name="Akandel Products 02 - Horizontal Rows">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Horizontal Rows"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-center o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_02"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_02"
+        data-number-of-records="12" data-number-of-elements="3" data-number-of-elements-small-devices="1" data-row-per-slide="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Explore our latest formulas&quot;" _ak_title="&quot;Derma-approved essentials&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_03" name="Akandel Products 03 - Minimal Clean">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Minimal Clean"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-eyebrow o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_03"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_03"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Just landed&quot;" _ak_title="&quot;New arrivals&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_04" name="Akandel Products 04 - Hover Reveal">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Hover Reveal"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-underline o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_04"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_04"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;What everyone is buying&quot;" _ak_title="&quot;Trending now&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_05" name="Akandel Products 05 - Sale Badge Card">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Sale Badge Card"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-split o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_05"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_05"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Limited-time prices&quot;" _ak_title="&quot;On sale&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_06" name="Akandel Products 06 - Super Deal Wide">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Super Deal Wide"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-pill o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_06"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_06"
+        data-number-of-records="12" data-number-of-elements="2" data-number-of-elements-small-devices="1"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Deal of the week&quot;" _ak_title="&quot;Super deal&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_07" name="Akandel Products 07 - Round Thumbnail">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Round Thumbnail"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-bar o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_07"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_07"
+        data-number-of-records="12" data-number-of-elements="5" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Customer favourites&quot;" _ak_title="&quot;Best sellers&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_08" name="Akandel Products 08 - Dark Card">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Dark Card"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-minimal o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_08"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_08"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Our team recommends&quot;" _ak_title="&quot;Editor's choice&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_09" name="Akandel Products 09 - Mini List">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Mini List"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-line o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_09"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_09"
+        data-number-of-records="12" data-number-of-elements="3" data-number-of-elements-small-devices="1" data-row-per-slide="3" data-arrow-position="bottom"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Small prices, big love&quot;" _ak_title="&quot;Quick picks&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_10" name="Akandel Products 10 - Portrait Tall">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Portrait Tall"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-center o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_10"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_10"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;New this week&quot;" _ak_title="&quot;Fresh drops&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_11" name="Akandel Products 11 - Price Tag">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Price Tag"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-eyebrow o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_11"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_11"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Grab them while you can&quot;" _ak_title="&quot;Price drop&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_12" name="Akandel Products 12 - Rated Card">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Rated Card"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-underline o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_12"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_12"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Loved by customers&quot;" _ak_title="&quot;Top rated&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_13" name="Akandel Products 13 - Soft Gradient">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Soft Gradient"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-split o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_13"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_13"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Made for this season&quot;" _ak_title="&quot;Seasonal edit&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_14" name="Akandel Products 14 - Quick Add">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Quick Add"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-pill o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_14"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_14"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Fast favourites&quot;" _ak_title="&quot;Add in one click&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_15" name="Akandel Products 15 - Category Chip">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Category Chip"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-bar o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_15"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_15"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Find the right product&quot;" _ak_title="&quot;Shop by need&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_16" name="Akandel Products 16 - Grid Two Rows">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Grid Two Rows"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-minimal o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_16"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_16"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2" data-row-per-slide="2" data-arrow-position="bottom"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Browse the collection&quot;" _ak_title="&quot;More to discover&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_17" name="Akandel Products 17 - Wide Duo">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Wide Duo"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-line o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_17"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_17"
+        data-number-of-records="12" data-number-of-elements="2" data-number-of-elements-small-devices="1"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Two you should know&quot;" _ak_title="&quot;Spotlight&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_18" name="Akandel Products 18 - Compact Six">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Compact Six"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-center o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_18"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_18"
+        data-number-of-records="12" data-number-of-elements="6" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Perfect add-ons&quot;" _ak_title="&quot;Little extras&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_19" name="Akandel Products 19 - Outline Hover">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Outline Hover"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-eyebrow o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_19"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_19"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Back in stock&quot;" _ak_title="&quot;Most wanted&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_20" name="Akandel Products 20 - Centered Link">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Centered Link"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-underline o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_20"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_20"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Picked for you&quot;" _ak_title="&quot;Recommended&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_21" name="Akandel Products 21 - Floating Cart">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Floating Cart"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-split o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_21"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_21"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Restock your favourites&quot;" _ak_title="&quot;Everyday essentials&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_22" name="Akandel Products 22 - Gold Accent">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Gold Accent"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-pill o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_22"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_22"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Our finest products&quot;" _ak_title="&quot;Premium selection&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_23" name="Akandel Products 23 - Price First">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Price First"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-bar o_cc o_cc2 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_23"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_23"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Great value picks&quot;" _ak_title="&quot;Under $50&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_product_carousel_24" name="Akandel Products 24 - Indexed Showcase">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Products · Indexed Showcase"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-ph-minimal o_cc o_cc1 pt64 pb64 o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_cc1 s_product_product_ak_24"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_product_ak_24"
+        data-number-of-records="12" data-number-of-elements="3" data-number-of-elements-small-devices="1" data-arrow-position="bottom"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000" data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="&quot;Ranked by customers&quot;" _ak_title="&quot;The top three&quot;"/>
+    </section>
+</template>
+</odoo>

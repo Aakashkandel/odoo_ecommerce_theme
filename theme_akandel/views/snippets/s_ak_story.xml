@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Brand story: image + narrative + key figures -->
+<template id="s_ak_story_split" name="Akandel Brand Story">
+    <section class="s_ak_story_split o_cc o_cc1 pt96 pb96" data-snippet="s_ak_story_split" data-name="Brand Story">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <img class="img-fluid w-100 ak-radius-xl ak-ratio-tall" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair crafted in our workshop" loading="lazy"/>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <p class="ak-eyebrow">Our story</p>
+                    <h2 class="display-5 mb-4">We work with the people who make things well.</h2>
+                    <p class="lead ak-lead">Akandel began in a small joinery in 2014. Today we partner with 40 independent workshops, paying fairly and designing pieces meant to outlast trends.</p>
+                    <p class="mb-5">Every product is tested in real homes before it reaches yours — and it comes with the story of who made it.</p>
+                    <div class="row g-4 ak-stats">
+                        <div class="col-4"><p class="ak-stat-value mb-1">40+</p><p class="ak-stat-label mb-0">workshops</p></div>
+                        <div class="col-4"><p class="ak-stat-value mb-1">92%</p><p class="ak-stat-label mb-0">natural materials</p></div>
+                        <div class="col-4"><p class="ak-stat-value mb-1">10 yr</p><p class="ak-stat-label mb-0">guarantee</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Values: numbered columns explaining the brand promise -->
+<template id="s_ak_story_values" name="Akandel Brand Values">
+    <section class="s_ak_story_values o_cc o_cc2 pt96 pb80" data-snippet="s_ak_story_values" data-name="Brand Values">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <p class="ak-eyebrow">What we stand for</p>
+                    <h2 class="mb-0">Better made, better kept.</h2>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3">
+                    <p class="ak-value-index">01</p>
+                    <h3 class="h5">Honest materials</h3>
+                    <p class="ak-muted mb-0">Solid woods, natural fibres and finishes free of harmful solvents.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p class="ak-value-index">02</p>
+                    <h3 class="h5">Fair making</h3>
+                    <p class="ak-muted mb-0">Long-term partnerships with workshops paid fairly for their craft.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p class="ak-value-index">03</p>
+                    <h3 class="h5">Designed to last</h3>
+                    <p class="ak-muted mb-0">Timeless shapes, replaceable parts and a 10-year frame guarantee.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p class="ak-value-index">04</p>
+                    <h3 class="h5">Lighter footprint</h3>
+                    <p class="ak-muted mb-0">Plastic-free packaging and carbon-balanced delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Benefits bar: four compact service promises -->
+<template id="s_ak_benefits_bar" name="Akandel Benefits Bar">
+    <section class="s_ak_benefits_bar o_cc o_cc1 pt40 pb40" data-snippet="s_ak_benefits_bar" data-name="Benefits Bar">
+        <div class="container">
+            <div class="row g-4 ak-benefits">
+                <div class="col-6 col-lg-3 d-flex align-items-center gap-3">
+                    <span class="ak-benefit-icon"><i class="fa fa-truck" aria-hidden="true"/></span>
+                    <span><strong class="d-block">Free delivery</strong><span class="small ak-muted">Orders over $150</span></span>
+                </div>
+                <div class="col-6 col-lg-3 d-flex align-items-center gap-3">
+                    <span class="ak-benefit-icon"><i class="fa fa-refresh" aria-hidden="true"/></span>
+                    <span><strong class="d-block">30-day returns</strong><span class="small ak-muted">Free and easy</span></span>
+                </div>
+                <div class="col-6 col-lg-3 d-flex align-items-center gap-3">
+                    <span class="ak-benefit-icon"><i class="fa fa-shield" aria-hidden="true"/></span>
+                    <span><strong class="d-block">10-year guarantee</strong><span class="small ak-muted">On every frame</span></span>
+                </div>
+                <div class="col-6 col-lg-3 d-flex align-items-center gap-3">
+                    <span class="ak-benefit-icon"><i class="fa fa-lock" aria-hidden="true"/></span>
+                    <span><strong class="d-block">Secure checkout</strong><span class="small ak-muted">Trusted payments</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Benefits cards: delivery and service information as cards -->
+<template id="s_ak_benefits_cards" name="Akandel Benefits Cards">
+    <section class="s_ak_benefits_cards o_cc o_cc2 pt80 pb80" data-snippet="s_ak_benefits_cards" data-name="Benefits Cards">
+        <div class="container">
+            <div class="ak-section-head text-center mb-5">
+                <p class="ak-eyebrow">The Akandel promise</p>
+                <h2 class="mb-0">Shopping made easy</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="ak-card h-100">
+                        <span class="ak-benefit-icon mb-4"><i class="fa fa-truck" aria-hidden="true"/></span>
+                        <h3 class="h5">White-glove delivery</h3>
+                        <p class="ak-muted mb-0">Large items delivered to the room of your choice, packaging taken away.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ak-card h-100">
+                        <span class="ak-benefit-icon mb-4"><i class="fa fa-calendar-check-o" aria-hidden="true"/></span>
+                        <h3 class="h5">Choose your slot</h3>
+                        <p class="ak-muted mb-0">Pick a delivery day that suits you, with live tracking on the day.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ak-card h-100">
+                        <span class="ak-benefit-icon mb-4"><i class="fa fa-undo" aria-hidden="true"/></span>
+                        <h3 class="h5">Try it at home</h3>
+                        <p class="ak-muted mb-0">Not right for your space? Return it within 30 days, free of charge.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ak-card h-100">
+                        <span class="ak-benefit-icon mb-4"><i class="fa fa-comments-o" aria-hidden="true"/></span>
+                        <h3 class="h5">Free design advice</h3>
+                        <p class="ak-muted mb-0">Book a 30-minute video call with our interior stylists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Press: "as featured in" wordmarks -->
+<template id="s_ak_press" name="Akandel Press Mentions">
+    <section class="s_ak_press o_cc o_cc1 pt48 pb48" data-snippet="s_ak_press" data-name="Press Mentions">
+        <div class="container">
+            <p class="ak-eyebrow text-center mb-4">As featured in</p>
+            <div class="row g-4 align-items-center justify-content-center text-center ak-press-row">
+                <div class="col-6 col-md-4 col-lg-2"><p class="ak-press-mark mb-0">Interiors<em>&amp;</em>Co</p></div>
+                <div class="col-6 col-md-4 col-lg-2"><p class="ak-press-mark ak-press-serif mb-0">The Dwell</p></div>
+                <div class="col-6 col-md-4 col-lg-2"><p class="ak-press-mark ak-press-caps mb-0">CASA</p></div>
+                <div class="col-6 col-md-4 col-lg-2"><p class="ak-press-mark mb-0">Living Room</p></div>
+                <div class="col-6 col-md-4 col-lg-2"><p class="ak-press-mark ak-press-serif mb-0"><em>Hearth</em></p></div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Who we are: image with gold outline, highlighted headline, icon checklist -->
+<template id="s_ak_about_trust" name="Akandel Who We Are">
+    <section class="s_ak_about_trust o_cc o_cc1 pt96 pb96" data-snippet="s_ak_about_trust" data-name="Who We Are">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="ak-about-media">
+                        <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Carefully selected products" loading="lazy"/>
+                        <div class="ak-about-badge">
+                            <strong>30+</strong>
+                            <span>years of trusted quality</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="ak-eyebrow">Who we are</p>
+                    <h2 class="ak-about-title mb-4">Three decades of building brands <span class="ak-hl">people trust</span>.</h2>
+                    <p class="lead ak-lead">We were founded on a simple principle: quality should never be compromised. Today we curate a portfolio of trusted brands, connecting global standards with local expertise.</p>
+                    <p class="ak-lead mb-4">Every product that carries our name passes through rigorous quality checks, careful logistics and authenticity verification.</p>
+                    <ul class="list-unstyled ak-about-points mb-0">
+                        <li><span class="ak-about-icon"><i class="fa fa-check-circle" aria-hidden="true"/></span><div><h3 class="h6 mb-1">Rigorous quality checks</h3><p class="mb-0 ak-muted">Every product is inspected before it carries our name.</p></div></li>
+                        <li><span class="ak-about-icon"><i class="fa fa-snowflake-o" aria-hidden="true"/></span><div><h3 class="h6 mb-1">Temperature-controlled logistics</h3><p class="mb-0 ak-muted">Products are stored and moved in the right conditions, end to end.</p></div></li>
+                        <li><span class="ak-about-icon"><i class="fa fa-shield" aria-hidden="true"/></span><div><h3 class="h6 mb-1">Authenticity verification</h3><p class="mb-0 ak-muted">Genuine products only, traceable from factory to shelf.</p></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+</odoo>

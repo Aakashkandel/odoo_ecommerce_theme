@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Optional shop page elements, toggled in Website Builder > Products Page
+    (Akandel rows). Each one is a view activated with the `websiteConfig`
+    builder action, so it can be switched on or off per website.
+-->
+
+<!-- ===================================================================== -->
+<!-- Shop banners (one at a time). The title follows the page: category    -->
+<!-- name, search query or "Shop". Texts in the structure are editable.     -->
+<!-- ===================================================================== -->
+
+<template id="ak_shop_banner_title" name="Akandel Shop Banner Title">
+    <h1 class="ak-shop-banner-title">
+        <t t-if="category" t-out="category.name"/>
+        <t t-elif="search">Results for “<t t-out="search"/>”</t>
+        <t t-else="">Shop all products</t>
+    </h1>
+    <p t-if="search_count" class="ak-shop-banner-count"><t t-out="search_count"/> products</p>
+</template>
+
+<template id="ak_shop_banner_simple" inherit_id="website_sale.products" name="Akandel Shop Banner: Soft" active="False">
+    <xpath expr="//div[@id='o_wsale_container']" position="before">
+        <section class="ak-shop-banner ak-shop-banner-simple">
+            <div class="container">
+                <p class="ak-eyebrow mb-2">Our collection</p>
+                <t t-call="theme_akandel.ak_shop_banner_title"/>
+                <div class="oe_structure" id="oe_structure_ak_shop_banner_simple">
+                    <section class="s_text_block" data-snippet="s_text_block" data-name="Banner Text">
+                        <p class="ak-shop-banner-lead">Clean formulas, dermatologist tested, delivered to your door.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </xpath>
+</template>
+
+<template id="ak_shop_banner_image" inherit_id="website_sale.products" name="Akandel Shop Banner: Image Cover" active="False">
+    <xpath expr="//div[@id='o_wsale_container']" position="before">
+        <t t-set="ak_banner_img" t-value="category and category.cover_image and website.image_url(category, 'cover_image') or '/website/static/src/img/library/shop_generic_2_lg.jpg'"/>
+        <section class="ak-shop-banner ak-shop-banner-image" t-attf-style="--ak-banner-img: url('#{ak_banner_img}')">
+            <div class="container">
+                <p class="ak-eyebrow mb-2">New season</p>
+                <t t-call="theme_akandel.ak_shop_banner_title"/>
+                <div class="oe_structure" id="oe_structure_ak_shop_banner_image">
+                    <section class="s_text_block" data-snippet="s_text_block" data-name="Banner Text">
+                        <p class="ak-shop-banner-lead">Discover the essentials our customers love most.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </xpath>
+</template>
+
+<template id="ak_shop_banner_split" inherit_id="website_sale.products" name="Akandel Shop Banner: Split" active="False">
+    <xpath expr="//div[@id='o_wsale_container']" position="before">
+        <t t-set="ak_banner_img" t-value="category and category.cover_image and website.image_url(category, 'cover_image') or '/website/static/src/img/library/shop_generic_3_lg.webp'"/>
+        <section class="ak-shop-banner ak-shop-banner-split">
+            <div class="container">
+                <div class="ak-shop-banner-grid">
+                    <div class="ak-shop-banner-text">
+                        <p class="ak-eyebrow mb-2">Shop</p>
+                        <t t-call="theme_akandel.ak_shop_banner_title"/>
+                        <div class="oe_structure" id="oe_structure_ak_shop_banner_split">
+                            <section class="s_text_block" data-snippet="s_text_block" data-name="Banner Text">
+                                <p class="ak-shop-banner-lead">Thoughtfully made products, honest prices and free returns.</p>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="ak-shop-banner-media">
+                        <img t-att-src="ak_banner_img" alt="" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </xpath>
+</template>
+
+<template id="ak_shop_banner_gradient" inherit_id="website_sale.products" name="Akandel Shop Banner: Gradient" active="False">
+    <xpath expr="//div[@id='o_wsale_container']" position="before">
+        <section class="ak-shop-banner ak-shop-banner-gradient">
+            <div class="container">
+                <t t-call="theme_akandel.ak_shop_banner_title"/>
+                <div class="oe_structure" id="oe_structure_ak_shop_banner_gradient">
+                    <section class="s_text_block" data-snippet="s_text_block" data-name="Banner Text">
+                        <p class="ak-shop-banner-lead">Members get <strong>10% off</strong> every order. Free shipping over $50.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </xpath>
+</template>
+
+<!-- ===================================================================== -->
+<!-- Other shop elements                                                   -->
+<!-- ===================================================================== -->
+
+<template id="ak_shop_promo_strip" inherit_id="website_sale.products" name="Akandel Shop Promo Strip" active="False">
+    <xpath expr="//header[@id='o_wsale_products_header']" position="before">
+        <div class="oe_structure ak-shop-promo-zone" id="oe_structure_ak_shop_promo">
+            <section class="s_text_block ak-shop-promo" data-snippet="s_text_block" data-name="Promo Strip">
+                <p class="mb-0"><i class="fa fa-gift me-2" aria-hidden="true"/><strong>Super Deal</strong>: 15% off your first order with code <strong>WELCOME15</strong></p>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<template id="ak_shop_product_count" inherit_id="website_sale.products" name="Akandel Shop Product Count" active="False">
+    <xpath expr="//header[@id='o_wsale_products_header']//h1[hasclass('o_wsale_shop_title')]" position="after">
+        <p t-if="search_count and not search" class="ak-shop-count mb-0">
+            <t t-out="search_count"/> <t t-if="search_count == 1">product</t><t t-else="">products</t>
+        </p>
+    </xpath>
+    <xpath expr="//header[@id='o_wsale_products_header']/t[@t-if='category']" position="before">
+        <p t-if="category and search_count and not search" class="ak-shop-count mb-0">
+            <t t-out="search_count"/> <t t-if="search_count == 1">product</t><t t-else="">products</t>
+        </p>
+    </xpath>
+</template>
+
+<template id="ak_shop_trust_bar" inherit_id="website_sale.products" name="Akandel Shop Trust Bar" active="False">
+    <xpath expr="//div[@id='o_wsale_pager']" position="after">
+        <div class="oe_structure" id="oe_structure_ak_shop_trust">
+            <section class="s_text_block ak-shop-trust" data-snippet="s_text_block" data-name="Trust Bar">
+                <div class="ak-shop-trust-grid">
+                    <div><i class="fa fa-truck" aria-hidden="true"/><p><strong>Free shipping</strong><br/><span>On orders over $50</span></p></div>
+                    <div><i class="fa fa-refresh" aria-hidden="true"/><p><strong>Easy returns</strong><br/><span>30 days, no questions</span></p></div>
+                    <div><i class="fa fa-lock" aria-hidden="true"/><p><strong>Secure payment</strong><br/><span>Encrypted checkout</span></p></div>
+                    <div><i class="fa fa-comments-o" aria-hidden="true"/><p><strong>Expert advice</strong><br/><span>We reply within a day</span></p></div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<template id="ak_shop_sticky_toolbar" inherit_id="website_sale.products" name="Akandel Shop Sticky Toolbar" active="False">
+    <xpath expr="//div[@id='o_wsale_container']" position="attributes">
+        <attribute name="t-attf-class" add="ak-shop-sticky-tools" separator=" "/>
+    </xpath>
+</template>
+
+<template id="ak_shop_hover_cart" inherit_id="website_sale.products" name="Akandel Shop Quick Add Reveal" active="False">
+    <xpath expr="//div[@id='o_wsale_container']" position="attributes">
+        <attribute name="t-attf-class" add="ak-shop-quick-reveal" separator=" "/>
+    </xpath>
+</template>
+
+<template id="ak_shop_sidebar_cards" inherit_id="website_sale.products" name="Akandel Shop Sidebar Card" active="False">
+    <xpath expr="//div[@id='o_wsale_container']" position="attributes">
+        <attribute name="t-attf-class" add="ak-shop-side-card" separator=" "/>
+    </xpath>
+</template>
+
+<!-- ===================================================================== -->
+<!-- Add-to-cart experiences: shared options                               -->
+<!-- ===================================================================== -->
+
+<template id="ak_cart_icon_panel" inherit_id="website.layout" name="Akandel Cart Icon Opens Panel" active="False">
+    <xpath expr="//div[@id='wrapwrap']" position="attributes">
+        <attribute name="data-ak-cart-icon">1</attribute>
+    </xpath>
+</template>
+
+<template id="ak_cart_opt_freeship" inherit_id="website.layout" name="Akandel Cart Free Shipping Bar" active="False">
+    <xpath expr="//div[@id='wrapwrap']" position="attributes">
+        <attribute name="t-att-data-ak-freeship">website and website.ak_free_shipping_threshold or 0</attribute>
+    </xpath>
+</template>
+
+<template id="ak_cart_opt_reco" inherit_id="website.layout" name="Akandel Cart Recommendations" active="False">
+    <xpath expr="//div[@id='wrapwrap']" position="attributes">
+        <attribute name="data-ak-cart-reco">1</attribute>
+    </xpath>
+</template>
+
+<!-- ===================================================================== -->
+<!-- Cart panel content, rendered by /ak/cart_panel                        -->
+<!--   mode: 'full' (all lines) or 'added' (just added lines + summary)    -->
+<!-- ===================================================================== -->
+
+<template id="ak_cart_panel" name="Akandel Cart Panel">
+    <t t-set="order" t-value="website_sale_order"/>
+    <t t-set="all_lines" t-value="order and order.website_order_line.filtered(lambda l: not l.linked_line_id and not l.combo_item_id) or []"/>
+    <t t-set="lines" t-value="mode == 'added' and all_lines.filtered(lambda l: l.id in added_line_ids) or all_lines"/>
+    <t t-set="tax_incl" t-value="website.show_line_subtotals_tax_selection == 'tax_included'"/>
+    <t t-set="subtotal" t-value="order and (order.amount_total if tax_incl else order.amount_untaxed) or 0"/>
+    <t t-set="currency" t-value="order and order.currency_id or website.currency_id"/>
+    <div class="ak-cp-head">
+        <div class="ak-cp-head-title">
+            <span class="ak-cp-head-icon"><i class="fa fa-shopping-bag" aria-hidden="true"/></span>
+            <h2 class="ak-cp-title" id="ak_cp_title">
+                <t t-if="mode == 'added'">Added to your cart</t>
+                <t t-else="">Your cart</t>
+            </h2>
+            <span class="ak-cp-count" t-if="order and order.cart_quantity">
+                <t t-out="int(order.cart_quantity)"/> <t t-if="order.cart_quantity == 1">item</t><t t-else="">items</t>
+            </span>
+        </div>
+        <button type="button" class="ak-cp-close" aria-label="Close" title="Close"><i class="oi oi-close" aria-hidden="true"/></button>
+    </div>
+    <ol class="ak-cp-steps" aria-label="Checkout steps">
+        <li class="is-active"><span>1</span>Cart</li>
+        <li><span>2</span>Details</li>
+        <li><span>3</span>Payment</li>
+    </ol>
+    <div class="ak-cp-added-banner" t-if="added_line_ids and mode != 'added'">
+        <i class="fa fa-check-circle" aria-hidden="true"/> Item added to your cart
+    </div>
+    <t t-if="freeship_threshold and order">
+        <t t-set="remaining" t-value="max(freeship_threshold - order.amount_total, 0)"/>
+        <t t-set="ratio" t-value="min(100, int(order.amount_total * 100 / freeship_threshold))"/>
+        <div t-attf-class="ak-cp-freeship {{not remaining and 'is-done'}}">
+            <p class="mb-1" t-if="remaining">
+                Add <strong t-out="remaining" t-options="{'widget': 'monetary', 'display_currency': currency}"/> more for <strong>free shipping</strong>
+            </p>
+            <p class="mb-1" t-else=""><i class="fa fa-truck me-1" aria-hidden="true"/>You unlocked <strong>free shipping</strong></p>
+            <div class="ak-cp-freeship-track" role="progressbar" t-att-aria-valuenow="ratio" aria-valuemin="0" aria-valuemax="100">
+                <span t-attf-style="width: {{ratio}}%"/>
+            </div>
+        </div>
+    </t>
+    <div class="ak-cp-body">
+        <t t-if="lines">
+            <ul class="ak-cp-lines list-unstyled mb-0">
+                <li t-foreach="lines" t-as="line" t-attf-class="ak-cp-line {{line.id in added_line_ids and 'is-added'}}" t-att-data-line-id="line.id" t-att-data-product-id="line.product_id.id">
+                    <t t-set="sellable" t-value="line._is_sellable()"/>
+                    <a class="ak-cp-line-img" t-att-href="sellable and line.product_id.website_url or None" tabindex="-1">
+                        <img t-att-src="website.image_url(line.product_id, 'image_128')" t-att-alt="line.name_short" loading="lazy"/>
+                    </a>
+                    <div class="ak-cp-line-info">
+                        <a t-if="sellable" class="ak-cp-line-name" t-att-href="line.product_id.website_url" t-out="line.name_short"/>
+                        <span t-else="" class="ak-cp-line-name" t-out="line.name_short"/>
+                        <small class="ak-cp-line-variant" t-if="line._get_combination_name()" t-out="line._get_combination_name()"/>
+                        <div class="ak-cp-line-row">
+                            <div class="ak-cp-qty" t-if="sellable">
+                                <button type="button" class="ak-cp-qty-btn" data-ak-qty="-1" aria-label="Remove one" title="Remove one"><i class="fa fa-minus" aria-hidden="true"/></button>
+                                <span class="ak-cp-qty-val" t-out="int(line.product_uom_qty)"/>
+                                <button type="button" class="ak-cp-qty-btn" data-ak-qty="1" aria-label="Add one" title="Add one"><i class="fa fa-plus" aria-hidden="true"/></button>
+                            </div>
+                            <span t-else="" class="ak-cp-qty-static">× <t t-out="int(line.product_uom_qty)"/></span>
+                            <span class="ak-cp-line-price" t-out="line._get_cart_display_price()" t-options="{'widget': 'monetary', 'display_currency': currency}"/>
+                        </div>
+                    </div>
+                    <button t-if="sellable" type="button" class="ak-cp-remove" data-ak-qty="0" aria-label="Remove item" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"/></button>
+                </li>
+            </ul>
+            <p class="ak-cp-more" t-if="mode == 'added' and len(all_lines) > len(lines)">
+                + <t t-out="len(all_lines) - len(lines)"/> other item(s) in your cart
+            </p>
+        </t>
+        <div t-else="" class="ak-cp-empty">
+            <span class="ak-cp-empty-icon"><i class="fa fa-shopping-bag" aria-hidden="true"/></span>
+            <p class="ak-cp-empty-title">Your cart is empty</p>
+            <p class="text-muted small">Discover our best sellers and new arrivals.</p>
+            <a href="/shop" class="btn btn-primary">Start shopping</a>
+        </div>
+        <div class="ak-cp-reco" t-if="recommendations">
+            <p class="ak-cp-reco-title">You may also like</p>
+            <div class="ak-cp-reco-list">
+                <a t-foreach="recommendations" t-as="reco" class="ak-cp-reco-item" t-att-href="reco.website_url">
+                    <img t-att-src="website.image_url(reco, 'image_256')" t-att-alt="reco.name" loading="lazy"/>
+                    <span class="ak-cp-reco-name" t-out="reco.name"/>
+                    <span class="ak-cp-reco-price" t-out="reco._get_contextual_price()" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="ak-cp-foot" t-if="all_lines">
+        <div class="ak-cp-subtotal">
+            <span>Subtotal <small class="text-muted" t-if="not tax_incl">(excl. taxes)</small></span>
+            <strong t-out="subtotal" t-options="{'widget': 'monetary', 'display_currency': currency}"/>
+        </div>
+        <p class="ak-cp-note">Shipping and discount codes are calculated at checkout.</p>
+        <div class="ak-cp-actions">
+            <a href="/shop/cart" class="btn btn-outline-primary ak-cp-view">View cart</a>
+            <a href="/shop/checkout?try_skip_step=true" class="btn btn-primary ak-cp-checkout">Checkout <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+        </div>
+        <button type="button" class="ak-cp-continue">Continue shopping</button>
+    </div>
+</template>
+
+</odoo>

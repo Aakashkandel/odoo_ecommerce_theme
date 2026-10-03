@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Akandel mobile navigation variants.
+
+    They extend `website.template_header_mobile` *additively* (classes, extra
+    rows, drawer side...) instead of replacing it, so the cart / wishlist
+    buttons injected by website_sale & website_sale_wishlist and the core
+    "Mobile Menu" options keep working with every desktop header.
+    Only one variant is active at a time; they are selected from
+    Website Builder > Header > Mobile Style.
+-->
+
+<!-- 1. Refined: polished default drawer with larger tap targets -->
+<template id="template_header_mobile_ak_refined" inherit_id="website.template_header_mobile" name="Akandel Mobile: Refined" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-refined</attribute>
+    </xpath>
+</template>
+
+<!-- 2. Centered: menu button left, logo centered, store icons right -->
+<template id="template_header_mobile_ak_centered" inherit_id="website.template_header_mobile" name="Akandel Mobile: Centered Logo" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-centered</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="before">
+        <t t-set="_side" t-valuef="offcanvas-start"/>
+    </xpath>
+    <xpath expr="//t[@t-set='offcanvas_is_leftside']" position="attributes">
+        <attribute name="t-valuef">True</attribute>
+    </xpath>
+</template>
+
+<!-- 3. Category drawer: left drawer listing shop categories -->
+<template id="template_header_mobile_ak_drawer" inherit_id="website.template_header_mobile" name="Akandel Mobile: Category Drawer" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-drawer</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="before">
+        <t t-set="_side" t-valuef="offcanvas-start"/>
+    </xpath>
+    <xpath expr="//t[@t-set='offcanvas_is_leftside']" position="attributes">
+        <attribute name="t-valuef">True</attribute>
+    </xpath>
+    <xpath expr="//t[@t-call='website.placeholder_header_text_element']" position="before">
+        <li class="ak-m-categories mt-4 o_not_editable" t-ignore="true">
+            <span class="ak-eyebrow d-block mb-2">Shop by category</span>
+            <ul class="list-unstyled mb-0">
+                <t t-call="theme_akandel.ak_category_links"
+                    _ak_item_class.f="ak-m-category-item"
+                    _ak_link_class.f="d-flex align-items-center justify-content-between py-2 text-reset"/>
+            </ul>
+        </li>
+    </xpath>
+</template>
+
+<!-- 4. Fullscreen: full-screen overlay with editorial type -->
+<template id="template_header_mobile_ak_fullscreen" inherit_id="website.template_header_mobile" name="Akandel Mobile: Fullscreen Overlay" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-fullscreen</attribute>
+    </xpath>
+</template>
+
+<!-- 5. Bottom sheet: menu slides up from the bottom -->
+<template id="template_header_mobile_ak_sheet" inherit_id="website.template_header_mobile" name="Akandel Mobile: Bottom Sheet" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-sheet</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="before">
+        <t t-set="_side" t-valuef="offcanvas-bottom"/>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']/div[hasclass('offcanvas-header')]" position="inside">
+        <span class="ak-sheet-handle" aria-hidden="true"/>
+    </xpath>
+</template>
+
+<!-- 6. Tab bar: app-like bottom navigation (see ak_mobile_tabbar_layout) -->
+<template id="template_header_mobile_ak_tabbar" inherit_id="website.template_header_mobile" name="Akandel Mobile: Bottom Tab Bar" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-tabbar</attribute>
+    </xpath>
+</template>
+
+<template id="ak_mobile_tabbar_layout" inherit_id="website.layout" name="Akandel Mobile: Bottom Tab Bar Links" active="False">
+    <xpath expr="//div[@id='wrapwrap']/main" position="after">
+        <nav class="ak-tabbar o_cc o_cc1 d-lg-none o_not_editable" t-ignore="true" aria-label="Quick navigation" t-if="not no_header">
+            <ul class="ak-tabbar-list list-unstyled d-flex mb-0">
+                <li class="ak-tabbar-item">
+                    <a href="/" t-attf-class="ak-tabbar-link #{request.httprequest.path == '/' and 'active'}">
+                        <i class="fa fa-home" aria-hidden="true"/><span>Home</span>
+                    </a>
+                </li>
+                <li class="ak-tabbar-item">
+                    <a href="/shop" t-attf-class="ak-tabbar-link #{request.httprequest.path.startswith('/shop') and not request.httprequest.path.startswith('/shop/cart') and 'active'}">
+                        <i class="fa fa-th-large" aria-hidden="true"/><span>Shop</span>
+                    </a>
+                </li>
+                <t t-call="website_sale_wishlist.header_wishlist_link"
+                    _icon="True"
+                    _text="True"
+                    _item_class.f="ak-tabbar-item"
+                    _link_class.f="ak-tabbar-link"
+                    _icon_wrap_class.f="position-relative"
+                    _badge_class.f="ak-badge position-absolute top-0 start-100 translate-middle rounded-pill"/>
+                <t t-call="website_sale.header_cart_link"
+                    _icon="True"
+                    _text="True"
+                    _item_class.f="ak-tabbar-item"
+                    _link_class.f="ak-tabbar-link"
+                    _icon_wrap_class.f="position-relative"
+                    _badge_class.f="ak-badge position-absolute top-0 start-100 translate-middle rounded-pill"/>
+                <li class="ak-tabbar-item">
+                    <a href="/my" t-attf-class="ak-tabbar-link #{request.httprequest.path.startswith('/my') and 'active'}">
+                        <i class="fa fa-user-o" aria-hidden="true"/><span>Account</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </xpath>
+</template>
+
+<!-- 7. Search bar: always-visible search field under the top row -->
+<template id="template_header_mobile_ak_search" inherit_id="website.template_header_mobile" name="Akandel Mobile: Persistent Search" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-search</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="before">
+        <ul class="ak-m-searchbar navbar-nav w-100 order-last">
+            <t t-call="website.placeholder_header_search_box"
+                _item_class.f="w-100"
+                _classes.f="w-100"
+                _input_classes.f="rounded-start-pill ps-3 border-0 text-bg-light"
+                _submit_classes.f="rounded-end-pill pe-3 border-0 text-bg-light"
+                limit.f="0"/>
+        </ul>
+    </xpath>
+</template>
+
+<!-- 8. Compact: slim bar with essentials only -->
+<template id="template_header_mobile_ak_compact" inherit_id="website.template_header_mobile" name="Akandel Mobile: Compact" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-compact</attribute>
+    </xpath>
+</template>
+
+<!-- 9. Promo: editable promotion strip above the mobile bar -->
+<template id="template_header_mobile_ak_promo" inherit_id="website.template_header_mobile" name="Akandel Mobile: Promo Strip" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-promo</attribute>
+    </xpath>
+    <xpath expr="//div[hasclass('o_main_nav')]" position="before">
+        <div class="ak-m-promo-strip o_cc o_cc4 w-100">
+            <div class="oe_structure oe_structure_solo">
+                <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Mobile Promotion">
+                    <p class="mb-0 text-center small"><strong>Free delivery</strong> over $150 · <a href="/shop">Shop now</a></p>
+                </section>
+            </div>
+        </div>
+    </xpath>
+</template>
+
+<!-- 10. Dark drawer: high-contrast drawer -->
+<template id="template_header_mobile_ak_dark" inherit_id="website.template_header_mobile" name="Akandel Mobile: Dark Drawer" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-dark</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="attributes">
+        <attribute name="t-attf-class" add="o_cc o_cc5" separator=" "/>
+    </xpath>
+</template>
+
+<!-- 11. Floating: rounded bar detached from the screen edges -->
+<template id="template_header_mobile_ak_floating" inherit_id="website.template_header_mobile" name="Akandel Mobile: Floating Bar" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-floating</attribute>
+    </xpath>
+</template>
+
+<!-- 12. Category chips: scrollable category shortcuts under the bar -->
+<template id="template_header_mobile_ak_chips" inherit_id="website.template_header_mobile" name="Akandel Mobile: Category Chips" active="False">
+    <xpath expr="//t[@t-call='website.navbar']" position="attributes">
+        <attribute name="_navbar_classes.f">o_header_mobile d-block d-lg-none ak-m ak-m-chips</attribute>
+    </xpath>
+    <xpath expr="//div[@id='top_menu_collapse_mobile']" position="before">
+        <div class="ak-m-chipbar w-100 order-last o_not_editable" t-ignore="true">
+            <ul class="list-unstyled d-flex gap-2 mb-0" aria-label="Shop categories">
+                <t t-call="theme_akandel.ak_category_links"
+                    _ak_item_class.f="flex-shrink-0"
+                    _ak_link_class.f="ak-chip"
+                    _ak_limit="10"/>
+            </ul>
+        </div>
+    </xpath>
+</template>
+
+</odoo>

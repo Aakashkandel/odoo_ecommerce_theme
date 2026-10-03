@@ -1,0 +1,528 @@
+//------------------------------------------------------------------------------
+// Akandel - Category sections: 24 templates (.ak-cc-<design>) fed by the shop's
+// real categories (website_sale "Category List" data source).
+//------------------------------------------------------------------------------
+
+$ak-primary: o-color('o-color-1');
+$ak-gold: o-color('o-color-2');
+$ak-light: o-color('o-color-3');
+$ak-ink: o-color('o-color-5');
+$ak-ease: cubic-bezier(.2, .7, .2, 1);
+
+// Layout helpers used by templates through data-extra-classes
+.s_ak_categories {
+    .dynamic_snippet_template > .row > * {
+        display: flex;
+    }
+
+    .ak-cc-grid {
+        display: grid;
+        gap: 1rem;
+        margin: 0;
+
+        > * {
+            width: auto;
+            max-width: none;
+            padding: 0;
+        }
+
+        .ak-cc, .ak-cc-media, .ak-cc-img {
+            height: 100%;
+        }
+
+        .ak-cc-img {
+            aspect-ratio: auto !important;
+        }
+    }
+
+    .ak-cc-grid-bento {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: 12rem;
+
+        > :first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-rows: 10rem;
+        }
+    }
+
+    .ak-cc-grid-masonry {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: 6rem;
+
+        > * { grid-row: span 3; }
+        > :nth-child(4n + 2), > :nth-child(4n + 3) { grid-row: span 4; }
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    .ak-cc-scroll {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1.25rem;
+        margin: 0;
+        padding-bottom: .75rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+
+        > * {
+            flex: 0 0 auto;
+            width: 11rem;
+            padding: 0;
+            scroll-snap-align: start;
+        }
+    }
+
+    .ak-cc-counter > * {
+        padding: 0 1rem;
+    }
+
+    .row:has(> * > .ak-cc-links) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 3rem;
+
+        > * { width: auto; }
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Card base & kits
+//------------------------------------------------------------------------------
+
+.ak-cc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: inherit !important;
+    text-decoration: none !important;
+
+    .ak-cc-index,
+    .ak-cc-chevron,
+    .ak-cc-link {
+        display: none;
+    }
+
+    .ak-cc-media {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        background-color: $ak-light;
+    }
+
+    .ak-cc-img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        transition: transform .7s $ak-ease;
+    }
+
+    &:hover .ak-cc-img {
+        transform: scale(1.06);
+    }
+
+    .ak-cc-name {
+        font-family: var(--ak-headings-font);
+        font-weight: 600;
+        line-height: 1.3;
+    }
+}
+
+.ak-cc-below {
+    align-items: center;
+    text-align: center;
+
+    .ak-cc-media { width: 100%; border-radius: var(--ak-radius-lg); }
+    .ak-cc-body { margin-top: .85rem; }
+}
+
+.ak-cc-over {
+    overflow: hidden;
+    border-radius: var(--ak-radius-lg);
+
+    .ak-cc-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(10, 16, 28, 0) 40%, rgba(10, 16, 28, .65) 100%);
+        transition: opacity .3s;
+    }
+
+    .ak-cc-img { aspect-ratio: 4 / 5; }
+
+    .ak-cc-body {
+        position: absolute;
+        right: 1.25rem;
+        bottom: 1.1rem;
+        left: 1.25rem;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+        color: #fff;
+    }
+
+    .ak-cc-name { font-size: 1.2rem; }
+
+    .ak-cc-link {
+        display: inline-flex;
+        align-items: center;
+        gap: .35rem;
+        font-size: .85rem;
+        font-weight: 600;
+        opacity: .9;
+    }
+}
+
+.ak-cc-card {
+    overflow: hidden;
+    border: 1px solid var(--ak-line);
+    border-radius: var(--ak-radius-lg);
+    background-color: #fff;
+    color: $ak-ink !important;
+    transition: box-shadow .3s, transform .35s $ak-ease;
+
+    &:hover { box-shadow: var(--ak-shadow-card); transform: translateY(-4px); }
+    .ak-cc-img { aspect-ratio: 4 / 3; }
+
+    .ak-cc-body {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        padding: 1rem 1.15rem 1.15rem;
+    }
+
+    .ak-cc-link {
+        display: inline-flex;
+        align-items: center;
+        gap: .35rem;
+        font-size: .85rem;
+        font-weight: 600;
+        color: $ak-primary;
+    }
+}
+
+.ak-cc-inline {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    .ak-cc-media {
+        flex: 0 0 auto;
+        width: 3.5rem;
+        border-radius: var(--ak-radius);
+    }
+
+    .ak-cc-body { flex: 1 1 auto; }
+
+    .ak-cc-chevron {
+        display: inline-block;
+        font-size: 1.25rem;
+        opacity: .5;
+        transition: transform .3s $ak-ease, opacity .2s;
+    }
+
+    &:hover .ak-cc-chevron { opacity: 1; transform: translateX(.25rem); }
+}
+
+//------------------------------------------------------------------------------
+// 24 designs
+//------------------------------------------------------------------------------
+
+// 01 Circle thumbs
+.ak-cc-circle {
+    .ak-cc-media { border-radius: 50%; transition: box-shadow .3s; }
+    &:hover .ak-cc-media { box-shadow: 0 0 0 4px #fff, 0 0 0 6px $ak-primary; }
+}
+
+// 02 Overlay tiles
+.ak-cc-tile {
+    .ak-cc-link { opacity: 0; transform: translateY(.5rem); transition: opacity .25s, transform .3s $ak-ease; }
+    &:hover .ak-cc-link, &:focus-visible .ak-cc-link { opacity: .95; transform: none; }
+}
+
+// 03 Cards with link: base card kit
+
+// 04 Image pills
+.ak-cc-pill {
+    padding: .35rem 1.2rem .35rem .35rem;
+    border: 1px solid var(--ak-line);
+    border-radius: 999px;
+    background-color: #fff;
+    color: $ak-ink !important;
+    gap: .7rem;
+    transition: border-color .2s, box-shadow .2s;
+
+    .ak-cc-media { width: 2.6rem; border-radius: 50%; }
+    .ak-cc-chevron { display: none; }
+    &:hover { border-color: $ak-primary; box-shadow: var(--ak-shadow-card); }
+}
+
+// 05 Bento grid (layout in .ak-cc-grid-bento)
+.ak-cc-bento {
+    .ak-cc-name { font-size: 1.15rem; }
+}
+
+// 06 Scroll strip
+.ak-cc-strip {
+    .ak-cc-img { aspect-ratio: 4 / 5; }
+}
+
+// 07 Numbered list
+.ak-cc-numbered {
+    padding: 1.1rem .5rem;
+    border-bottom: 1px solid var(--ak-line);
+    transition: background-color .2s;
+
+    .ak-cc-index {
+        display: block;
+        flex: 0 0 2.5rem;
+        font-family: var(--ak-headings-font);
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: darken($ak-gold, 12%);
+    }
+
+    .ak-cc-name { font-size: 1.15rem; }
+    &:hover { background-color: rgba($ak-primary, .04); }
+}
+
+// 08 Hover reveal
+.ak-cc-reveal {
+    .ak-cc-media::after {
+        background: rgba(10, 16, 28, .35);
+    }
+
+    &:hover .ak-cc-media::after { background: rgba(10, 16, 28, .6); }
+    .ak-cc-img { aspect-ratio: 1; }
+
+    .ak-cc-body {
+        inset: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ak-cc-name { font-size: 1.1rem; letter-spacing: .12em; text-transform: uppercase; }
+    .ak-cc-link { max-height: 0; overflow: hidden; transition: max-height .3s; }
+    &:hover .ak-cc-link { max-height: 2rem; }
+}
+
+// 09 Arch frames
+.ak-cc-arch {
+    .ak-cc-media {
+        border-radius: 999px 999px var(--ak-radius-lg) var(--ak-radius-lg);
+        outline: 1px solid rgba($ak-gold, .6);
+        outline-offset: .35rem;
+    }
+
+    .ak-cc-img { aspect-ratio: 3 / 4; }
+}
+
+// 10 Soft tinted squares
+.ak-cc-soft {
+    .ak-cc-media {
+        border-radius: 1.5rem;
+        background-color: rgba($ak-gold, .12);
+        transition: transform .35s $ak-ease, background-color .3s;
+    }
+
+    .ak-cc-img { padding: 14%; object-fit: contain; mix-blend-mode: multiply; }
+    &:hover .ak-cc-media { transform: translateY(-4px); background-color: rgba($ak-gold, .2); }
+}
+
+.s_ak_categories .row > :nth-child(even) > .ak-cc-soft .ak-cc-media {
+    background-color: rgba($ak-primary, .08);
+}
+
+// 11 Gradient cards
+.ak-cc-gradient {
+    border: 0;
+    background: linear-gradient(160deg, rgba($ak-primary, .1), rgba($ak-gold, .16));
+
+    .ak-cc-media { background-color: transparent; }
+    .ak-cc-img { object-fit: contain; padding: 1rem; mix-blend-mode: multiply; }
+}
+
+// 12 Polaroid
+.ak-cc-polaroid {
+    padding: .7rem .7rem 0;
+    border: 0;
+    border-radius: .35rem;
+    box-shadow: var(--ak-shadow-card);
+    text-align: center;
+    transform: rotate(-1.5deg);
+
+    .ak-cc-media { border-radius: .2rem; }
+    .ak-cc-img { aspect-ratio: 1; }
+    .ak-cc-link { display: none; }
+    .ak-cc-body { padding: .9rem 0 1.1rem; }
+    &:hover { transform: rotate(0) translateY(-4px); }
+}
+
+.s_ak_categories .row > :nth-child(even) > .ak-cc-polaroid { transform: rotate(1.5deg); }
+
+// 13 Tall portraits
+.ak-cc-tall {
+    .ak-cc-img { aspect-ratio: 3 / 5; }
+    .ak-cc-name { font-size: 1.4rem; }
+}
+
+// 14 Large two column
+.ak-cc-large {
+    .ak-cc-img { aspect-ratio: 16 / 9; }
+    .ak-cc-body { bottom: 1.5rem; left: 1.75rem; }
+    .ak-cc-name { font-size: clamp(1.4rem, 2.4vw, 2rem); }
+
+    .ak-cc-link {
+        align-self: flex-start;
+        margin-top: .5rem;
+        padding: .45rem 1rem;
+        border-radius: 999px;
+        background-color: #fff;
+        color: $ak-ink;
+        opacity: 1;
+    }
+}
+
+// 15 Masonry (layout in .ak-cc-grid-masonry)
+.ak-cc-masonry {
+    .ak-cc-name { font-size: 1.05rem; }
+}
+
+// 16 Side rows
+.ak-cc-rows {
+    padding: .7rem 1rem .7rem .7rem;
+    border: 1px solid var(--ak-line);
+    border-radius: var(--ak-radius-lg);
+    background-color: #fff;
+    color: $ak-ink !important;
+    transition: border-color .2s, box-shadow .2s;
+
+    .ak-cc-media { width: 4rem; }
+    &:hover { border-color: $ak-primary; box-shadow: var(--ak-shadow-card); }
+}
+
+// 17 Outline cards
+.ak-cc-outline {
+    border-width: 2px;
+
+    .ak-cc-img { object-fit: contain; padding: .75rem; mix-blend-mode: multiply; }
+    &:hover { border-color: $ak-primary; transform: none; box-shadow: none; }
+}
+
+// 18 Glass labels
+.ak-cc-glass {
+    .ak-cc-media::after { display: none; }
+
+    .ak-cc-body {
+        right: .9rem;
+        bottom: .9rem;
+        left: .9rem;
+        align-items: center;
+        padding: .65rem;
+        border: 1px solid rgba(255, 255, 255, .45);
+        border-radius: var(--ak-radius);
+        background-color: rgba(255, 255, 255, .28);
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .ak-cc-link { display: none; }
+}
+
+// 19 Ribbon labels
+.ak-cc-ribbon {
+    .ak-cc-media::after { display: none; }
+
+    .ak-cc-body {
+        top: 1rem;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        padding: .45rem 1rem .45rem .9rem;
+        border-radius: 0 999px 999px 0;
+        background-color: $ak-primary;
+    }
+
+    .ak-cc-name { font-size: .95rem; }
+    .ak-cc-link { display: none; }
+}
+
+// 20 Staggered
+.ak-cc-stagger {
+    .ak-cc-img { aspect-ratio: 3 / 4; }
+}
+
+.s_ak_categories .row > :nth-child(even) > .ak-cc-stagger {
+    @include media-breakpoint-up(lg) { margin-top: 2.5rem; }
+}
+
+// 21 Hexagons
+.ak-cc-hexagon {
+    .ak-cc-media {
+        border-radius: 0;
+        clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%);
+    }
+}
+
+// 22 Banner stack
+.ak-cc-banner {
+    .ak-cc-media::after { background: linear-gradient(90deg, rgba(10, 16, 28, .7), rgba(10, 16, 28, 0) 70%); }
+    .ak-cc-img { aspect-ratio: 3 / 1; }
+
+    .ak-cc-body {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+
+    .ak-cc-name { font-size: 1.5rem; }
+}
+
+// 23 Text links
+.ak-cc-links {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--ak-line);
+
+    .ak-cc-media {
+        width: 3rem;
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(.6);
+        transition: opacity .25s, transform .3s $ak-ease;
+    }
+
+    .ak-cc-name { font-size: clamp(1.25rem, 2vw, 1.75rem); font-weight: 600; }
+    &:hover .ak-cc-media { opacity: 1; transform: none; }
+    &:hover .ak-cc-name { color: $ak-primary; }
+}
+
+// 24 Gradient rings
+.ak-cc-ring {
+    .ak-cc-media {
+        padding: 4px;
+        border-radius: 50%;
+        background: conic-gradient(from 210deg, $ak-gold, $ak-primary, $ak-gold);
+    }
+
+    .ak-cc-img {
+        border: 4px solid #fff;
+        border-radius: 50%;
+    }
+}

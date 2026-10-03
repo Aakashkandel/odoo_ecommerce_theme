@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Product sections are pre-configured instances of website_sale's native
+    "Products" dynamic snippet (data-snippet="s_dynamic_snippet_products"):
+    products, prices, ribbons, wishlist and add-to-cart all come from Odoo,
+    and every setting (filter, category, number, design) stays editable in the
+    Website Builder options of that snippet.
+-->
+
+<!-- Inner markup shared by the Akandel product sections. -->
+<template id="ak_dynamic_products_body" name="Akandel Dynamic Products Body">
+    <div class="s_dynamic_snippet_container container">
+        <div class="row s_nb_column_fixed">
+            <section class="s_dynamic_snippet_holder d-none px-4 placeholder-glow">
+                <div class="row">
+                    <span class="placeholder col-3 rounded"/>
+                    <span class="placeholder col-2 offset-7 rounded"/>
+                    <span class="placeholder mt-3 col-6 rounded"/>
+                </div>
+                <div class="row mt-4">
+                    <span class="placeholder col-12 rounded" style="height: 250px;"/>
+                </div>
+            </section>
+            <section class="justify-content-between d-flex s_dynamic_snippet_title oe_unremovable oe_unmovable flex-column flex-md-row align-items-md-end mb-lg-0 pb-4 s_col_no_resize">
+                <div>
+                    <p class="ak-eyebrow" t-out="_ak_eyebrow"/>
+                    <h2 class="mb-0" t-out="_ak_title"/>
+                </div>
+                <div>
+                    <a title="See all" href="/shop" class="ak-link-arrow">See all<span class="fa fa-long-arrow-right ms-2"/></a>
+                </div>
+            </section>
+            <section class="s_dynamic_snippet_content oe_unremovable oe_unmovable o_not_editable col s_col_no_resize">
+                <div class="css_non_editable_mode_hidden">
+                    <div class="missing_option_warning alert alert-info fade show d-none d-print-none rounded-0">
+                        This block shows live content from your shop (products or categories) once they are published.
+                    </div>
+                </div>
+                <div class="dynamic_snippet_template"/>
+            </section>
+        </div>
+    </div>
+</template>
+
+<!-- New arrivals: newest published products -->
+<template id="s_ak_products_new" name="Akandel New Arrivals">
+    <section data-snippet="s_dynamic_snippet_products" data-name="New Arrivals"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-products-new o_cc o_cc1 pt80 pb80
+               o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_thumb_4_5
+               o_wsale_products_opt_thumb_cover o_wsale_products_opt_img_secondary_show o_wsale_products_opt_img_hover_zoom_out_light
+               o_wsale_products_opt_cc1 o_wsale_products_opt_rounded_3 o_wsale_products_opt_name_color_regular
+               o_wsale_products_opt_name_size_body o_wsale_products_opt_actions_onhover o_wsale_products_opt_actions_theme
+               o_wsale_products_opt_has_cta o_wsale_products_opt_has_wishlist o_wsale_products_opt_wishlist_fixed"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_newest_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="website_sale.dynamic_filter_template_product_product_products_item"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000"
+        data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow.f="Just landed" _ak_title.f="New arrivals"/>
+    </section>
+</template>
+
+<!-- Best sellers: most recently sold products -->
+<template id="s_ak_products_best" name="Akandel Best Sellers">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Best Sellers"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-products-best o_cc o_cc2 pt80 pb80
+               o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_cards o_wsale_products_opt_thumb_6_5
+               o_wsale_products_opt_thumb_cover o_wsale_products_opt_img_hover_zoom_in_light o_wsale_products_opt_hover_shadow_out
+               o_wsale_products_opt_cc1 o_wsale_products_opt_rounded_3 o_wsale_products_opt_name_color_regular
+               o_wsale_products_opt_name_size_body o_wsale_products_opt_name_weight_bold o_wsale_products_opt_actions_inline
+               o_wsale_products_opt_actions_theme o_wsale_products_opt_has_cta o_wsale_products_opt_has_description
+               o_wsale_products_opt_has_wishlist o_wsale_products_opt_wishlist_fixed"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_latest_sold_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="website_sale.dynamic_filter_template_product_product_products_item"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000"
+        data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow.f="Customer favourites" _ak_title.f="Best sellers"/>
+    </section>
+</template>
+
+<!-- Recently viewed: per-visitor history (stays hidden until products are viewed) -->
+<template id="s_ak_products_viewed" name="Akandel Recently Viewed">
+    <section data-snippet="s_dynamic_snippet_products" data-name="Recently Viewed"
+        class="s_dynamic_snippet_products oe_website_sale s_dynamic o_dynamic_snippet_empty s_ak_products ak-products-viewed o_cc o_cc1 pt64 pb64
+               o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_condensed o_wsale_products_opt_thumb_4_5
+               o_wsale_products_opt_thumb_cover o_wsale_products_opt_img_hover_zoom_out_light o_wsale_products_opt_cc1
+               o_wsale_products_opt_rounded_2 o_wsale_products_opt_name_color_regular o_wsale_products_opt_name_size_body
+               o_wsale_products_opt_actions_subtle o_wsale_products_opt_actions_theme o_wsale_products_opt_has_cta"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_latest_viewed_products', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="website_sale.dynamic_filter_template_product_product_products_item"
+        data-number-of-records="8" data-number-of-elements="5" data-number-of-elements-small-devices="2"
+        data-product-category-id="all" data-show-variants="true" data-carousel-interval="5000"
+        data-custom-template-data="{}">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow.f="Picked up where you left off" _ak_title.f="Recently viewed"/>
+    </section>
+</template>
+
+<!-- Product spotlight: editorial feature for one hero product -->
+<template id="s_ak_product_spotlight" name="Akandel Product Spotlight">
+    <section class="s_ak_product_spotlight o_cc o_cc2 pt80 pb80" data-snippet="s_ak_product_spotlight" data-name="Product Spotlight">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="ak-spotlight-media">
+                        <img class="img-fluid w-100 ak-radius-xl" src="/website/static/src/img/library/shop_category_3.webp" alt="Oak sideboard with three doors" loading="lazy"/>
+                        <span class="ak-spotlight-tag">Handmade in oak</span>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <p class="ak-eyebrow">Product of the month</p>
+                    <h2 class="display-5 mb-3">The Arlo sideboard</h2>
+                    <p class="ak-rating mb-3" aria-label="Rated 4.9 out of 5">
+                        <i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/>
+                        <span class="ms-2 small">4.9 · 312 reviews</span>
+                    </p>
+                    <p class="lead ak-lead mb-4">Solid FSC oak, soft-close doors and hand-rubbed oil. A quiet piece that anchors any room.</p>
+                    <ul class="list-unstyled ak-checklist mb-4">
+                        <li><i class="fa fa-check" aria-hidden="true"/>Three adjustable shelves</li>
+                        <li><i class="fa fa-check" aria-hidden="true"/>Assembled by our makers</li>
+                        <li><i class="fa fa-check" aria-hidden="true"/>Delivered in 2–3 weeks</li>
+                    </ul>
+                    <p class="d-flex flex-wrap align-items-center gap-3 mb-0">
+                        <a href="/shop" class="btn btn-primary btn-lg">View product</a>
+                        <span class="ak-price h4 mb-0">$1,290</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+</odoo>

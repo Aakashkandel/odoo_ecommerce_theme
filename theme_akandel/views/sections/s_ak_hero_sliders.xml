@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="s_ak_hero_slider_01" name="Akandel Hero Slider 01 - Split Classic">
+    <section class="s_ak_hero_slider ak-hs-split o_cc o_cc2 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_02" name="Akandel Hero Slider 02 - Split Reverse">
+    <section class="s_ak_hero_slider ak-hs-reverse o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_03" name="Akandel Hero Slider 03 - Full Cover">
+    <section class="s_ak_hero_slider ak-hs-cover o_cc o_cc5 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_04" name="Akandel Hero Slider 04 - Centered Cover">
+    <section class="s_ak_hero_slider ak-hs-center o_cc o_cc5 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_05" name="Akandel Hero Slider 05 - Cover with Card">
+    <section class="s_ak_hero_slider ak-hs-cardcover o_cc o_cc5 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_06" name="Akandel Hero Slider 06 - Framed Panel">
+    <section class="s_ak_hero_slider ak-hs-framed o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_07" name="Akandel Hero Slider 07 - Circle Spotlight">
+    <section class="s_ak_hero_slider ak-hs-circle o_cc o_cc2 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_08" name="Akandel Hero Slider 08 - Arch Window">
+    <section class="s_ak_hero_slider ak-hs-arch o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_09" name="Akandel Hero Slider 09 - Product Stage">
+    <section class="s_ak_hero_slider ak-hs-stage o_cc o_cc2 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_10" name="Akandel Hero Slider 10 - Big Typography">
+    <section class="s_ak_hero_slider ak-hs-type o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_11" name="Akandel Hero Slider 11 - Image Over Text">
+    <section class="s_ak_hero_slider ak-hs-stacked o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_12" name="Akandel Hero Slider 12 - Diagonal Cut">
+    <section class="s_ak_hero_slider ak-hs-diagonal o_cc o_cc2 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_13" name="Akandel Hero Slider 13 - Dark Luxe">
+    <section class="s_ak_hero_slider ak-hs-luxe o_cc o_cc5 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_14" name="Akandel Hero Slider 14 - Offset Card">
+    <section class="s_ak_hero_slider ak-hs-offset o_cc o_cc2 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_15" name="Akandel Hero Slider 15 - Ken Burns Zoom">
+    <section class="s_ak_hero_slider ak-hs-zoom o_cc o_cc5 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_16" name="Akandel Hero Slider 16 - Half Bleed">
+    <section class="s_ak_hero_slider ak-hs-bleed o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_17" name="Akandel Hero Slider 17 - Compact Promo">
+    <section class="s_ak_hero_slider ak-hs-promo o_cc o_cc4 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_18" name="Akandel Hero Slider 18 - Numbered Slides">
+    <section class="s_ak_hero_slider ak-hs-numbered o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_19" name="Akandel Hero Slider 19 - Glass Card">
+    <section class="s_ak_hero_slider ak-hs-glass o_cc o_cc5 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_20" name="Akandel Hero Slider 20 - Rounded Inset">
+    <section class="s_ak_hero_slider ak-hs-inset o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_21" name="Akandel Hero Slider 21 - Feature Checklist">
+    <section class="s_ak_hero_slider ak-hs-checklist o_cc o_cc2 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Limited offer</p>
+                            <h2 class="ak-slide-title">Save big on our <span class="ak-hl">best sellers</span>.</h2>
+                            <p class="ak-slide-text">Customer favourites at their best price of the season. While stocks last.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">See the deals</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Sunlit room with a minimal table" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Save</span><span class="ak-slide-tag-value">30%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_22" name="Akandel Hero Slider 22 - Dashed Ring">
+    <section class="s_ak_hero_slider ak-hs-ring o_cc o_cc1 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Free delivery</p>
+                            <h2 class="ak-slide-title">Delivered to your door, <span class="ak-hl">fast</span>.</h2>
+                            <p class="ak-slide-text">Free shipping on orders over $50 and easy 30-day returns on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Start shopping</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/gift.webp" alt="Wrapped gift box" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Free</span><span class="ak-slide-tag-value">Shipping</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_23" name="Akandel Hero Slider 23 - Tilted Frames">
+    <section class="s_ak_hero_slider ak-hs-tilt o_cc o_cc2 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Curated picks</p>
+                            <h2 class="ak-slide-title">Little details make a <span class="ak-hl">big difference</span>.</h2>
+                            <p class="ak-slide-text">Hand-picked favourites from trusted brands, chosen for how they make you feel.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Browse picks</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Top</span><span class="ak-slide-tag-value">Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+
+<template id="s_ak_hero_slider_24" name="Akandel Hero Slider 24 - Progress Bars">
+    <section class="s_ak_hero_slider ak-hs-progress o_cc o_cc5 pt0 pb0" data-snippet="s_ak_hero_slider" data-name="Hero Slider">
+        <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+        <div t-attf-id="akHero{{uniq}}" class="s_carousel carousel slide ak-hs-carousel" data-bs-ride="carousel" data-bs-interval="7000">
+            <div class="carousel-inner">
+                <div class="carousel-item ak-slide active" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">01</span>
+                            <p class="ak-eyebrow">Members club</p>
+                            <h2 class="ak-slide-title">Join today and get <span class="ak-hl">10% off</span> your first order.</h2>
+                            <p class="ak-slide-text">Early access to launches, exclusive offers and rewards on every purchase.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Join the club</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="eager"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Extra</span><span class="ak-slide-tag-value">10% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">02</span>
+                            <p class="ak-eyebrow">New season</p>
+                            <h2 class="ak-slide-title">Everyday essentials, <span class="ak-hl">thoughtfully made</span>.</h2>
+                            <p class="ak-slide-text">Discover carefully selected products, checked for quality and delivered with care.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Shop now</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Bright living room with a grey sofa" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Up to</span><span class="ak-slide-tag-value">40% off</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ak-slide" data-name="Slide">
+                    <div class="container ak-slide-inner">
+                        <div class="ak-slide-content">
+                            <span class="ak-slide-index" aria-hidden="true">03</span>
+                            <p class="ak-eyebrow">Quality first</p>
+                            <h2 class="ak-slide-title">Products you can <span class="ak-hl">trust</span>, every day.</h2>
+                            <p class="ak-slide-text">Every item is inspected before it carries our name, so what you receive is exactly what you expect.</p>
+                            <p class="ak-slide-actions"><a href="/shop" class="btn btn-primary btn-lg">Explore the range</a> <a href="/aboutus" class="btn btn-outline-primary btn-lg ak-btn-ghost">Learn more</a></p>
+                            <ul class="ak-slide-points list-unstyled"><li><i class="fa fa-check" aria-hidden="true"/><span>Quality checked</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>Fast, tracked delivery</span></li><li><i class="fa fa-check" aria-hidden="true"/><span>30-day easy returns</span></li></ul>
+                        </div>
+                        <div class="ak-slide-media">
+                            <img class="ak-slide-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase on marble" loading="lazy"/>
+                            <div class="ak-slide-tag"><span class="ak-slide-tag-label">Just</span><span class="ak-slide-tag-value">Arrived</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="prev" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next o_not_editable" contenteditable="false" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide="next" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"/>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+    </section>
+</template>
+</odoo>

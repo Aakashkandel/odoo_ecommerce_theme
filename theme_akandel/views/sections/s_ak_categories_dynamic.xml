@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="dynamic_filter_template_product_public_category_ak_01" name="Akandel 01 · Circle Thumbs">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-4 justify-content-center" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_01.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-below ak-cc-circle" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_02" name="Akandel 02 · Overlay Tiles">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_02.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-tile" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_03" name="Akandel 03 · Cards with Link">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-4" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_03.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-card ak-cc-card" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_04" name="Akandel 04 · Image Pills">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-auto" data-extra-classes="g-3 justify-content-center" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_04.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-inline ak-cc-pill" t-att-title="cat['name']"><span class="ak-cc-index" aria-hidden="true" t-out="'%02d' % (cat_index + 1)"/><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span><i class="fa fa-angle-right ak-cc-chevron" aria-hidden="true"/></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_05" name="Akandel 05 · Bento Grid">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="ak-cc-cell" data-extra-classes="ak-cc-grid ak-cc-grid-bento" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_05.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-bento" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_06" name="Akandel 06 · Scroll Strip">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="ak-cc-cell" data-extra-classes="ak-cc-scroll" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_06.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-below ak-cc-strip" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_07" name="Akandel 07 · Numbered List">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-md-6" data-extra-classes="g-0 ak-cc-counter" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_07.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-inline ak-cc-numbered" t-att-title="cat['name']"><span class="ak-cc-index" aria-hidden="true" t-out="'%02d' % (cat_index + 1)"/><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span><i class="fa fa-angle-right ak-cc-chevron" aria-hidden="true"/></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_08" name="Akandel 08 · Hover Reveal">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_08.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-reveal" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_09" name="Akandel 09 · Arch Frames">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-md-4 col-lg-2" data-extra-classes="g-4" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_09.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-below ak-cc-arch" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_10" name="Akandel 10 · Soft Squares">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-4 justify-content-center" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_10.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-below ak-cc-soft" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_11" name="Akandel 11 · Gradient Cards">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_11.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-card ak-cc-gradient" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_12" name="Akandel 12 · Polaroid">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-md-4 col-lg-3" data-extra-classes="g-4" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_12.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-card ak-cc-polaroid" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_13" name="Akandel 13 · Tall Portraits">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_13.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-tall" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_14" name="Akandel 14 · Large Two Column">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-md-6" data-extra-classes="g-4" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_14.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-large" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_15" name="Akandel 15 · Masonry">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="ak-cc-cell" data-extra-classes="ak-cc-grid ak-cc-grid-masonry" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_15.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-masonry" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_16" name="Akandel 16 · Side Rows">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-md-6 col-lg-4" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_16.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-inline ak-cc-rows" t-att-title="cat['name']"><span class="ak-cc-index" aria-hidden="true" t-out="'%02d' % (cat_index + 1)"/><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span><i class="fa fa-angle-right ak-cc-chevron" aria-hidden="true"/></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_17" name="Akandel 17 · Outline Cards">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-md-4 col-lg-3" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_17.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-card ak-cc-outline" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_18" name="Akandel 18 · Glass Labels">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_18.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-glass" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_19" name="Akandel 19 · Ribbon Labels">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_19.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-ribbon" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_20" name="Akandel 20 · Staggered">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-6 col-lg-3" data-extra-classes="g-4" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_20.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-below ak-cc-stagger" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_21" name="Akandel 21 · Hexagons">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-3 justify-content-center" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_21.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-below ak-cc-hexagon" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_22" name="Akandel 22 · Banner Stack">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-md-6" data-extra-classes="g-3" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_22.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-over ak-cc-banner" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/><span class="ak-cc-link">Shop now <i class="fa fa-long-arrow-right" aria-hidden="true"/></span></span></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_23" name="Akandel 23 · Text Links">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-12" data-extra-classes="g-0" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_23.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-inline ak-cc-links" t-att-title="cat['name']"><span class="ak-cc-index" aria-hidden="true" t-out="'%02d' % (cat_index + 1)"/><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span><i class="fa fa-angle-right ak-cc-chevron" aria-hidden="true"/></a>
+    </t>
+</template>
+
+<template id="dynamic_filter_template_product_public_category_ak_24" name="Akandel 24 · Gradient Rings">
+    <t t-foreach="records" t-as="cat" data-number-of-elements="4" data-number-of-elements-sm="2"
+       data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-4 justify-content-center" data-thumb="/theme_akandel/static/src/img/snippets_thumbs/cc_24.svg">
+        <a t-attf-href="/shop/category/#{cat['id']}" class="ak-cc ak-cc-below ak-cc-ring" t-att-title="cat['name']"><span class="ak-cc-media"><img class="ak-cc-img" t-att-src="cat['cover_image']" t-att-alt="cat['name']" loading="lazy"/></span><span class="ak-cc-body"><span class="ak-cc-name" t-out="cat['name']"/></span></a>
+    </t>
+</template>
+
+<template id="s_ak_categories_01" name="Akandel Categories 01 - Circle Thumbs">
+    <section data-snippet="s_ak_categories" data-name="Categories · Circle Thumbs"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-center o_cc o_cc1 pt64 pb64 s_product_public_category_ak_01"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_01"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-4 justify-content-center">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Shop by category&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_02" name="Akandel Categories 02 - Overlay Tiles">
+    <section data-snippet="s_ak_categories" data-name="Categories · Overlay Tiles"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-eyebrow o_cc o_cc1 pt64 pb64 s_product_public_category_ak_02"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_02"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Browse categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_03" name="Akandel Categories 03 - Cards with Link">
+    <section data-snippet="s_ak_categories" data-name="Categories · Cards with Link"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-underline o_cc o_cc2 pt64 pb64 s_product_public_category_ak_03"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_03"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-4">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Explore the range&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_04" name="Akandel Categories 04 - Image Pills">
+    <section data-snippet="s_ak_categories" data-name="Categories · Image Pills"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-split o_cc o_cc1 pt64 pb64 s_product_public_category_ak_04"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_04"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-auto" data-extra-classes="g-3 justify-content-center">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Find what you need&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_05" name="Akandel Categories 05 - Bento Grid">
+    <section data-snippet="s_ak_categories" data-name="Categories · Bento Grid"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-pill o_cc o_cc1 pt64 pb64 s_product_public_category_ak_05"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_05"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="ak-cc-cell" data-extra-classes="ak-cc-grid ak-cc-grid-bento">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Popular categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_06" name="Akandel Categories 06 - Scroll Strip">
+    <section data-snippet="s_ak_categories" data-name="Categories · Scroll Strip"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-bar o_cc o_cc1 pt64 pb64 s_product_public_category_ak_06"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_06"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="ak-cc-cell" data-extra-classes="ak-cc-scroll">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_07" name="Akandel Categories 07 - Numbered List">
+    <section data-snippet="s_ak_categories" data-name="Categories · Numbered List"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-minimal o_cc o_cc2 pt64 pb64 s_product_public_category_ak_07"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_07"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-md-6" data-extra-classes="g-0 ak-cc-counter">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Shop departments&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_08" name="Akandel Categories 08 - Hover Reveal">
+    <section data-snippet="s_ak_categories" data-name="Categories · Hover Reveal"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-line o_cc o_cc1 pt64 pb64 s_product_public_category_ak_08"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_08"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Discover more&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_09" name="Akandel Categories 09 - Arch Frames">
+    <section data-snippet="s_ak_categories" data-name="Categories · Arch Frames"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-center o_cc o_cc1 pt64 pb64 s_product_public_category_ak_09"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_09"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-md-4 col-lg-2" data-extra-classes="g-4">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Shop by category&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_10" name="Akandel Categories 10 - Soft Squares">
+    <section data-snippet="s_ak_categories" data-name="Categories · Soft Squares"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-eyebrow o_cc o_cc1 pt64 pb64 s_product_public_category_ak_10"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_10"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-4 justify-content-center">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Browse categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_11" name="Akandel Categories 11 - Gradient Cards">
+    <section data-snippet="s_ak_categories" data-name="Categories · Gradient Cards"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-underline o_cc o_cc2 pt64 pb64 s_product_public_category_ak_11"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_11"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Explore the range&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_12" name="Akandel Categories 12 - Polaroid">
+    <section data-snippet="s_ak_categories" data-name="Categories · Polaroid"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-split o_cc o_cc1 pt64 pb64 s_product_public_category_ak_12"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_12"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-md-4 col-lg-3" data-extra-classes="g-4">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Find what you need&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_13" name="Akandel Categories 13 - Tall Portraits">
+    <section data-snippet="s_ak_categories" data-name="Categories · Tall Portraits"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-pill o_cc o_cc1 pt64 pb64 s_product_public_category_ak_13"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_13"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Popular categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_14" name="Akandel Categories 14 - Large Two Column">
+    <section data-snippet="s_ak_categories" data-name="Categories · Large Two Column"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-bar o_cc o_cc1 pt64 pb64 s_product_public_category_ak_14"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_14"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-md-6" data-extra-classes="g-4">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_15" name="Akandel Categories 15 - Masonry">
+    <section data-snippet="s_ak_categories" data-name="Categories · Masonry"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-minimal o_cc o_cc2 pt64 pb64 s_product_public_category_ak_15"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_15"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="ak-cc-cell" data-extra-classes="ak-cc-grid ak-cc-grid-masonry">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Shop departments&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_16" name="Akandel Categories 16 - Side Rows">
+    <section data-snippet="s_ak_categories" data-name="Categories · Side Rows"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-line o_cc o_cc1 pt64 pb64 s_product_public_category_ak_16"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_16"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-md-6 col-lg-4" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Discover more&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_17" name="Akandel Categories 17 - Outline Cards">
+    <section data-snippet="s_ak_categories" data-name="Categories · Outline Cards"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-center o_cc o_cc1 pt64 pb64 s_product_public_category_ak_17"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_17"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-md-4 col-lg-3" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Shop by category&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_18" name="Akandel Categories 18 - Glass Labels">
+    <section data-snippet="s_ak_categories" data-name="Categories · Glass Labels"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-eyebrow o_cc o_cc1 pt64 pb64 s_product_public_category_ak_18"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_18"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Browse categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_19" name="Akandel Categories 19 - Ribbon Labels">
+    <section data-snippet="s_ak_categories" data-name="Categories · Ribbon Labels"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-underline o_cc o_cc2 pt64 pb64 s_product_public_category_ak_19"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_19"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Explore the range&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_20" name="Akandel Categories 20 - Staggered">
+    <section data-snippet="s_ak_categories" data-name="Categories · Staggered"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-split o_cc o_cc1 pt64 pb64 s_product_public_category_ak_20"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_20"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-6 col-lg-3" data-extra-classes="g-4">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Find what you need&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_21" name="Akandel Categories 21 - Hexagons">
+    <section data-snippet="s_ak_categories" data-name="Categories · Hexagons"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-pill o_cc o_cc1 pt64 pb64 s_product_public_category_ak_21"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_21"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-3 justify-content-center">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Popular categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_22" name="Akandel Categories 22 - Banner Stack">
+    <section data-snippet="s_ak_categories" data-name="Categories · Banner Stack"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-bar o_cc o_cc1 pt64 pb64 s_product_public_category_ak_22"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_22"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-md-6" data-extra-classes="g-3">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Categories&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_23" name="Akandel Categories 23 - Text Links">
+    <section data-snippet="s_ak_categories" data-name="Categories · Text Links"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-minimal o_cc o_cc2 pt64 pb64 s_product_public_category_ak_23"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_23"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-12" data-extra-classes="g-0">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Shop departments&quot;"/>
+    </section>
+</template>
+
+<template id="s_ak_categories_24" name="Akandel Categories 24 - Gradient Rings">
+    <section data-snippet="s_ak_categories" data-name="Categories · Gradient Rings"
+        class="s_ak_categories s_dynamic o_dynamic_snippet_empty ak-ph-line o_cc o_cc1 pt64 pb64 s_product_public_category_ak_24"
+        t-att-data-filter-id="(res_company.env.ref('website_sale.dynamic_filter_category_list', raise_if_not_found=False) or res_company.env['website.snippet.filter']).id or None"
+        data-template-key="theme_akandel.dynamic_filter_template_product_public_category_ak_24"
+        data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="2"
+        data-column-classes="col-4 col-md-3 col-lg-2" data-extra-classes="g-4 justify-content-center">
+        <t t-call="theme_akandel.ak_dynamic_products_body" _ak_eyebrow="'Categories'" _ak_title="&quot;Discover more&quot;"/>
+    </section>
+</template>
+</odoo>

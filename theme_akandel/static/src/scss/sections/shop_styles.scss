@@ -1,0 +1,799 @@
+//------------------------------------------------------------------------------
+// Akandel - Shop page styles (24) + optional shop elements
+// #o_wsale_container.ak-shop.ak-shop-<style>
+//
+// Each style only sets `--aks-*` tokens. One shared ruleset maps them onto
+// Odoo's own product tile variables (`--o-wsale-card-*`), so Odoo's layout
+// options (grid / list, columns, image size, actions, ribbons...) keep working
+// with every style.
+//------------------------------------------------------------------------------
+
+$aks-primary: o-color('o-color-1');
+$aks-gold: o-color('o-color-2');
+$aks-light: o-color('o-color-3');
+$aks-ink: o-color('o-color-5');
+$aks-gold-text: darken($aks-gold, 12%);
+$aks-ease: cubic-bezier(.2, .7, .2, 1);
+
+// ---------------------------------------------------------------------------
+// Shared ruleset
+// ---------------------------------------------------------------------------
+
+#o_wsale_container.ak-shop {
+    // Defaults (= "Clean Cards")
+    --aks-card-bg: #fff;
+    --aks-card-color: #{$aks-ink};
+    --aks-card-bw: 1px;
+    --aks-card-border: rgba(20, 32, 51, .09);
+    --aks-card-border-hover: rgba(20, 32, 51, .16);
+    --aks-card-radius: 1rem;
+    --aks-card-pad: 0px;
+    --aks-card-shadow: none;
+    --aks-card-shadow-hover: 0 2px 6px rgba(20, 32, 51, .05), 0 16px 32px -14px rgba(20, 32, 51, .22);
+    --aks-card-lift: translateY(-3px);
+    --aks-thumb-bg: #{$aks-light};
+    --aks-thumb-radius: calc(var(--aks-card-radius) - var(--aks-card-bw)) calc(var(--aks-card-radius) - var(--aks-card-bw)) 0 0;
+    --aks-img-zoom: scale(1.03);
+    --aks-info-pad: .85rem 1rem 1rem;
+    --aks-title-size: .95rem;
+    --aks-title-weight: 600;
+    --aks-title-color: #{$aks-ink};
+    --aks-title-font: inherit;
+    --aks-title-transform: none;
+    --aks-title-spacing: normal;
+    --aks-price-color: #{$aks-ink};
+    --aks-text-align: left;
+    --aks-btn-radius: 999px;
+    --aks-head-bg: transparent;
+    --aks-head-color: inherit;
+    --aks-head-pad: 0;
+    --aks-head-radius: 0;
+    --aks-head-margin: 0;
+    --aks-tool-bg: transparent;
+    --aks-tool-border: transparent;
+    --aks-tool-radius: 0;
+    --aks-tool-pad: 0;
+    --aks-tool-shadow: none;
+    --aks-side-bg: transparent;
+    --aks-side-radius: 0;
+    --aks-side-pad: 0;
+    --aks-side-border: transparent;
+    --aks-nav-radius: .6rem;
+    --aks-nav-active-bg: #{rgba($aks-primary, .1)};
+    --aks-nav-active-color: #{$aks-primary};
+
+    #o_wsale_products_grid {
+        --o-wsale-card-bg: var(--aks-card-bg);
+        --o-wsale-card-color: var(--aks-card-color);
+        --o-wsale-card-border-width: var(--aks-card-bw);
+        --o-wsale-card-border-color: var(--aks-card-border);
+        --o-wsale-card-border-color-hover: var(--aks-card-border-hover);
+        --o-wsale-card-border-radius: var(--aks-card-radius);
+        --o-wsale-card-padding: var(--aks-card-pad);
+        --o-wsale-card-shadow: var(--aks-card-shadow);
+        --o-wsale-card-shadow-hover: var(--aks-card-shadow-hover);
+        --o-wsale-card-transform-hover: var(--aks-card-lift);
+        --o-wsale-card-transition: transform .35s #{$aks-ease}, box-shadow .35s #{$aks-ease}, border-color .25s;
+        --o-wsale-card-pseudobg: none;
+        --o-wsale-card-thumb-background: var(--aks-thumb-bg);
+        --o-wsale-card-thumb-border-radius: var(--aks-thumb-radius);
+        --o-wsale-card-img-transition: transform .6s #{$aks-ease};
+        --o-wsale-card-img-transform-hover: var(--aks-img-zoom);
+        --o-wsale-card-info-padding: var(--aks-info-pad);
+        --o-wsale-card-info-title-font-size: var(--aks-title-size);
+        --o-wsale-card-info-title-font-weight: var(--aks-title-weight);
+        --o-wsale-card-text-align: var(--aks-text-align);
+
+        &.o_wsale_products_opt_layout_list {
+            --aks-thumb-radius: calc(var(--aks-card-radius) - var(--aks-card-bw)) 0 0 calc(var(--aks-card-radius) - var(--aks-card-bw));
+        }
+    }
+
+    .oe_product_cart {
+        .o_wsale_products_item_title {
+            font-family: var(--aks-title-font);
+            text-transform: var(--aks-title-transform);
+            letter-spacing: var(--aks-title-spacing);
+            line-height: 1.35;
+
+            a {
+                color: var(--aks-title-color);
+            }
+        }
+
+        .product_price span[aria-label="Sale price"] {
+            color: var(--aks-price-color);
+        }
+
+        .o_wsale_product_btn .btn {
+            --btn-border-radius: var(--aks-btn-radius);
+        }
+    }
+
+    // Title / category header
+    #o_wsale_products_header {
+        margin: var(--aks-head-margin);
+        padding: var(--aks-head-pad);
+        border-radius: var(--aks-head-radius);
+        background: var(--aks-head-bg);
+        color: var(--aks-head-color);
+
+        :is(.o_wsale_shop_title, .o_wsale_category_title) {
+            font-weight: 700;
+            letter-spacing: -.02em;
+        }
+    }
+
+    // Toolbar (search, sort, filters)
+    .products_header {
+        padding: var(--aks-tool-pad);
+        border: 1px solid var(--aks-tool-border);
+        border-radius: var(--aks-tool-radius);
+        background: var(--aks-tool-bg);
+        box-shadow: var(--aks-tool-shadow);
+    }
+
+    // Filters sidebar
+    #products_grid_before {
+        margin-top: 1rem;
+        padding: var(--aks-side-pad);
+        border: 1px solid var(--aks-side-border);
+        border-radius: var(--aks-side-radius);
+        background: var(--aks-side-bg);
+
+        .nav-link {
+            border-radius: var(--aks-nav-radius);
+            transition: background-color .2s, color .2s;
+
+            &.active,
+            &:hover {
+                background: var(--aks-nav-active-bg);
+                color: var(--aks-nav-active-color);
+            }
+        }
+    }
+
+    .form-check-input:checked {
+        background-color: $aks-primary;
+        border-color: $aks-primary;
+    }
+
+    .o_wsale_categories_filmstrip .o_wsale_filmstrip_image {
+        border-radius: 50%;
+    }
+}
+
+// Colored header bands: keep breadcrumbs and helper texts readable.
+@mixin aks-dark-head {
+    --aks-head-color: #fff;
+    --aks-head-pad: 2rem 2rem 1.5rem;
+    --aks-head-radius: 1.5rem;
+    --aks-head-margin: 1.25rem 0 1.5rem;
+
+    #o_wsale_products_header {
+        :is(.breadcrumb, .breadcrumb-item, .breadcrumb-item a, .breadcrumb-item::before, .text-muted, .o_wsale_category_description, .ak-shop-count) {
+            color: rgba(255, 255, 255, .8) !important;
+        }
+
+        .products_header .btn:not(.btn-primary) {
+            background: rgba(255, 255, 255, .95);
+            border-color: transparent;
+            color: $aks-ink;
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// 24 styles
+// ---------------------------------------------------------------------------
+
+#o_wsale_container.ak-shop {
+    // 01 Clean Cards: defaults
+
+    // 02 Minimal Grid
+    &.ak-shop-minimal {
+        --aks-card-bg: transparent;
+        --aks-card-bw: 0px;
+        --aks-card-radius: 0px;
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-thumb-radius: .5rem;
+        --aks-img-zoom: scale(1.05);
+        --aks-info-pad: .75rem 0 0;
+        --aks-title-weight: 500;
+    }
+
+    // 03 Soft Shadow
+    &.ak-shop-soft {
+        --aks-card-bw: 0px;
+        --aks-card-radius: 1.25rem;
+        --aks-card-shadow: 0 2px 6px rgba(20, 32, 51, .04), 0 12px 28px -12px rgba(20, 32, 51, .16);
+        --aks-card-shadow-hover: 0 4px 10px rgba(20, 32, 51, .06), 0 24px 44px -16px rgba(20, 32, 51, .28);
+        --aks-card-lift: translateY(-5px);
+    }
+
+    // 04 Bordered Catalog
+    &.ak-shop-catalog {
+        --aks-card-radius: 0px;
+        --aks-card-border: rgba(20, 32, 51, .14);
+        --aks-card-border-hover: #{$aks-ink};
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-thumb-bg: #fff;
+        --aks-text-align: center;
+        --aks-title-size: .8rem;
+        --aks-title-transform: uppercase;
+        --aks-title-spacing: .08em;
+        --aks-btn-radius: 0;
+        --aks-nav-radius: 0;
+        --aks-tool-border: rgba(20, 32, 51, .14);
+        --aks-tool-pad: .5rem;
+    }
+
+    // 05 Image Gallery
+    &.ak-shop-gallery {
+        --aks-card-bg: transparent;
+        --aks-card-bw: 0px;
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-thumb-radius: 1.1rem;
+        --aks-img-zoom: scale(1.07);
+        --aks-info-pad: .6rem .25rem 0;
+        --aks-title-size: .88rem;
+        --aks-title-weight: 500;
+
+        #o_wsale_products_grid .oe_product_image {
+            transition: box-shadow .35s $aks-ease;
+        }
+
+        .oe_product_cart:hover .oe_product_image {
+            box-shadow: 0 18px 36px -18px rgba(20, 32, 51, .45);
+        }
+    }
+
+    // 06 Boutique Centered
+    &.ak-shop-boutique {
+        --aks-card-bg: transparent;
+        --aks-card-bw: 0px;
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-thumb-bg: #F7F1E6;
+        --aks-thumb-radius: 1.5rem;
+        --aks-text-align: center;
+        --aks-info-pad: 1rem .5rem 0;
+        --aks-title-font: var(--ak-headings-font);
+        --aks-title-size: .85rem;
+        --aks-title-transform: uppercase;
+        --aks-title-spacing: .1em;
+        --aks-price-color: #{$aks-gold-text};
+
+        #o_wsale_products_header :is(.o_wsale_shop_title, .o_wsale_category_title, .ak-shop-count) {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    // 07 Dark Store
+    &.ak-shop-dark {
+        @include aks-dark-head;
+        --aks-head-bg: #{$aks-ink};
+        --aks-card-bg: #{$aks-ink};
+        --aks-card-color: #fff;
+        --aks-card-bw: 0px;
+        --aks-card-radius: 1.1rem;
+        --aks-card-pad: .5rem;
+        --aks-card-shadow-hover: 0 22px 40px -18px rgba(10, 16, 28, .6);
+        --aks-thumb-bg: #fff;
+        --aks-thumb-radius: .8rem;
+        --aks-info-pad: .85rem .5rem .5rem;
+        --aks-title-color: #fff;
+        --aks-price-color: #{$aks-gold};
+
+        .oe_product_cart :is(.text-muted, del) {
+            color: rgba(255, 255, 255, .6) !important;
+        }
+    }
+
+    // 08 Pastel Tiles
+    &.ak-shop-pastel {
+        --aks-card-bg: #{$aks-light};
+        --aks-card-bw: 0px;
+        --aks-card-radius: 1.5rem;
+        --aks-card-pad: .55rem;
+        --aks-thumb-bg: #fff;
+        --aks-thumb-radius: 1.1rem;
+        --aks-info-pad: .8rem .6rem .6rem;
+
+        .oe_product:nth-child(4n+2) .oe_product_cart { --o-wsale-card-bg: #FFF3E3; }
+        .oe_product:nth-child(4n+3) .oe_product_cart { --o-wsale-card-bg: #EAF5EC; }
+        .oe_product:nth-child(4n+4) .oe_product_cart { --o-wsale-card-bg: #F1ECFA; }
+    }
+
+    // 09 Compact Dense
+    &.ak-shop-dense {
+        --aks-card-radius: .6rem;
+        --aks-card-border-hover: #{$aks-primary};
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-info-pad: .5rem .6rem .6rem;
+        --aks-title-size: .82rem;
+        --aks-btn-radius: .5rem;
+
+        .oe_product_cart .product_price {
+            font-size: .88rem;
+        }
+    }
+
+    // 10 Magazine
+    &.ak-shop-magazine {
+        --aks-card-bg: transparent;
+        --aks-card-bw: 0px;
+        --aks-card-radius: 0px;
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-thumb-radius: 0;
+        --aks-info-pad: 1rem 0 0;
+        --aks-title-font: var(--ak-headings-font);
+        --aks-title-size: 1.1rem;
+        --aks-title-weight: 700;
+
+        #o_wsale_products_grid {
+            --o-wsale-card-thumb-aspect-ratio: .75;
+            --o-wsale-card-thumb-fill-mode: cover;
+        }
+
+        #o_wsale_products_header :is(.o_wsale_shop_title, .o_wsale_category_title) {
+            font-size: clamp(2rem, 4vw, 3rem) !important;
+            letter-spacing: -.035em;
+        }
+    }
+
+    // 11 Rounded Pills
+    &.ak-shop-rounded {
+        --aks-card-bw: 0px;
+        --aks-card-bg: #{$aks-light};
+        --aks-card-radius: 2rem;
+        --aks-card-pad: .6rem;
+        --aks-thumb-bg: #fff;
+        --aks-thumb-radius: 1.5rem;
+        --aks-info-pad: .8rem .75rem .75rem;
+        --aks-nav-radius: 999px;
+
+        .products_header :is(.form-control, .btn, .input-group) {
+            border-radius: 999px !important;
+        }
+    }
+
+    // 12 Sidebar Panels
+    &.ak-shop-panels {
+        --aks-side-bg: #{$aks-light};
+        --aks-side-radius: 1.25rem;
+        --aks-side-pad: 1rem 1.1rem;
+        --aks-card-shadow-hover: var(--ak-shadow-card);
+    }
+
+    // 13 Filter Bar
+    &.ak-shop-filterbar {
+        --aks-card-bw: 0px;
+        --aks-card-shadow: var(--ak-shadow-soft);
+        --aks-tool-bg: #{$aks-light};
+        --aks-tool-border: rgba(20, 32, 51, .06);
+        --aks-tool-radius: 1rem;
+        --aks-tool-pad: .6rem .75rem;
+    }
+
+    // 14 Colored Header Band
+    &.ak-shop-band {
+        @include aks-dark-head;
+        --aks-head-bg: #{$aks-primary};
+    }
+
+    // 15 Gold Luxe
+    &.ak-shop-luxe {
+        --aks-card-radius: .25rem;
+        --aks-card-border: #{rgba($aks-gold, .28)};
+        --aks-card-border-hover: #{$aks-gold};
+        --aks-card-shadow-hover: 0 18px 36px -20px #{rgba($aks-gold, .55)};
+        --aks-thumb-bg: #FBF6EC;
+        --aks-text-align: center;
+        --aks-title-font: var(--ak-headings-font);
+        --aks-title-size: .82rem;
+        --aks-title-transform: uppercase;
+        --aks-title-spacing: .12em;
+        --aks-price-color: #{$aks-gold-text};
+        --aks-btn-radius: .25rem;
+        --aks-nav-active-bg: #{rgba($aks-gold, .14)};
+        --aks-nav-active-color: #{$aks-gold-text};
+
+        #o_wsale_products_header :is(.o_wsale_shop_title, .o_wsale_category_title)::after {
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 2px;
+            margin-top: .5rem;
+            background: $aks-gold;
+        }
+
+        #o_wsale_products_header .o_wsale_category_title::after {
+            display: none;
+        }
+    }
+
+    // 16 Blue Accent
+    &.ak-shop-accent {
+        --aks-card-border-hover: #{$aks-primary};
+        --aks-thumb-bg: #EEF4FC;
+        --aks-price-color: #{$aks-primary};
+
+        #o_wsale_products_header :is(.o_wsale_shop_title, .o_wsale_category_title) {
+            padding-left: .9rem;
+            border-left: 4px solid $aks-primary;
+        }
+    }
+
+    // 17 Outline Hover
+    &.ak-shop-outline {
+        --aks-card-bw: 2px;
+        --aks-card-border: transparent;
+        --aks-card-border-hover: #{$aks-primary};
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-card-pad: .4rem;
+        --aks-thumb-radius: .7rem;
+        --aks-info-pad: .75rem .5rem .5rem;
+        --aks-card-bg: transparent;
+    }
+
+    // 18 Floating Toolbar
+    &.ak-shop-floating {
+        --aks-card-bw: 0px;
+        --aks-card-shadow: var(--ak-shadow-card);
+        --aks-tool-bg: #fff;
+        --aks-tool-radius: 999px;
+        --aks-tool-pad: .45rem .5rem;
+        --aks-tool-shadow: 0 10px 30px -12px rgba(20, 32, 51, .25);
+
+        .products_header :is(.form-control, .btn) {
+            border-radius: 999px !important;
+        }
+    }
+
+    // 19 Zoom Focus
+    &.ak-shop-zoom {
+        --aks-card-bg: transparent;
+        --aks-card-bw: 0px;
+        --aks-card-shadow-hover: none;
+        --aks-card-lift: none;
+        --aks-thumb-radius: 1rem;
+        --aks-img-zoom: scale(1.12);
+        --aks-info-pad: .7rem .25rem 0;
+
+        #o_wsale_products_grid {
+            --o-wsale-card-img-transition: transform 1s #{$aks-ease};
+        }
+
+        .oe_product_cart:hover .o_wsale_products_item_title a {
+            color: $aks-primary;
+        }
+    }
+
+    // 20 Tall Showcase
+    &.ak-shop-showcase {
+        --aks-card-radius: 1.25rem;
+        --aks-card-bw: 0px;
+        --aks-card-shadow: var(--ak-shadow-soft);
+        --aks-info-pad: 1rem 1.1rem 1.1rem;
+        --aks-title-size: 1rem;
+
+        #o_wsale_products_grid {
+            --o-wsale-card-thumb-aspect-ratio: .8;
+            --o-wsale-card-thumb-fill-mode: cover;
+        }
+    }
+
+    // 21 Lined List
+    &.ak-shop-lined {
+        --aks-card-bg: transparent;
+        --aks-card-bw: 0px;
+        --aks-card-radius: 0px;
+        --aks-card-shadow: inset 0 -1px 0 rgba(20, 32, 51, .12);
+        --aks-card-shadow-hover: inset 0 -2px 0 #{$aks-ink};
+        --aks-card-lift: none;
+        --aks-thumb-radius: .5rem;
+        --aks-info-pad: .8rem 0 1rem;
+
+        #o_wsale_products_header {
+            border-bottom: 1px solid rgba(20, 32, 51, .12);
+        }
+    }
+
+    // 22 Glass Cards
+    &.ak-shop-glass {
+        --aks-card-bg: rgba(255, 255, 255, .62);
+        --aks-card-border: rgba(255, 255, 255, .85);
+        --aks-card-border-hover: #fff;
+        --aks-card-radius: 1.25rem;
+        --aks-card-pad: .5rem;
+        --aks-thumb-bg: rgba(255, 255, 255, .7);
+        --aks-thumb-radius: .9rem;
+        --aks-info-pad: .8rem .5rem .5rem;
+        --aks-side-bg: rgba(255, 255, 255, .55);
+        --aks-side-radius: 1.25rem;
+        --aks-side-pad: 1rem;
+        --aks-side-border: rgba(255, 255, 255, .85);
+
+        .oe_product_cart {
+            backdrop-filter: blur(14px);
+        }
+    }
+
+    // 23 Gradient Header
+    &.ak-shop-gradient {
+        @include aks-dark-head;
+        --aks-head-bg: linear-gradient(120deg, #{$aks-primary} 0%, #{mix($aks-primary, $aks-ink, 55%)} 55%, #{$aks-gold} 130%);
+        --aks-card-bw: 0px;
+        --aks-card-shadow: var(--ak-shadow-soft);
+    }
+
+    // 24 Material Elevation
+    &.ak-shop-material {
+        --aks-card-bw: 0px;
+        --aks-card-radius: .75rem;
+        --aks-card-shadow: 0 1px 3px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .16);
+        --aks-card-shadow-hover: 0 10px 20px rgba(0, 0, 0, .12), 0 6px 6px rgba(0, 0, 0, .14);
+        --aks-btn-radius: .5rem;
+
+        .o_wsale_product_btn .btn {
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+    }
+}
+
+// Glass needs a colored backdrop to read as glass.
+#wrap:has(> #o_wsale_container.ak-shop-glass) {
+    background:
+        radial-gradient(60rem 30rem at 0% 0%, rgba($aks-primary, .12), transparent 60%),
+        radial-gradient(50rem 30rem at 100% 30%, rgba($aks-gold, .14), transparent 60%),
+        $aks-light;
+}
+
+// ---------------------------------------------------------------------------
+// Optional elements
+// ---------------------------------------------------------------------------
+
+// Sticky toolbar: the header box is removed so the toolbar can stick while
+// the whole product grid scrolls.
+#o_wsale_container.ak-shop-sticky-tools {
+    // `overflow: auto` would make the grid column the sticky reference.
+    #products_grid {
+        overflow: clip !important;
+        overflow-clip-margin: 1.5rem;
+    }
+
+    #o_wsale_products_header {
+        display: contents !important;
+
+        > * {
+            margin-top: .5rem;
+        }
+
+        > :first-child {
+            margin-top: 1.5rem;
+        }
+
+        .products_header {
+            position: sticky;
+            top: var(--ak-sticky-top, .75rem);
+            z-index: 10;
+            transition: top .25s ease;
+            margin-bottom: 1rem;
+            padding: .5rem;
+            border-radius: 1rem;
+            background: #fff;
+            box-shadow: 0 10px 30px -14px rgba(20, 32, 51, .28);
+        }
+    }
+}
+
+// Quick add reveal: product buttons appear on hover (devices with a mouse).
+@media (hover: hover) {
+    #o_wsale_container.ak-shop-quick-reveal .oe_product_cart {
+        .o_wsale_product_btn {
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity .25s, transform .25s $aks-ease;
+        }
+
+        &:is(:hover, :focus-within) .o_wsale_product_btn {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+// Sidebar card
+#o_wsale_container.ak-shop-side-card #products_grid_before {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(20, 32, 51, .08);
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: var(--ak-shadow-soft);
+}
+
+// Product count (the banners already show it)
+#wrap:has(> .ak-shop-banner) .ak-shop-count {
+    display: none;
+}
+
+.ak-shop-count {
+    color: var(--ak-ink-muted);
+    font-size: .875rem;
+}
+
+// Promo strip
+.ak-shop-promo-zone {
+    margin-top: 1.25rem;
+}
+
+.ak-shop-promo {
+    padding: .7rem 1.1rem;
+    border-radius: .9rem;
+    background: rgba($aks-gold, .12);
+    color: $aks-ink;
+    font-size: .92rem;
+    text-align: center;
+
+    .fa {
+        color: $aks-gold-text;
+    }
+}
+
+// Trust bar
+.ak-shop-trust {
+    margin: .5rem 0 2.5rem;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    background: $aks-light;
+}
+
+.ak-shop-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+
+    > div {
+        display: flex;
+        align-items: center;
+        gap: .85rem;
+    }
+
+    .fa {
+        display: inline-grid;
+        flex: 0 0 2.75rem;
+        place-items: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 50%;
+        background: #fff;
+        color: $aks-primary;
+        font-size: 1.1rem;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.35;
+        font-size: .92rem;
+
+        span {
+            color: var(--ak-ink-muted);
+            font-size: .82rem;
+        }
+    }
+}
+
+// Banners
+#wrap:has(> .ak-shop-banner) #o_wsale_products_header :is(.o_wsale_shop_title, .o_wsale_category_title:not(.o_wsale_category_title_is_search)) {
+    display: none !important;
+}
+
+.ak-shop-banner {
+    position: relative;
+
+    .ak-shop-banner-title {
+        margin-bottom: .35rem;
+        font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+    }
+
+    .ak-shop-banner-count {
+        margin-bottom: .5rem;
+        font-size: .85rem;
+        font-weight: 600;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        opacity: .7;
+    }
+
+    .ak-shop-banner-lead {
+        max-width: 38rem;
+        margin-bottom: 0;
+        font-size: 1.05rem;
+        opacity: .85;
+    }
+}
+
+.ak-shop-banner-simple {
+    padding: 3rem 0 2.5rem;
+    background: $aks-light;
+}
+
+.ak-shop-banner-image {
+    padding: clamp(3.5rem, 8vw, 6.5rem) 0;
+    background: linear-gradient(90deg, rgba(10, 16, 28, .72) 0%, rgba(10, 16, 28, .25) 70%), var(--ak-banner-img) center / cover no-repeat;
+    color: #fff;
+
+    .ak-eyebrow {
+        color: $aks-gold;
+    }
+
+    .ak-shop-banner-title {
+        color: #fff;
+    }
+}
+
+.ak-shop-banner-split {
+    padding: 2rem 0 1rem;
+
+    .ak-shop-banner-grid {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        align-items: center;
+        gap: 2rem;
+        overflow: hidden;
+        border-radius: 1.75rem;
+        background: $aks-light;
+    }
+
+    .ak-shop-banner-text {
+        padding: clamp(1.75rem, 4vw, 3.5rem);
+    }
+
+    .ak-shop-banner-media {
+        align-self: stretch;
+        min-height: 15rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .ak-shop-banner-grid {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .ak-shop-banner-media {
+            min-height: 11rem;
+            max-height: 14rem;
+        }
+    }
+}
+
+.ak-shop-banner-gradient {
+    padding: clamp(3rem, 6vw, 4.5rem) 0;
+    background: linear-gradient(120deg, $aks-primary 0%, mix($aks-primary, $aks-ink, 55%) 60%, $aks-gold 140%);
+    color: #fff;
+    text-align: center;
+
+    .ak-shop-banner-title {
+        color: #fff;
+    }
+
+    .ak-shop-banner-lead {
+        margin-inline: auto;
+    }
+}

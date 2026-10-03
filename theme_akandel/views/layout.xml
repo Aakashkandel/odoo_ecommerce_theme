@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Theme marker: lets Akandel styles and Website Builder extensions know they
+    run on a website using this theme (theme views only exist on such websites).
+-->
+<template id="ak_layout_marker" inherit_id="website.layout" name="Akandel Layout Marker">
+    <xpath expr="//div[@id='wrapwrap']" position="attributes">
+        <attribute name="t-attf-class" add="o_ak_theme" separator=" "/>
+    </xpath>
+</template>
+
+<!-- ======================================================================
+     Reusable header components
+     ====================================================================== -->
+
+<!--
+    Store actions: search, account, wishlist and cart.
+    Params:
+      _ak_search      'modal' (default) | 'none'
+      _ak_btn_class   classes of the round icon buttons
+      _ak_text        show text labels under icons (bool)
+-->
+<template id="ak_header_actions" name="Akandel Header Actions">
+    <t t-set="_ak_btn" t-value="_ak_btn_class or 'ak-icon-btn o_navlink_background_hover btn position-relative rounded-circle p-1 text-reset'"/>
+    <t t-set="_ak_badge" t-valuef="ak-badge position-absolute top-0 end-0 rounded-pill"/>
+    <t t-if="_ak_search != 'none'" t-call="website.placeholder_header_search_box"
+        _layout.f="modal"
+        _input_classes.f="border border-end-0 p-3"
+        _submit_classes.f="border border-start-0 px-4 bg-o-color-4"
+        _button_classes="'ak-icon-btn o_navlink_background_hover text-reset'"/>
+    <t t-call="portal.placeholder_user_sign_in"
+        _link_class="'ak-signin-link btn btn-sm rounded-pill px-3 text-reset o_navlink_background_hover'"/>
+    <t t-call="portal.user_dropdown"
+        _icon="True"
+        _no_caret="True"
+        _item_class.f="dropdown"
+        _icon_class.f="fa-stack"
+        _link_class="_ak_btn + ' d-flex align-items-center justify-content-center'"
+        _dropdown_menu_class.f="dropdown-menu-end"/>
+    <t t-call="website_sale_wishlist.header_wishlist_link"
+        _icon="True"
+        _text="_ak_text"
+        _text_class.f="ak-icon-label"
+        _link_class="_ak_btn"
+        _badge_class="_ak_badge"/>
+    <t t-call="website_sale.header_cart_link"
+        _icon="True"
+        _text="_ak_text"
+        _text_class.f="ak-icon-label"
+        _link_class="_ak_btn"
+        _badge_class="_ak_badge"/>
+</template>
+
+<!--
+    Top-level eCommerce categories rendered as navigation items. Content is
+    data-driven (Website > eCommerce > Categories), hence not editable inline.
+    Params: _ak_item_class, _ak_link_class, _ak_limit
+-->
+<template id="ak_category_links" name="Akandel Category Links">
+    <t t-set="ak_categories" t-value="website._akandel_get_nav_categories(limit=_ak_limit or 8)"/>
+    <li t-foreach="ak_categories" t-as="ak_categ" t-attf-class="#{_ak_item_class or 'nav-item'}">
+        <a t-attf-href="/shop/category/#{slug(ak_categ)}" t-attf-class="#{_ak_link_class or 'nav-link'}" t-out="ak_categ.name"/>
+    </li>
+    <li t-attf-class="#{_ak_item_class or 'nav-item'}">
+        <a href="/shop" t-attf-class="#{_ak_link_class or 'nav-link'} ak-category-all">
+            <t t-if="ak_categories">Shop all</t>
+            <t t-else="">Browse the shop</t>
+        </a>
+    </li>
+</template>
+
+<!-- Dropdown listing every top-level category ("All categories" button). -->
+<template id="ak_category_dropdown" name="Akandel Category Dropdown">
+    <li class="nav-item dropdown ak-category-dropdown o_no_autohide_item">
+        <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+           t-attf-class="dropdown-toggle d-flex align-items-center gap-2 #{_ak_toggle_class or 'nav-link fw-semibold'}">
+            <i class="fa fa-bars" aria-hidden="true"/>
+            <span>All categories</span>
+        </a>
+        <ul class="dropdown-menu ak-category-menu o_not_editable" t-ignore="true" role="menu">
+            <t t-call="theme_akandel.ak_category_links"
+                _ak_item_class.f=""
+                _ak_link_class.f="dropdown-item"
+                _ak_limit="12"/>
+        </ul>
+    </li>
+</template>
+
+<!-- Editable announcement bar used by several headers. -->
+<template id="ak_announcement_bar" name="Akandel Announcement Bar">
+    <div aria-label="Announcement" t-attf-class="ak-announcement o_header_hide_on_scroll #{_ak_class or 'o_cc o_cc5'}">
+        <div t-attf-class="#{header_content_width} d-flex align-items-center justify-content-center">
+            <div class="oe_structure oe_structure_solo w-100">
+                <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Announcement">
+                    <p class="ak-announcement-text mb-0 text-center">
+                        <span>Complimentary delivery on orders over $150</span>
+                        <span class="ak-dot" aria-hidden="true">·</span>
+                        <a href="/shop">Explore the new season</a>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- Editable utility links (help, order tracking...) used by several headers. -->
+<template id="ak_utility_links" name="Akandel Utility Links">
+    <div t-attf-class="oe_structure oe_structure_solo #{_ak_class}">
+        <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Utility Links">
+            <p class="ak-utility-links mb-0">
+                <a href="/my/orders">Track an order</a>
+                <a href="/contactus">Help &amp; contact</a>
+                <a href="/shop">Gift cards</a>
+            </p>
+        </section>
+    </div>
+</template>
+
+<!-- Editable call-to-action button used by bold/promo headers. -->
+<template id="ak_header_cta" name="Akandel Header Call to Action">
+    <li t-attf-class="ak-header-cta #{_ak_item_class}">
+        <div class="oe_structure oe_structure_solo">
+            <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Button">
+                <a href="/shop" t-attf-class="oe_unremovable btn #{_ak_btn_class or 'btn-primary'} btn-sm px-4">Shop now</a>
+            </section>
+        </div>
+    </li>
+</template>
+
+</odoo>

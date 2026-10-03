@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="theme_akandel.ShopOption">
+        <BuilderRow label.translate="Shop Style" tooltip.translate="24 Akandel shop page designs. Odoo's layout, columns and card options still apply.">
+            <BuilderSelect action="'websiteConfig'">
+                <BuilderSelectItem id="'ak_shop_default_opt'" actionParam="{ views: [] }">Odoo default</BuilderSelectItem>
+                <t t-foreach="shopStyles" t-as="shopStyle" t-key="shopStyle.id">
+                    <BuilderSelectItem id="shopStyle.id" title="shopStyle.title" actionParam="{ views: [shopStyle.view] }" t-out="shopStyle.title"/>
+                </t>
+            </BuilderSelect>
+        </BuilderRow>
+        <BuilderRow label.translate="Banner" tooltip.translate="Page banner showing the category, search or shop title">
+            <BuilderSelect action="'websiteConfig'">
+                <BuilderSelectItem id="'ak_shop_banner_none_opt'" actionParam="{ views: [] }">None</BuilderSelectItem>
+                <t t-foreach="banners" t-as="banner" t-key="banner.id">
+                    <BuilderSelectItem id="banner.id" actionParam="{ views: [banner.view] }" t-out="banner.title"/>
+                </t>
+            </BuilderSelect>
+        </BuilderRow>
+        <BuilderContext action="'websiteConfig'">
+            <BuilderRow label.translate="Promo Strip" tooltip.translate="Editable promotion strip above the products">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_shop_promo_strip'] }"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Product Count">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_shop_product_count'] }"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Sticky Toolbar" tooltip.translate="Search, sort and filters stay visible while scrolling">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_shop_sticky_toolbar'] }"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Buttons on Hover" tooltip.translate="Product buttons appear when hovering a product (mouse devices)">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_shop_hover_cart'] }"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Sidebar Card" tooltip.translate="Show the filters sidebar as a card">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_shop_sidebar_cards'] }"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Trust Bar" tooltip.translate="Editable shipping / returns / payment reassurance below the products">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_shop_trust_bar'] }"/>
+            </BuilderRow>
+        </BuilderContext>
+    </t>
+
+    <t t-name="theme_akandel.CartOption">
+        <BuilderRow label.translate="Add to Cart Style" tooltip.translate="What visitors see after adding a product: side drawer, bottom sheet, modal, toast...">
+            <BuilderSelect action="'websiteConfig'">
+                <BuilderSelectItem id="'ak_cart_default_opt'" actionParam="{ views: [] }">Odoo notification</BuilderSelectItem>
+                <t t-foreach="cartStyles" t-as="cartStyle" t-key="cartStyle.id">
+                    <BuilderSelectItem id="cartStyle.id" title="cartStyle.title" actionParam="{ views: [cartStyle.view] }" t-out="cartStyle.title"/>
+                </t>
+            </BuilderSelect>
+        </BuilderRow>
+        <BuilderContext action="'websiteConfig'" t-if="!isActiveItem('ak_cart_default_opt')">
+            <BuilderRow label.translate="Cart Icon Opens Panel" tooltip.translate="The header cart icon opens the cart panel instead of the cart page">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_cart_icon_panel'] }"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Free Shipping Bar">
+                <BuilderCheckbox id="'ak_cart_freeship_opt'" actionParam="{ views: ['theme_akandel.ak_cart_opt_freeship'] }"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Threshold" level="1" t-if="isActiveItem('ak_cart_freeship_opt')">
+                <BuilderNumberInput action="'akFreeShipping'" step="5" min="0"/>
+            </BuilderRow>
+            <BuilderRow label.translate="Recommendations" tooltip.translate="Accessory products of the cart items (Sales > Products > Accessory Products)">
+                <BuilderCheckbox actionParam="{ views: ['theme_akandel.ak_cart_opt_reco'] }"/>
+            </BuilderRow>
+        </BuilderContext>
+    </t>
+
+</templates>

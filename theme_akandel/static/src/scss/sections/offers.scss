@@ -1,0 +1,626 @@
+//------------------------------------------------------------------------------
+// Akandel - Offer sections (24 designs on one shared structure)
+// .s_ak_offers.ak-of-<design>
+//------------------------------------------------------------------------------
+
+$ak-primary: o-color('o-color-1');
+$ak-gold: o-color('o-color-2');
+$ak-light: o-color('o-color-3');
+$ak-ink: o-color('o-color-5');
+$ak-sale: #C2410C;
+$ak-ease: cubic-bezier(.2, .7, .2, 1);
+
+@mixin ak-of-overlay {
+    .ak-of-media {
+        position: absolute;
+        inset: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10, 16, 28, .05) 30%, rgba(10, 16, 28, .75) 100%);
+        }
+    }
+
+    .ak-of-img { height: 100%; aspect-ratio: auto; }
+
+    .ak-of-body {
+        position: relative;
+        z-index: 1;
+        justify-content: flex-end;
+        align-items: flex-start;
+        min-height: 22rem;
+        text-align: left;
+        color: #fff;
+    }
+
+    .ak-of-link { color: #fff; }
+}
+
+.s_ak_offers {
+    .ak-of-head {
+        max-width: 42rem;
+        margin-bottom: 2.75rem;
+    }
+
+    .ak-of-title {
+        margin-bottom: .6rem;
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    .ak-of-sub {
+        margin: 0;
+        opacity: .75;
+    }
+
+    .ak-of-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .ak-of-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid var(--ak-line);
+        border-radius: var(--ak-radius-lg);
+        background-color: #fff;
+        color: $ak-ink;
+        transition: transform .35s $ak-ease, box-shadow .35s $ak-ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--ak-shadow-card);
+        }
+    }
+
+    .ak-of-media {
+        overflow: hidden;
+    }
+
+    .ak-of-img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1.05;
+        object-fit: cover;
+        transition: transform .7s $ak-ease;
+    }
+
+    .ak-of-item:hover .ak-of-img {
+        transform: scale(1.05);
+    }
+
+    .ak-of-body {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        align-items: center;
+        gap: .45rem;
+        padding: 1.75rem 1.5rem 2rem;
+        text-align: center;
+    }
+
+    .ak-of-badge {
+        display: none;
+        align-self: inherit;
+        padding: .3rem .8rem;
+        border-radius: 999px;
+        background-color: $ak-sale;
+        color: #fff;
+        font-family: var(--ak-headings-font);
+        font-size: .8rem;
+        font-weight: 700;
+    }
+
+    .ak-of-name {
+        margin: 0;
+        font-size: clamp(1.4rem, 2vw, 1.85rem);
+        font-weight: 700;
+    }
+
+    .ak-of-text,
+    .ak-of-code {
+        display: none;
+        margin: 0;
+    }
+
+    .ak-of-text { opacity: .72; }
+
+    .ak-of-code {
+        padding: .35rem .8rem;
+        border: 1.5px dashed currentColor;
+        border-radius: .5rem;
+        font-size: .85rem;
+        letter-spacing: .04em;
+    }
+
+    .ak-of-link {
+        margin-top: auto;
+        padding-top: .9rem;
+        color: $ak-primary;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover { text-decoration: underline; text-underline-offset: .2em; }
+
+        // Make the whole card clickable.
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .ak-of-grid { grid-template-columns: minmax(0, 1fr) !important; }
+        .ak-of-item { grid-column: auto !important; grid-row: auto !important; }
+    }
+}
+
+// Editing: let the builder select texts inside cards instead of the overlay link.
+.editor_enable .s_ak_offers .ak-of-link::after,
+.o_editable .s_ak_offers .ak-of-link::after {
+    display: none;
+}
+
+//------------------------------------------------------------------------------
+// Designs
+//------------------------------------------------------------------------------
+
+// 01 Image cards (title + "+ Shop Now")
+.s_ak_offers.ak-of-cards .ak-of-item {
+    padding: .5rem .5rem 0;
+
+    .ak-of-media { border-radius: calc(var(--ak-radius-lg) - .35rem); }
+}
+
+// 02 Overlay tiles
+.s_ak_offers.ak-of-overlay {
+    .ak-of-item { border: 0; }
+    @include ak-of-overlay;
+    .ak-of-badge, .ak-of-text { display: block; }
+    .ak-of-text { opacity: .9; }
+}
+
+// 03 Feature + two
+.s_ak_offers.ak-of-feature {
+    .ak-of-grid { grid-template-columns: 1.3fr 1fr; }
+
+    .ak-of-item:first-child {
+        grid-row: span 2;
+        border: 0;
+        @include ak-of-overlay;
+
+        .ak-of-body { min-height: 30rem; padding: 2.5rem; }
+        .ak-of-name { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+        .ak-of-badge, .ak-of-text { display: block; }
+    }
+
+    .ak-of-item:not(:first-child) {
+        flex-direction: row;
+
+        .ak-of-media { flex: 0 0 42%; }
+        .ak-of-img { height: 100%; aspect-ratio: auto; }
+        .ak-of-body { align-items: flex-start; text-align: left; padding: 1.5rem; }
+        .ak-of-text { display: block; }
+    }
+}
+
+// 04 Coupon tickets
+.s_ak_offers.ak-of-coupon {
+    .ak-of-media { display: none; }
+
+    .ak-of-item {
+        border: 2px dashed rgba($ak-primary, .35);
+        background-color: rgba($ak-primary, .04);
+        -webkit-mask: radial-gradient(circle at 0 50%, transparent 1rem, #000 1.05rem) left / 51% 100% no-repeat,
+                      radial-gradient(circle at 100% 50%, transparent 1rem, #000 1.05rem) right / 51% 100% no-repeat;
+        mask: radial-gradient(circle at 0 50%, transparent 1rem, #000 1.05rem) left / 51% 100% no-repeat,
+              radial-gradient(circle at 100% 50%, transparent 1rem, #000 1.05rem) right / 51% 100% no-repeat;
+    }
+
+    .ak-of-badge {
+        display: block;
+        padding: 0;
+        background: none;
+        color: $ak-primary;
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .ak-of-text, .ak-of-code { display: block; }
+    .ak-of-code { color: $ak-primary; }
+}
+
+// 05 Gradient tiles
+.s_ak_offers.ak-of-gradient {
+    .ak-of-item { border: 0; color: #fff; }
+    .ak-of-item:nth-child(1) { background: linear-gradient(140deg, $ak-primary, lighten($ak-primary, 18%)); }
+    .ak-of-item:nth-child(2) { background: linear-gradient(140deg, darken($ak-gold, 6%), lighten($ak-gold, 12%)); }
+    .ak-of-item:nth-child(3) { background: linear-gradient(140deg, $ak-ink, lighten($ak-ink, 22%)); }
+
+    .ak-of-media {
+        width: 9rem;
+        margin: 2rem auto 0;
+        border: 4px solid rgba(255, 255, 255, .45);
+        border-radius: 50%;
+    }
+
+    .ak-of-img { aspect-ratio: 1; }
+    .ak-of-text { display: block; opacity: .9; }
+    .ak-of-link { color: #fff; }
+}
+
+// 06 Dark deals
+.s_ak_offers.ak-of-dark {
+    .ak-of-item {
+        border-color: rgba(255, 255, 255, .12);
+        background-color: lighten($ak-ink, 5%);
+        color: #fff;
+    }
+
+    .ak-of-img { aspect-ratio: 4 / 3; opacity: .85; }
+    .ak-of-badge { display: block; background-color: $ak-gold; }
+    .ak-of-text { display: block; }
+    .ak-of-link { color: lighten($ak-gold, 12%); }
+}
+
+// 07 Circle badges
+.s_ak_offers.ak-of-circles {
+    .ak-of-item { overflow: visible; }
+    .ak-of-media { border-radius: var(--ak-radius-lg) var(--ak-radius-lg) 0 0; }
+    .ak-of-img { aspect-ratio: 4 / 3; }
+
+    .ak-of-body { position: relative; }
+
+    .ak-of-badge {
+        position: absolute;
+        top: -2.25rem;
+        right: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        padding: 0;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        background-color: $ak-gold;
+        font-size: 1rem;
+        z-index: 2;
+    }
+
+    .ak-of-body { align-items: flex-start; text-align: left; }
+    .ak-of-text { display: block; }
+}
+
+// 08 Minimal rows
+.s_ak_offers.ak-of-rows {
+    .ak-of-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .ak-of-media { display: none; }
+
+    .ak-of-item {
+        border: 0;
+        border-bottom: 1px solid var(--ak-line);
+        border-radius: 0;
+        background: transparent;
+        color: inherit;
+
+        &:hover { transform: none; box-shadow: none; }
+    }
+
+    .ak-of-body {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 0 1.5rem;
+        padding: 1.5rem 0;
+        text-align: left;
+    }
+
+    .ak-of-badge { display: block; grid-row: span 2; font-size: 1rem; }
+    .ak-of-name { grid-column: 2; }
+    .ak-of-text { display: block; grid-column: 2; }
+    .ak-of-link { grid-column: 3; grid-row: 1 / span 2; margin: 0; padding: 0; }
+}
+
+// 09 Horizontal cards
+.s_ak_offers.ak-of-horizontal {
+    .ak-of-grid { grid-template-columns: minmax(0, 1fr); max-width: 60rem; margin: 0 auto; }
+    .ak-of-item { flex-direction: row; }
+    .ak-of-media { flex: 0 0 34%; }
+    .ak-of-img { height: 100%; aspect-ratio: auto; min-height: 12rem; }
+    .ak-of-body { align-items: flex-start; justify-content: center; padding: 2rem; text-align: left; }
+    .ak-of-badge, .ak-of-text { display: block; }
+}
+
+// 10 Polaroid tilt
+.s_ak_offers.ak-of-polaroid {
+    .ak-of-item {
+        padding: .8rem .8rem 0;
+        border: 0;
+        border-radius: .4rem;
+        box-shadow: var(--ak-shadow-card);
+        transform: rotate(-2deg);
+
+        &:nth-child(2) { transform: rotate(1.5deg) translateY(1rem); }
+        &:nth-child(3) { transform: rotate(-.5deg); }
+        &:hover { transform: rotate(0) translateY(-4px); }
+    }
+
+    .ak-of-media { border-radius: .25rem; }
+}
+
+// 11 Deal of the day
+.s_ak_offers.ak-of-dotd {
+    .ak-of-grid { grid-template-columns: 1.6fr 1fr; }
+
+    .ak-of-item:first-child {
+        grid-row: span 2;
+        flex-direction: row;
+        background-color: rgba($ak-gold, .08);
+
+        .ak-of-media { flex: 0 0 50%; }
+        .ak-of-img { height: 100%; aspect-ratio: auto; }
+        .ak-of-body { align-items: flex-start; justify-content: center; padding: 2.5rem; text-align: left; }
+        .ak-of-badge, .ak-of-text, .ak-of-code { display: block; }
+        .ak-of-name { font-size: clamp(1.8rem, 2.8vw, 2.4rem); }
+    }
+
+    .ak-of-item:not(:first-child) {
+        flex-direction: row;
+        align-items: center;
+
+        .ak-of-media { flex: 0 0 7rem; margin: 1rem; border-radius: var(--ak-radius); }
+        .ak-of-img { aspect-ratio: 1; }
+        .ak-of-body { align-items: flex-start; padding: 1rem 1rem 1rem 0; text-align: left; }
+        .ak-of-name { font-size: 1.2rem; }
+        .ak-of-link { padding-top: .25rem; }
+    }
+}
+
+// 12 Icon offers
+.s_ak_offers.ak-of-icons {
+    .ak-of-media { display: none; }
+    .ak-of-item { border: 0; background-color: rgba($ak-primary, .06); }
+
+    .ak-of-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: .75rem;
+        padding: 0;
+        border-radius: 1.4rem;
+        background-color: $ak-primary;
+        font-size: 1.15rem;
+        transform: rotate(-6deg);
+    }
+
+    .ak-of-text { display: block; }
+}
+
+// 13 Gold border
+.s_ak_offers.ak-of-gold {
+    .ak-of-item { border: 1.5px solid rgba($ak-gold, .55); }
+    .ak-of-img { aspect-ratio: 4 / 3; }
+    .ak-of-badge { display: block; background-color: $ak-gold; }
+    .ak-of-link { color: darken($ak-gold, 14%); }
+    .ak-of-item:hover { box-shadow: 0 18px 36px -20px rgba($ak-gold, .7); }
+}
+
+// 14 Full-width stripes
+.s_ak_offers.ak-of-stripes {
+    .ak-of-grid { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+    .ak-of-media { display: none; }
+
+    .ak-of-item {
+        border: 0;
+        color: #fff;
+
+        &:nth-child(1) { background-color: $ak-primary; }
+        &:nth-child(2) { background-color: darken($ak-gold, 6%); }
+        &:nth-child(3) { background-color: $ak-ink; }
+    }
+
+    .ak-of-body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .5rem 1.5rem;
+        padding: 1.6rem 2rem;
+        text-align: left;
+    }
+
+    .ak-of-badge { display: block; background-color: rgba(255, 255, 255, .2); }
+    .ak-of-text { display: block; opacity: .9; }
+    .ak-of-link { margin-left: auto; padding: 0; color: #fff; }
+}
+
+// 15 Image left rows
+.s_ak_offers.ak-of-imgleft {
+    .ak-of-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ak-of-item { flex-direction: row; }
+    .ak-of-item:first-child { grid-column: span 2; }
+    .ak-of-media { flex: 0 0 38%; }
+    .ak-of-img { height: 100%; aspect-ratio: auto; min-height: 13rem; }
+    .ak-of-body { align-items: flex-start; justify-content: center; text-align: left; }
+    .ak-of-text, .ak-of-code { display: block; }
+}
+
+// 16 Mosaic
+.s_ak_offers.ak-of-mosaic {
+    .ak-of-item { border: 0; @include ak-of-overlay; }
+    .ak-of-item:first-child { grid-column: span 2; }
+    .ak-of-item:last-child { grid-column: span 3; .ak-of-body { min-height: 16rem; } }
+    .ak-of-badge { display: block; }
+}
+
+// 17 Corner ribbons
+.s_ak_offers.ak-of-ribbon {
+    .ak-of-badge {
+        position: absolute;
+        top: 1.4rem;
+        right: -2.6rem;
+        display: block;
+        width: 10rem;
+        padding: .35rem 0;
+        border-radius: 0;
+        text-align: center;
+        transform: rotate(45deg);
+        z-index: 2;
+    }
+
+    .ak-of-img { aspect-ratio: 4 / 3; }
+    .ak-of-text { display: block; }
+}
+
+// 18 Glass on image
+.s_ak_offers.ak-of-glass {
+    .ak-of-item { border: 0; }
+
+    .ak-of-media {
+        position: absolute;
+        inset: 0;
+    }
+
+    .ak-of-img { height: 100%; aspect-ratio: auto; }
+
+    .ak-of-body {
+        position: relative;
+        justify-content: center;
+        min-height: 24rem;
+        margin: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, .4);
+        border-radius: var(--ak-radius);
+        background-color: rgba(255, 255, 255, .7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .ak-of-text { display: block; }
+}
+
+// 19 Color blocks
+.s_ak_offers.ak-of-blocks {
+    .ak-of-item {
+        border: 0;
+        color: #fff;
+
+        &:nth-child(1) { background-color: $ak-primary; }
+        &:nth-child(2) { background-color: darken($ak-gold, 8%); }
+        &:nth-child(3) { background-color: $ak-ink; }
+    }
+
+    .ak-of-media {
+        position: absolute;
+        right: -2rem;
+        bottom: -2rem;
+        width: 9rem;
+        border-radius: 50%;
+        opacity: .9;
+    }
+
+    .ak-of-img { aspect-ratio: 1; }
+
+    .ak-of-body {
+        align-items: flex-start;
+        min-height: 16rem;
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .ak-of-text { display: block; max-width: 70%; opacity: .9; }
+    .ak-of-link { color: #fff; }
+}
+
+// 20 Big percent
+.s_ak_offers.ak-of-percent {
+    .ak-of-media { display: none; }
+    .ak-of-item { background-color: rgba($ak-gold, .07); border-color: rgba($ak-gold, .25); }
+
+    .ak-of-badge {
+        display: block;
+        padding: 0;
+        background: none;
+        color: darken($ak-gold, 10%);
+        font-size: clamp(3.5rem, 6vw, 5rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -.04em;
+    }
+
+    .ak-of-text { display: block; }
+}
+
+// 21 Stacked banners
+.s_ak_offers.ak-of-stack {
+    .ak-of-grid { grid-template-columns: minmax(0, 1fr); }
+    .ak-of-item { border: 0; @include ak-of-overlay; }
+
+    .ak-of-media::after {
+        background: linear-gradient(90deg, rgba(10, 16, 28, .75), rgba(10, 16, 28, 0) 70%);
+    }
+
+    .ak-of-body {
+        justify-content: center;
+        min-height: 13rem;
+        padding: 2rem 2.5rem;
+    }
+
+    .ak-of-badge, .ak-of-text { display: block; }
+}
+
+// 22 Arch images
+.s_ak_offers.ak-of-arch {
+    .ak-of-item { border: 0; background: transparent; color: inherit; }
+    .ak-of-item:hover { box-shadow: none; }
+    .ak-of-media { border-radius: 999px 999px var(--ak-radius-lg) var(--ak-radius-lg); }
+    .ak-of-img { aspect-ratio: 3 / 4; }
+}
+
+// 23 Offset duo
+.s_ak_offers.ak-of-duo {
+    .ak-of-item:nth-child(2) {
+        @include media-breakpoint-up(lg) { margin-top: 3rem; }
+    }
+
+    .ak-of-item { border: 0; box-shadow: var(--ak-shadow-card); }
+    .ak-of-img { aspect-ratio: 4 / 5; }
+    .ak-of-badge { display: block; }
+}
+
+// 24 Floating badges
+.s_ak_offers.ak-of-floating {
+    .ak-of-item {
+        overflow: visible;
+        padding: 1rem 1rem 0;
+        border: 0;
+        box-shadow: var(--ak-shadow-card);
+    }
+
+    .ak-of-media { border-radius: var(--ak-radius); }
+
+    .ak-of-badge {
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        padding: 0;
+        border-radius: 50%;
+        background-color: $ak-primary;
+        box-shadow: var(--ak-shadow-soft);
+        z-index: 2;
+    }
+
+    .ak-of-text { display: block; }
+}

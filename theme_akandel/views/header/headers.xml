@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Akandel desktop header variants.
+
+    Every variant follows the core Odoo 19 header contract:
+      * replaces `//header//nav` of `website.layout` (like website.template_header_*),
+      * keeps a single `#o_main_nav` / `#top_menu` (Website Builder options rely on them),
+      * reuses the core placeholders (brand, search, language, sign in, CTA...) so the
+        "Header > Elements" toggles of the Website Builder keep working,
+      * always renders `website.template_header_mobile` for small screens (see
+        mobile_headers.xml for the Akandel mobile styles).
+    They are selected from Website Builder > Header > Template.
+-->
+
+<!-- 1. Essential: logo, centered menu, store actions -->
+<template id="template_header_ak_essential" inherit_id="website.layout" name="Akandel Header: Essential" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-essential d-none d-lg-block">
+            <div id="o_main_nav" t-attf-class="o_main_nav #{header_content_width}">
+                <t t-call="website.placeholder_header_brand" _link_class.f="me-4"/>
+                <t t-call="website.navbar_nav" _nav_class.f="ak-nav mx-auto">
+                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                        <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                    </t>
+                </t>
+                <ul class="ak-header-actions navbar-nav flex-row align-items-center gap-1 flex-shrink-0 ps-3">
+                    <t t-call="website.placeholder_header_text_element"/>
+                    <t t-call="website.placeholder_header_social_links"/>
+                    <t t-call="website.placeholder_header_language_selector"
+                        _btn_class="_additional_btn_color or 'nav-link'"
+                        _dropdown_menu_class.f="dropdown-menu-end"/>
+                    <t t-call="theme_akandel.ak_header_actions"/>
+                    <t t-call="website.placeholder_header_call_to_action" _item_class.f="ms-2"/>
+                </ul>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 2. Centered: search | logo | actions, then a centered menu row -->
+<template id="template_header_ak_centered" inherit_id="website.layout" name="Akandel Header: Centered Logo" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-centered d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <div aria-label="Top" t-attf-class="#{header_content_width} d-grid align-items-center w-100 py-3 o_grid_header_3_cols">
+                    <ul class="navbar-nav flex-row align-items-center gap-2">
+                        <t t-call="website.placeholder_header_search_box"
+                            _classes.f="ak-search-inline"
+                            _input_classes.f="rounded-start-pill ps-3 border-0 text-bg-light"
+                            _submit_classes.f="rounded-end-pill pe-3 border-0 text-bg-light"/>
+                        <t t-call="website.placeholder_header_language_selector"
+                            _btn_class.f="nav-link"
+                            _dropdown_menu_class.f="dropdown-menu-start"/>
+                    </ul>
+                    <t t-call="website.placeholder_header_brand" _link_class.f="mx-auto"/>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center justify-content-end gap-1">
+                        <t t-call="theme_akandel.ak_header_actions" _ak_search.f="none"/>
+                    </ul>
+                </div>
+                <div aria-label="Menu" class="ak-header-row w-100">
+                    <div t-attf-class="#{header_content_width}">
+                        <t t-call="website.navbar_nav" _nav_class.f="ak-nav ak-nav-spaced justify-content-center">
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 3. Announcement: editable announcement bar above the main row -->
+<template id="template_header_ak_announce" inherit_id="website.layout" name="Akandel Header: Announcement Bar" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-announce d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <t t-call="theme_akandel.ak_announcement_bar"/>
+                <div aria-label="Main" t-attf-class="#{header_content_width} d-flex align-items-center w-100 py-2">
+                    <t t-call="website.placeholder_header_brand" _link_class.f="me-4"/>
+                    <t t-call="website.navbar_nav" _nav_class.f="ak-nav me-auto">
+                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                            <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                        </t>
+                    </t>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center gap-1 flex-shrink-0 ps-3">
+                        <t t-call="website.placeholder_header_language_selector"
+                            _btn_class.f="nav-link"
+                            _dropdown_menu_class.f="dropdown-menu-end"/>
+                        <t t-call="theme_akandel.ak_header_actions"/>
+                        <t t-call="website.placeholder_header_call_to_action" _item_class.f="ms-2"/>
+                    </ul>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 4. Category: wide search row + category navigation bar -->
+<template id="template_header_ak_category" inherit_id="website.layout" name="Akandel Header: Category Navigation" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-category d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <div aria-label="Top" t-attf-class="#{header_content_width} d-flex align-items-center gap-4 w-100 py-3">
+                    <t t-call="website.placeholder_header_brand" _link_class.f="flex-shrink-0"/>
+                    <ul class="navbar-nav flex-grow-1 ak-search-wide">
+                        <t t-call="website.placeholder_header_search_box"
+                            _item_class.f="w-100"
+                            _classes.f="w-100"
+                            _input_classes.f="rounded-start-pill ps-4 border-0 text-bg-light"
+                            _submit_classes.f="rounded-end-pill pe-4 border-0 bg-o-color-1 text-white"/>
+                    </ul>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center gap-1 flex-shrink-0">
+                        <t t-call="theme_akandel.ak_header_actions" _ak_search.f="none"/>
+                    </ul>
+                </div>
+                <div aria-label="Categories" class="ak-header-row ak-category-bar w-100">
+                    <div t-attf-class="#{header_content_width} d-flex align-items-center gap-3">
+                        <ul class="navbar-nav flex-row flex-shrink-0">
+                            <t t-call="theme_akandel.ak_category_dropdown" _ak_toggle_class.f="nav-link fw-semibold"/>
+                        </ul>
+                        <t t-call="website.navbar_nav" _nav_class.f="ak-nav me-auto">
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                            </t>
+                        </t>
+                        <ul class="navbar-nav flex-row align-items-center gap-2 flex-shrink-0">
+                            <t t-call="website.placeholder_header_text_element" _txt_elt_content.f="sentence"/>
+                            <t t-call="website.placeholder_header_language_selector"
+                                _btn_class.f="nav-link"
+                                _dropdown_menu_class.f="dropdown-menu-end"/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile" _txt_elt_content.f="sentence"/>
+    </xpath>
+</template>
+
+<!-- 5. Promo: campaign strip with CTA, then menu | logo | actions -->
+<template id="template_header_ak_promo" inherit_id="website.layout" name="Akandel Header: Promotion" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-promo d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <div aria-label="Promotion" class="ak-promo-strip o_cc o_cc4 o_header_hide_on_scroll w-100">
+                    <div t-attf-class="#{header_content_width} d-flex align-items-center justify-content-center gap-3 py-2">
+                        <div class="oe_structure oe_structure_solo">
+                            <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Promotion">
+                                <p class="mb-0"><strong>The Spring Edit</strong> · Up to 30% off selected living room pieces</p>
+                            </section>
+                        </div>
+                        <ul class="navbar-nav flex-row">
+                            <t t-call="theme_akandel.ak_header_cta" _ak_btn_class.f="btn-outline-light"/>
+                        </ul>
+                    </div>
+                </div>
+                <div aria-label="Main" t-attf-class="#{header_content_width} d-grid align-items-center w-100 py-3 o_grid_header_3_cols">
+                    <t t-call="website.navbar_nav" _nav_class.f="ak-nav me-auto">
+                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                            <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                        </t>
+                    </t>
+                    <t t-call="website.placeholder_header_brand" _link_class.f="mx-auto"/>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center justify-content-end gap-1 ps-3">
+                        <t t-call="website.placeholder_header_language_selector"
+                            _btn_class.f="nav-link"
+                            _dropdown_menu_class.f="dropdown-menu-end"/>
+                        <t t-call="theme_akandel.ak_header_actions"/>
+                    </ul>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 6. Minimal: menu in a side drawer, centered logo, actions -->
+<template id="template_header_ak_minimal" inherit_id="website.layout" name="Akandel Header: Minimal Drawer" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar"
+            _navbar_classes.f="ak-header ak-header-minimal d-none d-lg-block"
+            _navbar_expand_class.f="">
+            <div id="o_main_nav" t-attf-class="o_main_nav d-grid py-1 o_grid_header_3_cols #{header_content_width}">
+                <div class="d-flex align-items-center gap-2 me-auto">
+                    <t t-call="website.navbar_toggler" _toggler_class.f="btn ak-icon-btn p-2"/>
+                    <span class="ak-menu-label small fw-semibold text-uppercase" aria-hidden="true">Menu</span>
+                </div>
+                <t t-call="website.placeholder_header_brand" _link_class.f="mw-100 mx-auto"/>
+                <ul class="ak-header-actions navbar-nav flex-row align-items-center justify-content-end gap-1 ms-auto">
+                    <t t-call="theme_akandel.ak_header_actions"/>
+                </ul>
+                <div class="offcanvas offcanvas-start o_navbar_mobile ak-drawer" id="top_menu_collapse">
+                    <div class="offcanvas-header justify-content-between">
+                        <span class="ak-eyebrow">Navigate</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"/>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column justify-content-between pt-0">
+                        <ul class="navbar-nav">
+                            <li>
+                                <t t-set="is_vertical_nav" t-valuef="True"/>
+                                <t t-call="website.navbar_nav" _nav_class.f="ak-drawer-nav mt-2">
+                                    <t t-set="offcanvas_is_leftside" t-valuef="True"/>
+                                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                        <t t-call="website.submenu"
+                                            item_class.f="nav-item border-bottom"
+                                            link_class.f="nav-link py-3 text-wrap"
+                                            dropdown_toggler_classes.f="d-flex justify-content-between align-items-center"
+                                            dropdown_menu_classes.f="position-relative rounded-0 o_dropdown_without_offset"/>
+                                    </t>
+                                </t>
+                            </li>
+                            <li class="mt-4 o_not_editable" t-ignore="true">
+                                <span class="ak-eyebrow d-block mb-2">Shop by category</span>
+                                <ul class="list-unstyled ak-drawer-categories">
+                                    <t t-call="theme_akandel.ak_category_links"
+                                        _ak_item_class.f=""
+                                        _ak_link_class.f="d-block py-1 text-reset"/>
+                                </ul>
+                            </li>
+                            <t t-call="website.placeholder_header_text_element" _txt_elt_content.f="phone_mail" _div_class.f="mt-3"/>
+                            <t t-call="website.placeholder_header_social_links" _div_class.f="mt-2"/>
+                        </ul>
+                        <ul class="navbar-nav gap-2 mt-4 w-100">
+                            <t t-call="website.placeholder_header_language_selector"
+                                _btn_class.f="nav-link d-flex align-items-center w-100"
+                                _txt_class.f="me-auto small"
+                                _flag_class.f="me-2"
+                                _div_classes.f="dropup"
+                                _dropdown_menu_class.f="w-100"/>
+                            <t t-call="website.header_call_to_action_large"/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile" _txt_elt_content.f="phone_mail"/>
+    </xpath>
+</template>
+
+<!-- 7. Split: menu split on both sides of a centered logo -->
+<template id="template_header_ak_split" inherit_id="website.layout" name="Akandel Header: Split Menu" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-split d-none d-lg-block">
+            <t t-set="ak_menus" t-value="website.menu_id.child_id.filtered('is_visible')"/>
+            <t t-set="ak_half" t-value="(len(ak_menus) + 1) // 2"/>
+            <div id="o_main_nav" t-attf-class="o_main_nav d-grid align-items-center py-2 o_grid_header_3_cols #{header_content_width}">
+                <t t-call="website.navbar_nav" _nav_class.f="ak-nav justify-content-end pe-4">
+                    <t t-foreach="ak_menus[:ak_half]" t-as="submenu">
+                        <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                    </t>
+                </t>
+                <t t-call="website.placeholder_header_brand" _link_class.f="mx-auto"/>
+                <div class="d-flex align-items-center justify-content-between ps-4">
+                    <ul class="nav navbar-nav ak-nav" role="menu">
+                        <t t-foreach="ak_menus[ak_half:]" t-as="submenu">
+                            <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                        </t>
+                    </ul>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center gap-1 flex-shrink-0 ps-3">
+                        <t t-call="theme_akandel.ak_header_actions"/>
+                    </ul>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 8. Floating: rounded, elevated bar (great with "Header overlay" pages) -->
+<template id="template_header_ak_floating" inherit_id="website.layout" name="Akandel Header: Floating Bar" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-floating d-none d-lg-block">
+            <div id="o_main_nav" t-attf-class="o_main_nav #{header_content_width}">
+                <div class="ak-floating-shell o_cc o_cc1 d-flex align-items-center w-100">
+                    <t t-call="website.placeholder_header_brand" _link_class.f="me-4"/>
+                    <t t-call="website.navbar_nav" _nav_class.f="ak-nav mx-auto">
+                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                            <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                        </t>
+                    </t>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center gap-1 flex-shrink-0 ps-3">
+                        <t t-call="website.placeholder_header_language_selector"
+                            _btn_class.f="nav-link"
+                            _dropdown_menu_class.f="dropdown-menu-end"/>
+                        <t t-call="theme_akandel.ak_header_actions"/>
+                        <t t-call="website.placeholder_header_call_to_action" _item_class.f="ms-2"/>
+                    </ul>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 9. Search first: prominent search, menu and contact row below -->
+<template id="template_header_ak_search" inherit_id="website.layout" name="Akandel Header: Search First" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-search d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <div aria-label="Top" t-attf-class="#{header_content_width} d-grid align-items-center w-100 py-3 o_grid_header_3_cols">
+                    <t t-call="website.placeholder_header_brand" _link_class.f="me-auto"/>
+                    <ul class="navbar-nav ak-search-hero">
+                        <t t-call="website.placeholder_header_search_box"
+                            _item_class.f="w-100"
+                            _classes.f="w-100"
+                            _input_classes.f="rounded-start-pill ps-4 border-end-0"
+                            _submit_classes.f="rounded-end-pill pe-4 border-start-0 bg-o-color-4"/>
+                    </ul>
+                    <ul class="ak-header-actions ak-actions-labelled navbar-nav flex-row align-items-center justify-content-end gap-1 ms-auto">
+                        <t t-call="theme_akandel.ak_header_actions" _ak_search.f="none" _ak_text="True"/>
+                    </ul>
+                </div>
+                <div aria-label="Menu" class="ak-header-row w-100">
+                    <div t-attf-class="#{header_content_width} d-flex align-items-center">
+                        <t t-call="website.navbar_nav" _nav_class.f="ak-nav me-auto">
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                            </t>
+                        </t>
+                        <ul class="navbar-nav flex-row align-items-center gap-2">
+                            <t t-call="website.placeholder_header_text_element"/>
+                            <t t-call="website.placeholder_header_language_selector"
+                                _btn_class.f="nav-link"
+                                _dropdown_menu_class.f="dropdown-menu-end"/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 10. Luxe: utility line, large centered logo, spaced uppercase menu -->
+<template id="template_header_ak_luxe" inherit_id="website.layout" name="Akandel Header: Luxe" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-luxe d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <div aria-label="Utility" class="ak-header-utility o_header_hide_on_scroll w-100">
+                    <div t-attf-class="#{header_content_width} d-flex align-items-center justify-content-between py-1">
+                        <t t-call="theme_akandel.ak_utility_links"/>
+                        <ul class="navbar-nav flex-row align-items-center gap-2">
+                            <t t-call="website.placeholder_header_social_links"/>
+                            <t t-call="website.placeholder_header_language_selector"
+                                _btn_class.f="nav-link small"
+                                _dropdown_menu_class.f="dropdown-menu-end"/>
+                        </ul>
+                    </div>
+                </div>
+                <div aria-label="Brand" t-attf-class="#{header_content_width} d-grid align-items-center w-100 py-3 o_grid_header_3_cols">
+                    <ul class="navbar-nav flex-row align-items-center me-auto">
+                        <t t-call="website.placeholder_header_search_box"
+                            _layout.f="modal"
+                            _input_classes.f="border border-end-0 p-3"
+                            _submit_classes.f="border border-start-0 px-4 bg-o-color-4"
+                            _button_classes.f="ak-icon-btn o_navlink_background_hover text-reset"/>
+                    </ul>
+                    <t t-call="website.placeholder_header_brand" _link_class.f="ak-brand-lg mx-auto"/>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center justify-content-end gap-1">
+                        <t t-call="theme_akandel.ak_header_actions" _ak_search.f="none"/>
+                    </ul>
+                </div>
+                <div aria-label="Menu" class="ak-header-row w-100">
+                    <div t-attf-class="#{header_content_width}">
+                        <t t-call="website.navbar_nav" _nav_class.f="ak-nav ak-nav-caps justify-content-center">
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 11. Bold: heavy type, pill actions and a strong call to action -->
+<template id="template_header_ak_bold" inherit_id="website.layout" name="Akandel Header: Bold" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-bold d-none d-lg-block">
+            <div id="o_main_nav" t-attf-class="o_main_nav #{header_content_width} py-2">
+                <t t-call="website.placeholder_header_brand" _link_class.f="me-5"/>
+                <t t-call="website.navbar_nav" _nav_class.f="ak-nav ak-nav-bold me-auto">
+                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                        <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                    </t>
+                </t>
+                <ul class="ak-header-actions ak-actions-pill navbar-nav flex-row align-items-center gap-1 flex-shrink-0 ps-3">
+                    <t t-call="theme_akandel.ak_header_actions"
+                        _ak_btn_class="'ak-icon-btn btn position-relative rounded-circle p-1 text-reset'"/>
+                </ul>
+                <ul class="navbar-nav flex-row align-items-center ps-3">
+                    <t t-call="theme_akandel.ak_header_cta" _ak_btn_class.f="btn-primary"/>
+                </ul>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+<!-- 12. Utility: service bar on top, compact search in the main row -->
+<template id="template_header_ak_utility" inherit_id="website.layout" name="Akandel Header: Utility Bar" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-utility-bar d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <div aria-label="Services" class="ak-header-utility o_cc o_cc2 o_header_hide_on_scroll w-100">
+                    <div t-attf-class="#{header_content_width} d-flex align-items-center justify-content-between py-1">
+                        <ul class="navbar-nav flex-row align-items-center gap-3">
+                            <t t-call="website.placeholder_header_text_element" _txt_elt_content.f="mail"/>
+                        </ul>
+                        <div class="d-flex align-items-center gap-3">
+                            <t t-call="theme_akandel.ak_utility_links"/>
+                            <ul class="navbar-nav flex-row align-items-center gap-2">
+                                <t t-call="website.placeholder_header_language_selector"
+                                    _btn_class.f="nav-link small"
+                                    _dropdown_menu_class.f="dropdown-menu-end"/>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div aria-label="Main" t-attf-class="#{header_content_width} d-flex align-items-center gap-3 w-100 py-2">
+                    <t t-call="website.placeholder_header_brand" _link_class.f="me-3"/>
+                    <t t-call="website.navbar_nav" _nav_class.f="ak-nav me-auto">
+                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                            <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                        </t>
+                    </t>
+                    <ul class="navbar-nav ak-search-compact">
+                        <t t-call="website.placeholder_header_search_box"
+                            _input_classes.f="rounded-start-pill ps-3 border-0 text-bg-light"
+                            _submit_classes.f="rounded-end-pill pe-3 border-0 text-bg-light"/>
+                    </ul>
+                    <ul class="ak-header-actions navbar-nav flex-row align-items-center gap-1 flex-shrink-0">
+                        <t t-call="theme_akandel.ak_header_actions" _ak_search.f="none"/>
+                    </ul>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile" _txt_elt_content.f="mail"/>
+    </xpath>
+</template>
+
+<!-- 13. Stacked: logo + tagline, labelled actions, menu row below -->
+<template id="template_header_ak_stacked" inherit_id="website.layout" name="Akandel Header: Stacked" active="False">
+    <xpath expr="//header//nav" position="replace">
+        <t t-call="website.navbar" _navbar_classes.f="ak-header ak-header-stacked d-none d-lg-block p-0">
+            <div id="o_main_nav" class="o_main_nav flex-wrap">
+                <div aria-label="Top" t-attf-class="#{header_content_width} d-flex align-items-center justify-content-between w-100 py-3">
+                    <div class="d-flex align-items-center gap-4">
+                        <t t-call="website.placeholder_header_brand"/>
+                        <div class="oe_structure oe_structure_solo ak-tagline">
+                            <section class="s_text_block oe_unremovable oe_unmovable" data-snippet="s_text_block" data-name="Tagline">
+                                <p class="mb-0 small">Thoughtfully made furniture<br/>&amp; objects for everyday living</p>
+                            </section>
+                        </div>
+                    </div>
+                    <ul class="ak-header-actions ak-actions-labelled navbar-nav flex-row align-items-center gap-2">
+                        <t t-call="theme_akandel.ak_header_actions" _ak_text="True"/>
+                    </ul>
+                </div>
+                <div aria-label="Menu" class="ak-header-row w-100">
+                    <div t-attf-class="#{header_content_width} d-flex align-items-center">
+                        <t t-call="website.navbar_nav" _nav_class.f="ak-nav ak-nav-underline me-auto">
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu" item_class.f="nav-item" link_class.f="nav-link"/>
+                            </t>
+                        </t>
+                        <ul class="navbar-nav flex-row align-items-center gap-2">
+                            <t t-call="website.placeholder_header_social_links"/>
+                            <t t-call="website.placeholder_header_language_selector"
+                                _btn_class.f="nav-link"
+                                _dropdown_menu_class.f="dropdown-menu-end"/>
+                            <t t-call="website.placeholder_header_call_to_action" _item_class.f="ms-2"/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-call="website.template_header_mobile"/>
+    </xpath>
+</template>
+
+</odoo>

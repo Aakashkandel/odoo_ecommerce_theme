@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Campaign banner: seasonal campaign with background image -->
+<template id="s_ak_campaign_banner" name="Akandel Campaign Banner">
+    <section class="s_ak_campaign_banner oe_img_bg o_bg_img_center o_cc o_cc5 pt128 pb128" data-snippet="s_ak_campaign_banner" data-name="Campaign Banner"
+             style="background-image: url('/website/static/src/img/library/gift.webp');">
+        <div class="o_we_bg_filter" style="background-image: linear-gradient(90deg, rgba(15, 16, 17, 0.78) 0%, rgba(15, 16, 17, 0.2) 70%);"/>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="ak-eyebrow">Winter gifting</p>
+                    <h2 class="display-4 mb-3">Gifts that stay for years.</h2>
+                    <p class="lead mb-4">Wrapped by hand, delivered before the 22nd. Free gift notes on every order.</p>
+                    <p class="d-flex flex-wrap gap-2 mb-0">
+                        <a href="/shop" class="btn btn-light btn-lg">Shop gifts</a>
+                        <a href="/shop" class="btn btn-outline-light btn-lg">Gift cards</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Collection duo: two side-by-side collection banners -->
+<template id="s_ak_collection_duo" name="Akandel Collection Duo">
+    <section class="s_ak_collection_duo o_cc o_cc1 pt64 pb64" data-snippet="s_ak_collection_duo" data-name="Collection Duo">
+        <div class="container">
+            <div class="row g-3 g-lg-4">
+                <div class="col-lg-6">
+                    <a href="/shop" class="ak-collection-card d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk in a calm study" loading="lazy"/>
+                        <span class="ak-collection-card-body">
+                            <span class="ak-eyebrow">Work from home</span>
+                            <span class="h3 d-block">The Study</span>
+                            <span class="ak-link-arrow">Shop the collection <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="/shop" class="ak-collection-card d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Dining table with flowers" loading="lazy"/>
+                        <span class="ak-collection-card-body">
+                            <span class="ak-eyebrow">Gather</span>
+                            <span class="h3 d-block">The Dining Room</span>
+                            <span class="ak-link-arrow">Shop the collection <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Collection trio: three tall collection cards -->
+<template id="s_ak_collection_trio" name="Akandel Collection Trio">
+    <section class="s_ak_collection_trio o_cc o_cc2 pt80 pb80" data-snippet="s_ak_collection_trio" data-name="Collection Trio">
+        <div class="container">
+            <div class="ak-section-head text-center mb-5">
+                <p class="ak-eyebrow">Seasonal collections</p>
+                <h2 class="mb-0">Three moods for autumn</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="/shop" class="ak-trio-card d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases" loading="lazy"/>
+                        <span class="h4 d-block mt-3 mb-1">Earth &amp; clay</span>
+                        <span class="small ak-muted">Warm terracotta and hand-thrown ceramics</span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/shop" class="ak-trio-card d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Curved plaster stairs" loading="lazy"/>
+                        <span class="h4 d-block mt-3 mb-1">Soft minimal</span>
+                        <span class="small ak-muted">Plaster tones, curves and quiet light</span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/shop" class="ak-trio-card d-block">
+                        <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_parallax.jpg" alt="Bedroom with standing mirror" loading="lazy"/>
+                        <span class="h4 d-block mt-3 mb-1">Rest &amp; retreat</span>
+                        <span class="small ak-muted">Linen, oak and pieces for slow mornings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+</odoo>

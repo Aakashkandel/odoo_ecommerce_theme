@@ -1,0 +1,187 @@
+//------------------------------------------------------------------------------
+// Akandel Theme - Primary variables
+//
+// Everything defined here feeds Odoo's Website Builder "Theme" tab: palettes,
+// fonts and default website values remain fully customizable by the store
+// owner. Only `!default`-free maps that Odoo expects to be merged are merged.
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Website values
+//------------------------------------------------------------------------------
+
+$o-website-values-palettes: (
+    (
+        'color-palettes-name':          'akandel-derma',
+
+        // Typography: modern sans-serif pairing (Poppins + Roboto).
+        // Serif alternatives (Fraunces, Playfair Display...) stay selectable.
+        'font':                         'Roboto',
+        'headings-font':                'Poppins',
+        'navbar-font':                  'Poppins',
+        'buttons-font':                 'Poppins',
+        'header-font-size':             .9375rem,
+
+        // Links
+        'link-underline':               'never',
+
+        // Buttons
+        'btn-padding-y':                .75rem,
+        'btn-padding-x':                1.625rem,
+        'btn-padding-y-sm':             .4375rem,
+        'btn-padding-x-sm':             1rem,
+        'btn-padding-y-lg':             1rem,
+        'btn-padding-x-lg':             2.25rem,
+        'btn-border-radius':            10rem,
+        'btn-border-radius-sm':         10rem,
+        'btn-border-radius-lg':         10rem,
+
+        // Inputs
+        'input-padding-y':              .75rem,
+        'input-padding-x':              1rem,
+        'input-border-radius':          .75rem,
+        'input-border-radius-sm':       .5rem,
+        'input-border-radius-lg':       1rem,
+
+        // Header & footer: Akandel templates are the defaults.
+        'header-template':              'ak_essential',
+        'header-links-style':           'default',
+        'logo-height':                  2.25rem,
+        'footer-template':              'ak_columns',
+        'footer-scrolltop':             true,
+    ),
+);
+
+//------------------------------------------------------------------------------
+// Colors
+//
+// o-color-1: primary accent     o-color-2: secondary (deep tone)
+// o-color-3: light surface      o-color-4: white
+// o-color-5: ink (text/dark surfaces)
+//------------------------------------------------------------------------------
+
+$o-color-palettes: map-merge($o-color-palettes, (
+    // Default: clean commerce (blue actions, gold highlights, navy ink).
+    'akandel-derma': (
+        'o-color-1': #1570CC,
+        'o-color-2': #C48A1C,
+        'o-color-3': #F3F6FA,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #142033,
+        'menu': 1,
+        'footer': 5,
+        'copyright': 5,
+    ),
+    'akandel-clay': (
+        'o-color-1': #A9532F,
+        'o-color-2': #1F3A37,
+        'o-color-3': #F4EEE6,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #17191B,
+        'menu': 1,
+        'footer': 2,
+        'copyright': 5,
+    ),
+    'akandel-noir': (
+        'o-color-1': #B08D57,
+        'o-color-2': #2A2826,
+        'o-color-3': #F5F1EA,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #0F0F10,
+        'menu': 5,
+        'footer': 5,
+        'copyright': 5,
+    ),
+    'akandel-sage': (
+        'o-color-1': #5E7A5A,
+        'o-color-2': #2D3A2B,
+        'o-color-3': #EEF0E7,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #191E18,
+        'menu': 1,
+        'footer': 2,
+        'copyright': 5,
+    ),
+    'akandel-coast': (
+        'o-color-1': #2C6E8F,
+        'o-color-2': #12324A,
+        'o-color-3': #EAF1F4,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #0D1B25,
+        'menu': 1,
+        'footer': 5,
+        'copyright': 5,
+    ),
+    'akandel-rose': (
+        'o-color-1': #B4566A,
+        'o-color-2': #3B2630,
+        'o-color-3': #F8EEEF,
+        'o-color-4': #FFFFFF,
+        'o-color-5': #1E1418,
+        'menu': 1,
+        'footer': 2,
+        'copyright': 5,
+    ),
+));
+
+// Akandel palettes first in the Website Builder palette picker.
+$o-selected-color-palettes-names: join((
+    'akandel-derma',
+    'akandel-clay',
+    'akandel-noir',
+    'akandel-sage',
+    'akandel-coast',
+    'akandel-rose',
+), $o-selected-color-palettes-names);
+
+//------------------------------------------------------------------------------
+// Fonts
+//------------------------------------------------------------------------------
+
+$o-theme-h1-font-size-multiplier: (52 / 16);
+$o-theme-h2-font-size-multiplier: (38 / 16);
+$o-theme-h3-font-size-multiplier: (28 / 16);
+$o-theme-h4-font-size-multiplier: (22 / 16);
+$o-theme-h5-font-size-multiplier: (18 / 16);
+$o-theme-h6-font-size-multiplier: (16 / 16);
+
+$o-theme-headings-font-weight: 600;
+
+$o-theme-font-configs: (
+    'Roboto': (
+        'family': ('Roboto', sans-serif),
+        'url': 'Roboto:300,300i,400,400i,500,700',
+    ),
+    'Poppins': (
+        'family': ('Poppins', sans-serif),
+        'url': 'Poppins:300,400,400i,500,600,700,800',
+    ),
+    'Manrope': (
+        'family': ('Manrope', sans-serif),
+        'url': 'Manrope:400,500,600,700,800',
+    ),
+    'Fraunces': (
+        'family': ('Fraunces', serif),
+        'url': 'Fraunces:400,400i,500,500i,600,700',
+    ),
+    'DM Sans': (
+        'family': ('DM Sans', sans-serif),
+        'url': 'DM+Sans:400,400i,500,700,700i',
+    ),
+    'Cormorant Garamond': (
+        'family': ('Cormorant Garamond', serif),
+        'url': 'Cormorant+Garamond:400,400i,500,600,700',
+    ),
+    'Outfit': (
+        'family': ('Outfit', sans-serif),
+        'url': 'Outfit:300,400,500,600,700',
+    ),
+    'Playfair Display': (
+        'family': ('Playfair Display', serif),
+        'url': 'Playfair+Display:400,400i,500,600,700',
+    ),
+    'Inter': (
+        'family': ('Inter', sans-serif),
+        'url': 'Inter:300,400,500,600,700',
+    ),
+);

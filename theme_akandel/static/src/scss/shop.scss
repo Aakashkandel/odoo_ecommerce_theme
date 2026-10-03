@@ -1,0 +1,634 @@
+//------------------------------------------------------------------------------
+// Akandel Theme - eCommerce pages (presentation only: Odoo keeps every
+// behavior of the shop, product page, cart, checkout and portal).
+//------------------------------------------------------------------------------
+
+$ak-accent: o-color('o-color-1');
+$ak-ink: o-color('o-color-5');
+$ak-ease: cubic-bezier(.2, .7, .2, 1);
+
+//------------------------------------------------------------------------------
+// Shop / category pages
+//------------------------------------------------------------------------------
+
+.o_wsale_products_page {
+    .o_wsale_shop_title,
+    .o_wsale_products_main_row h1 {
+        letter-spacing: -.02em;
+    }
+
+    // Filters sidebar & offcanvas
+    #products_grid_before,
+    .o_wsale_offcanvas {
+        h6, .h6, .o_wsale_offcanvas_title {
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            border-radius: .5rem;
+        }
+
+        .form-check-label {
+            cursor: pointer;
+        }
+    }
+
+    // Category filmstrip
+    .o_wsale_categories_filmstrip {
+        .o_wsale_filmstrip_image {
+            border-radius: 50%;
+        }
+    }
+
+    // Product tiles
+    .oe_product_cart {
+        transition: box-shadow .35s $ak-ease, transform .35s $ak-ease;
+
+        .oe_product_image {
+            border-radius: var(--ak-radius);
+        }
+
+        .o_wsale_products_item_title a,
+        h6 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .product_price,
+        .oe_currency_value {
+            font-variant-numeric: tabular-nums;
+        }
+    }
+
+    // Toolbar (search, sort, layout)
+    .o_wsale_products_searchbar_form .form-control,
+    .dropdown-toggle {
+        min-height: 2.75rem;
+    }
+}
+
+// Pagination
+.pagination {
+    gap: .35rem;
+
+    .page-link {
+        min-width: 2.5rem;
+        text-align: center;
+        border-radius: 999px !important;
+    }
+
+    .page-item.active .page-link {
+        background-color: $ak-accent;
+        border-color: $ak-accent;
+        color: color-contrast($ak-accent);
+    }
+}
+
+//------------------------------------------------------------------------------
+// Empty / no-result states
+//------------------------------------------------------------------------------
+
+.ak-empty-state {
+    margin-top: 4rem !important;
+    margin-bottom: 6rem !important;
+
+    svg, img {
+        max-width: 9rem;
+        height: auto;
+        opacity: .9;
+    }
+
+    h3, h5 {
+        font-family: var(--ak-headings-font);
+        font-size: 1.75rem;
+        font-weight: 500;
+        color: inherit;
+    }
+
+    .alert {
+        margin-top: 2rem;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Product page
+//------------------------------------------------------------------------------
+
+#product_detail_main {
+    #product_details h1 {
+        letter-spacing: -.02em;
+    }
+
+    .product_price,
+    .oe_price_h4 {
+        .oe_price {
+            font-family: var(--ak-headings-font);
+            font-size: 1.75rem;
+            font-weight: 500;
+        }
+
+        .oe_default_price,
+        .text-muted {
+            font-size: 1rem;
+        }
+    }
+
+    // Product images
+    .o_wsale_product_images,
+    #o-carousel-product {
+        .carousel-item img,
+        .o_carousel_product_img_md,
+        .product_detail_img {
+            border-radius: var(--ak-radius-lg);
+        }
+
+        .carousel-indicators img,
+        .o_carousel_product_indicators img {
+            border-radius: var(--ak-radius);
+        }
+    }
+
+    // Variant pills and color swatches
+    .css_attribute_color {
+        box-shadow: 0 0 0 1px var(--ak-line);
+        transition: box-shadow .2s;
+
+        &.active {
+            box-shadow: 0 0 0 2px $ak-accent, 0 0 0 4px rgba($ak-accent, .2);
+        }
+    }
+
+    .btn-check:checked + .btn,
+    .o_variant_pills.active {
+        border-color: $ak-accent;
+    }
+
+    // Quantity selector
+    .css_quantity {
+        border: 1px solid var(--ak-line);
+        border-radius: 999px;
+        overflow: hidden;
+
+        .btn,
+        .form-control {
+            border: 0;
+            background: transparent;
+        }
+    }
+
+    // Main call to action
+    #add_to_cart,
+    .o_we_buy_now {
+        padding-top: .9rem;
+        padding-bottom: .9rem;
+    }
+}
+
+// Purchase assurance block
+.ak-assurance-list {
+    li {
+        display: flex;
+        gap: .85rem;
+        align-items: baseline;
+        padding: .7rem 0;
+        font-size: .9375rem;
+
+        & + li {
+            border-top: 1px solid var(--ak-line);
+        }
+    }
+
+    .fa {
+        width: 1.25rem;
+        text-align: center;
+        color: $ak-accent;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Cart, checkout & confirmation
+//------------------------------------------------------------------------------
+
+.oe_website_sale {
+    .o_wizard {
+        padding: .85rem 1.25rem;
+        border-radius: 999px;
+        background-color: var(--ak-surface);
+
+        .fw-bold {
+            color: $ak-accent;
+        }
+    }
+
+    .o_cart_product {
+        border-bottom: 1px solid var(--ak-line);
+        padding-top: 1.25rem;
+
+        .o_cart_product_image img {
+            border-radius: var(--ak-radius) !important;
+        }
+
+        h6 a, .h6 a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .o_total_card {
+        box-shadow: none;
+
+        // Odoo renders the summary frameless on small screens.
+        @include media-breakpoint-up(lg) {
+            border: 1px solid var(--ak-line);
+            border-radius: var(--ak-radius-lg);
+            background-color: var(--ak-surface);
+        }
+
+        #order_total td,
+        #order_total th,
+        .o_total_row {
+            font-family: var(--ak-headings-font);
+            font-size: 1.15rem;
+        }
+    }
+
+    .card {
+        border-radius: var(--ak-radius-lg);
+    }
+
+    // Address & delivery choices
+    .o_wsale_address_fill .form-control,
+    .o_wsale_address_fill .form-select {
+        min-height: 2.9rem;
+    }
+
+    .o_payment_option_card,
+    .o_delivery_carrier_select,
+    .list-group-item {
+        transition: border-color .2s, background-color .2s;
+
+        &:has(input:checked) {
+            border-color: $ak-accent;
+            background-color: rgba($ak-accent, .05);
+        }
+    }
+}
+
+// Order confirmation
+#wrap:has(.oe_website_sale_tx_status) {
+    .oe_website_sale_tx_status .alert {
+        border-radius: var(--ak-radius-lg);
+    }
+}
+
+//------------------------------------------------------------------------------
+// Customer portal (account, orders, invoices)
+//------------------------------------------------------------------------------
+
+.o_portal {
+    .o_portal_my_home .o_portal_index_card,
+    .o_portal_docs .list-group-item,
+    .o_portal_sidebar .card,
+    .o_portal_wrap .card {
+        border-radius: var(--ak-radius-lg);
+    }
+
+    .o_portal_index_card {
+        transition: border-color .2s, transform .3s $ak-ease;
+
+        &:hover {
+            border-color: $ak-accent;
+            transform: translateY(-2px);
+        }
+    }
+
+    .o_portal_navbar .breadcrumb {
+        padding: .65rem 1rem;
+        border-radius: 999px;
+        background-color: var(--ak-surface);
+    }
+
+    .table > thead th {
+        font-size: .75rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        opacity: .8;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Website search results
+//------------------------------------------------------------------------------
+
+.o_website_search_results,
+.o_searchbar_form {
+    .dropdown-menu {
+        border-radius: var(--ak-radius);
+        overflow: hidden;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Toasts (add to cart notification)
+//------------------------------------------------------------------------------
+
+.o_notification_manager .o_notification {
+    border-radius: var(--ak-radius);
+}
+
+//------------------------------------------------------------------------------
+// Redesign v2: product page, cart & checkout (consistent with the sections)
+//------------------------------------------------------------------------------
+
+$ak-gold: o-color('o-color-2');
+$ak-light: o-color('o-color-3');
+
+// Breadcrumbs everywhere in the shop
+.oe_website_sale .breadcrumb,
+#product_detail .breadcrumb {
+    font-size: .85rem;
+
+    a { color: inherit; opacity: .7; text-decoration: none; }
+    a:hover { opacity: 1; }
+}
+
+// Product page ----------------------------------------------------------------
+
+#product_detail_main {
+    // Gallery on a soft surface
+    #o-carousel-product,
+    .o_wsale_product_images {
+        .carousel-inner,
+        .o_wsale_product_images_grid img {
+            border-radius: var(--ak-radius-xl);
+            background-color: #F5F7FA;
+        }
+
+        .carousel-item img {
+            mix-blend-mode: multiply;
+        }
+
+        .carousel-control-prev > span,
+        .carousel-control-next > span {
+            background-color: #fff !important;
+            color: $ak-ink;
+            box-shadow: var(--ak-shadow-card);
+        }
+
+        .carousel-indicators [data-bs-target],
+        .o_carousel_product_indicators li {
+            overflow: hidden;
+            border: 2px solid transparent;
+            border-radius: var(--ak-radius);
+            opacity: .7;
+
+            &.active { border-color: $ak-accent; opacity: 1; }
+        }
+    }
+
+    #product_details {
+        h1 {
+            font-size: clamp(1.75rem, 2.6vw, 2.4rem);
+            font-weight: 700;
+        }
+
+        .o_wsale_product_details_content_section + .o_wsale_product_details_content_section {
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--ak-line);
+        }
+
+        .product_price .oe_price,
+        .oe_price_h4 .oe_price {
+            color: $ak-accent;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+    // Variant pills & radios
+    .js_product .variant_attribute {
+        .attribute_name, strong:first-child {
+            font-size: .85rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .o_variant_pills,
+        .btn-check + .btn {
+            border-radius: 999px;
+        }
+    }
+
+    // Add to cart row
+    .o_wsale_product_details_content_section_cta {
+        #add_to_cart,
+        .o_we_buy_now {
+            min-height: 3.25rem;
+            font-size: 1rem;
+            letter-spacing: .02em;
+        }
+
+        .css_quantity { min-height: 3.25rem; }
+        .o_add_wishlist_dyn, .o_add_compare_dyn { border-radius: 999px; }
+    }
+
+    // Accordion (description, specs...)
+    .accordion {
+        --bs-accordion-border-color: var(--ak-line);
+        --bs-accordion-active-bg: transparent;
+        --bs-accordion-active-color: inherit;
+
+        .accordion-button {
+            font-family: var(--ak-headings-font);
+            font-weight: 600;
+        }
+    }
+}
+
+// Assurance block as three tiles
+.ak-assurance .ak-assurance-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .6rem;
+
+    li {
+        flex-direction: column;
+        gap: .4rem;
+        padding: .85rem;
+        border: 0 !important;
+        border-radius: var(--ak-radius);
+        background-color: $ak-light;
+        font-size: .8rem;
+        line-height: 1.35;
+    }
+
+    .fa {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 50%;
+        background-color: rgba($ak-gold, .16);
+        color: darken($ak-gold, 12%);
+    }
+
+    @include media-breakpoint-down(sm) {
+        grid-template-columns: minmax(0, 1fr);
+
+        li { flex-direction: row; align-items: center; }
+    }
+}
+
+// Checkout steps (numbered) ---------------------------------------------------
+
+.oe_website_sale .o_wizard {
+    counter-reset: ak-step;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-radius: var(--ak-radius-lg);
+    background-color: $ak-light;
+    font-size: .9rem;
+
+    > span, > a {
+        counter-increment: ak-step;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    p {
+        display: inline-flex;
+        align-items: center;
+        gap: .6rem;
+        font-weight: 600;
+
+        &::before {
+            content: counter(ak-step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.9rem;
+            height: 1.9rem;
+            border: 1.5px solid currentColor;
+            border-radius: 50%;
+            font-size: .8rem;
+            opacity: .55;
+        }
+    }
+
+    // Completed steps are links
+    > a p::before {
+        content: "\f00c";
+        border-color: $ak-accent;
+        background-color: $ak-accent;
+        color: #fff;
+        font-family: FontAwesome;
+        opacity: 1;
+    }
+
+    // Current step
+    .fw-bold p::before {
+        border-color: $ak-accent;
+        color: $ak-accent;
+        opacity: 1;
+    }
+
+    .fw-bold { color: $ak-accent; }
+
+    .fa-angle-right {
+        width: 2.5rem;
+        height: 1px;
+        margin: 0 1rem !important;
+        overflow: hidden;
+        background-color: var(--ak-line);
+        color: transparent;
+        font-size: 0 !important;
+    }
+}
+
+// Checkout forms & cards
+.o_website_sale_checkout,
+.oe_website_sale {
+    .form-control,
+    .form-select {
+        min-height: 3rem;
+        border-color: var(--ak-line);
+        border-radius: .75rem;
+    }
+
+    .form-label, label.col-form-label {
+        font-size: .85rem;
+        font-weight: 600;
+    }
+
+    // Address / delivery / payment choice cards
+    .card,
+    .list-group-item,
+    .o_payment_option_card {
+        border-color: var(--ak-line);
+        border-radius: var(--ak-radius-lg) !important;
+    }
+
+    .list-group {
+        gap: .6rem;
+
+        .list-group-item { border-width: 1px !important; }
+    }
+
+    .o_cta_navigation_container .btn-primary,
+    a[name="website_sale_main_button"],
+    button[name="o_payment_submit_button"] {
+        min-height: 3.25rem;
+        font-size: 1rem;
+    }
+
+    .o_total_card {
+        #cart_total, .o_cart_total {
+            td, th { padding-top: .45rem; padding-bottom: .45rem; }
+        }
+
+        tr:last-child td,
+        tr:last-child th {
+            font-family: var(--ak-headings-font);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.ak-checkout-trust {
+    margin-top: 1.25rem;
+    padding-top: 1.1rem;
+    border-top: 1px dashed var(--ak-line);
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: .65rem;
+        padding: .3rem 0;
+        font-size: .85rem;
+    }
+
+    .fa {
+        width: 1.25rem;
+        color: $ak-accent;
+        text-align: center;
+    }
+}
+
+.o_wsale_shorter_cart_summary .ak-checkout-trust {
+    margin-top: .75rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--ak-line);
+    border-radius: var(--ak-radius-lg);
+}
+
+// Order confirmation
+.oe_website_sale_tx_status,
+.o_website_sale_checkout .alert-success {
+    border: 0;
+    border-radius: var(--ak-radius-lg);
+}

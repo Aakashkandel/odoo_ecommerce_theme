@@ -1,0 +1,292 @@
+//------------------------------------------------------------------------------
+// Akandel Theme - Design system foundation
+//
+// Colors always come from the active Website Builder palette (o-color-1..5),
+// so every rule follows the store owner's color choices. Neutral overlays use
+// mid-grey alpha values that read well on both light and dark sections.
+//------------------------------------------------------------------------------
+
+$ak-accent: o-color('o-color-1');
+$ak-deep: o-color('o-color-2');
+$ak-gold: o-color('o-color-2');
+// Small accent text needs a darker shade to keep AA contrast on light surfaces.
+$ak-gold-text: darken($ak-gold, 12%);
+$ak-surface-light: o-color('o-color-3');
+$ak-ink: o-color('o-color-5');
+$ak-ease: cubic-bezier(.2, .7, .2, 1);
+
+:root {
+    --ak-accent: #{$ak-accent};
+    --ak-deep: #{$ak-deep};
+    --ak-ink: #{$ak-ink};
+    --ak-line: rgba(127, 127, 127, .22);
+    --ak-surface: rgba(127, 127, 127, .08);
+    --ak-surface-strong: rgba(127, 127, 127, .14);
+    --ak-radius: #{$border-radius};
+    --ak-radius-lg: #{$border-radius-lg};
+    --ak-radius-xl: #{$border-radius-xl};
+    --ak-ease: #{$ak-ease};
+    --ak-headings-font: #{$headings-font-family};
+    --ak-gold: #{$ak-gold};
+    --ak-gold-text: #{$ak-gold-text};
+    --ak-ink-muted: #{mix($ak-ink, #fff, 70%)};
+    --ak-shadow-soft: 0 10px 30px -12px rgba(20, 32, 51, .18);
+    --ak-shadow-card: 0 2px 6px rgba(20, 32, 51, .05), 0 12px 28px -10px rgba(20, 32, 51, .12);
+}
+
+//------------------------------------------------------------------------------
+// Typography
+//------------------------------------------------------------------------------
+
+h1, h2, .h1, .h2,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-weight: 700;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+}
+
+h3, h4, .h3, .h4 {
+    letter-spacing: -.01em;
+}
+
+:is(h1, h2, h3, .h1, .h2, .h3, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6) em,
+.ak-hl {
+    font-style: normal;
+    color: $ak-gold;
+}
+
+// Accent-colored text would disappear on accent backgrounds.
+.o_cc4 :is(h1, h2, h3, .h1, .h2, .h3, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6) em,
+.o_cc4 .ak-hl {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: .08em;
+    text-underline-offset: .12em;
+}
+
+.o_cc5 .ak-hl {
+    color: lighten($ak-gold, 8%);
+}
+
+.lead {
+    text-wrap: pretty;
+}
+
+.ak-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .9rem;
+    font-family: var(--ak-headings-font);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: $ak-gold-text;
+
+    &::before {
+        content: "";
+        flex: 0 0 auto;
+        width: 2.25rem;
+        height: 1px;
+        background-color: currentColor;
+        opacity: .7;
+    }
+
+    .text-center > &, .ak-center &, [style*="text-align: center"] > & {
+        &::after {
+            content: "";
+            width: 2.25rem;
+            height: 1px;
+            background-color: currentColor;
+            opacity: .7;
+        }
+    }
+
+    .o_cc4 &, .o_cc5 &, .oe_img_bg & {
+        color: lighten($ak-gold, 10%);
+    }
+
+    .o_cc4 & {
+        color: inherit;
+        opacity: .9;
+    }
+}
+
+.ak-lead {
+    opacity: .82;
+}
+
+.ak-muted {
+    opacity: .75;
+}
+
+// Secondary "ghost" button used next to primary calls to action.
+.btn.ak-btn-ghost {
+    border-width: 1.5px;
+
+    .o_cc5 &, .o_cc4 &, .oe_img_bg & {
+        color: inherit;
+        border-color: currentColor;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .12);
+        }
+    }
+}
+
+.ak-dot {
+    display: inline-block;
+    margin: 0 .6em;
+    opacity: .6;
+}
+
+::selection {
+    background-color: rgba($ak-accent, .22);
+}
+
+//------------------------------------------------------------------------------
+// Links & buttons
+//------------------------------------------------------------------------------
+
+.ak-link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    .fa {
+        transition: transform .3s $ak-ease;
+    }
+
+    &:hover .fa,
+    &:focus-visible .fa {
+        transform: translateX(.25rem);
+    }
+}
+
+.btn {
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: color .2s, background-color .2s, border-color .2s, box-shadow .2s, transform .2s $ak-ease;
+
+    &:not(.btn-link):not(.dropdown-toggle):hover {
+        transform: translateY(-1px);
+    }
+
+    &:not(.btn-link):active {
+        transform: translateY(0);
+    }
+}
+
+// Clear, consistent keyboard focus everywhere (programmatic focus targets,
+// tabindex="-1", such as dialogs, do not need a ring).
+a, button, summary, [tabindex]:not([tabindex="-1"]), .btn, .form-control, .form-select, .form-check-input {
+    &:focus-visible {
+        outline: 2px solid $ak-accent;
+        outline-offset: 3px;
+    }
+}
+
+.o_cc4 :is(a, button, summary, .btn):focus-visible {
+    outline-color: currentColor;
+}
+
+//------------------------------------------------------------------------------
+// Surfaces & media helpers (used by snippets, header and footer)
+//------------------------------------------------------------------------------
+
+.ak-radius-lg { border-radius: var(--ak-radius-lg) !important; }
+.ak-radius-xl { border-radius: var(--ak-radius-xl) !important; }
+
+.ak-ratio-tall { aspect-ratio: 4 / 5; object-fit: cover; }
+.ak-ratio-wide { aspect-ratio: 16 / 9; object-fit: cover; }
+.ak-ratio-photo { aspect-ratio: 3 / 2; object-fit: cover; }
+.ak-cover-img { object-fit: cover; min-height: 22rem; }
+
+.ak-card {
+    padding: 2rem;
+    border: 1px solid var(--ak-line);
+    border-radius: var(--ak-radius-lg);
+    background-color: var(--ak-surface);
+    transition: transform .35s $ak-ease, box-shadow .35s $ak-ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $box-shadow;
+    }
+}
+
+.ak-section-head h2 {
+    max-width: 34ch;
+}
+
+.ak-rating {
+    color: #E0A526;
+
+    span, strong {
+        color: initial;
+        color: inherit;
+    }
+}
+
+.ak-checklist li {
+    display: flex;
+    gap: .75rem;
+    align-items: baseline;
+    margin-bottom: .5rem;
+
+    .fa {
+        color: $ak-accent;
+    }
+}
+
+.ak-price {
+    font-family: var(--ak-headings-font);
+}
+
+.ak-feature-icon {
+    color: $ak-accent;
+}
+
+.ak-badge {
+    min-width: 1.15rem;
+    height: 1.15rem;
+    padding: 0 .3rem;
+    font-size: .625rem;
+    line-height: 1.15rem;
+    font-weight: 700;
+    background-color: $ak-accent !important;
+    color: color-contrast($ak-accent) !important;
+}
+
+//------------------------------------------------------------------------------
+// Forms
+//------------------------------------------------------------------------------
+
+.form-check-input:checked {
+    background-color: $ak-accent;
+    border-color: $ak-accent;
+}
+
+input[type="range"], input[type="checkbox"], input[type="radio"] {
+    accent-color: $ak-accent;
+}
+
+//------------------------------------------------------------------------------
+// Motion preferences
+//------------------------------------------------------------------------------
+
+@media (prefers-reduced-motion: reduce) {
+    [class*="ak-"], [class*="ak-"] *, .btn {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .btn:hover {
+        transform: none !important;
+    }
+}

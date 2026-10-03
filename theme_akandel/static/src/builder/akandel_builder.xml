@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Header > Template: Akandel headers appended to the native picker. -->
+    <t t-inherit="website.HeaderTemplateOption" t-inherit-mode="extension">
+        <xpath expr="//BuilderSelect[@action=&quot;'reloadComposite'&quot;]" position="inside">
+            <t t-foreach="akandelHeaders" t-as="akHeader" t-key="akHeader.id">
+                <BuilderSelectItem
+                    id="akHeader.id"
+                    title="akHeader.title"
+                    actionParam="[
+                        {
+                            action: 'websiteConfig',
+                            actionParam: {
+                                views: akHeader.views,
+                                vars: { 'header-template': akHeader.varName },
+                                checkVars: false,
+                            }
+                        }
+                    ]">
+                    <Img attrs="{ style: 'width: calc(100% - 0.5rem);' }" src="akHeader.imgSrc"/>
+                </BuilderSelectItem>
+            </t>
+        </xpath>
+    </t>
+
+    <!-- Header > Mobile Style -->
+    <t t-name="theme_akandel.MobileStyleOption">
+        <BuilderRow t-if="akandelMobileStyles.length"
+            label.translate="Mobile Style"
+            tooltip.translate="Akandel mobile navigation: drawer, overlay, bottom sheet, tab bar...">
+            <BuilderSelect action="'websiteConfig'">
+                <BuilderSelectItem id="'ak_mobile_default_opt'" title.translate="Odoo default" actionParam="{ views: [] }">
+                    <span class="d-block py-1">Odoo default</span>
+                </BuilderSelectItem>
+                <t t-foreach="akandelMobileStyles" t-as="akStyle" t-key="akStyle.id">
+                    <BuilderSelectItem id="akStyle.id" title="akStyle.title" actionParam="{ views: akStyle.views }">
+                        <div class="d-flex align-items-center gap-2 py-1">
+                            <Img attrs="{ style: 'width: 4.5rem; flex-shrink: 0;' }" src="akStyle.imgSrc"/>
+                            <span t-out="akStyle.title"/>
+                        </div>
+                    </BuilderSelectItem>
+                </t>
+            </BuilderSelect>
+        </BuilderRow>
+    </t>
+
+</templates>

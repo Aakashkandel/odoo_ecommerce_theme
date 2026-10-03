@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Akandel footer variants.
+
+    Same contract as the core `website.template_footer_*` views: they replace
+    `div#footer` of `website.layout` with an editable `oe_structure_solo`
+    made of regular building blocks (text, social media, newsletter...), so
+    everything stays editable in the Website Builder. They are selected from
+    Website Builder > Footer > Template.
+-->
+
+<!-- Shared, real newsletter form (website_mass_mailing). -->
+<template id="ak_footer_newsletter_form" name="Akandel Footer Newsletter Form">
+    <t t-set="ak_mailing_list" t-value="website.env.ref('mass_mailing.mailing_list_data', raise_if_not_found=False)"/>
+    <div class="s_newsletter_subscribe_form s_newsletter_list js_subscribe ak-newsletter-form" data-vxml="001"
+         t-att-data-list-id="ak_mailing_list.id if ak_mailing_list else 0" data-name="Newsletter Form">
+        <div class="js_subscribed_wrap d-none">
+            <p class="ak-newsletter-success mb-0"><i class="fa fa-check-circle-o me-1" role="img" aria-hidden="true"/>Thank you, you are on the list.</p>
+        </div>
+        <div class="js_subscribe_wrap">
+            <div class="input-group">
+                <input type="email" name="email" class="js_subscribe_value form-control" placeholder="Your email address" aria-label="Email address"/>
+                <a role="button" href="#" t-attf-class="js_subscribe_btn o_submit btn #{_ak_btn_class or 'btn-primary'}">Subscribe</a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- Shared social links (regular s_social_media block). -->
+<template id="ak_footer_social" name="Akandel Footer Social">
+    <div t-attf-class="s_social_media o_not_editable ak-social #{_ak_class or 'text-start'}" data-snippet="s_social_media" data-name="Social Media" contenteditable="false">
+        <h5 class="s_social_media_title d-none" contenteditable="true">Follow us</h5>
+        <a href="/website/social/instagram" class="s_social_media_instagram" target="_blank" aria-label="Instagram">
+            <i class="fa fa-instagram rounded-circle o_editable_media"/>
+        </a>
+        <a href="/website/social/facebook" class="s_social_media_facebook" target="_blank" aria-label="Facebook">
+            <i class="fa fa-facebook rounded-circle o_editable_media"/>
+        </a>
+        <a href="/website/social/twitter" class="s_social_media_twitter" target="_blank" aria-label="X">
+            <i class="fa fa-twitter rounded-circle o_editable_media"/>
+        </a>
+        <a href="/website/social/youtube" class="s_social_media_youtube" target="_blank" aria-label="YouTube">
+            <i class="fa fa-youtube-play rounded-circle o_editable_media"/>
+        </a>
+    </div>
+</template>
+
+<!-- 1. Columns: brand + three link columns + newsletter -->
+<template id="template_footer_ak_columns" inherit_id="website.layout" name="Akandel Footer: Columns" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-columns" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt80 pb48" data-snippet="s_text_block" data-name="Footer Columns">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-4">
+                            <p class="ak-footer-brand h3 mb-3">Akandel</p>
+                            <p class="ak-footer-lead">Furniture and objects designed to be lived with — made by independent workshops, delivered with care.</p>
+                            <t t-call="theme_akandel.ak_footer_social"/>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <h6 class="ak-footer-title">Shop</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">All products</a></li>
+                                <li><a href="/shop">New arrivals</a></li>
+                                <li><a href="/shop">Best sellers</a></li>
+                                <li><a href="/shop">Gift cards</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <h6 class="ak-footer-title">Help</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/contactus">Contact us</a></li>
+                                <li><a href="/my/orders">Track an order</a></li>
+                                <li><a href="#">Delivery &amp; returns</a></li>
+                                <li><a href="#">Care guide</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h6 class="ak-footer-title">Join the Akandel letter</h6>
+                            <p class="small ak-muted">New collections, workshop stories and early access to sales. No spam, ever.</p>
+                            <t t-call="theme_akandel.ak_footer_newsletter_form"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 2. Newsletter: large signup band above compact columns -->
+<template id="template_footer_ak_newsletter" inherit_id="website.layout" name="Akandel Footer: Newsletter Band" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-newsletter" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block o_cc o_cc4 pt64 pb64" data-snippet="s_text_block" data-name="Newsletter Band">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-6">
+                            <h3 class="mb-2">Get 10% off your first order</h3>
+                            <p class="mb-0">Sign up for new arrivals, interior ideas and members-only offers.</p>
+                        </div>
+                        <div class="col-lg-5 offset-lg-1">
+                            <t t-call="theme_akandel.ak_footer_newsletter_form" _ak_btn_class.f="btn-dark"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_text_block pt64 pb32" data-snippet="s_text_block" data-name="Footer Links">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3">
+                            <h6 class="ak-footer-title">Shop</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">Living room</a></li>
+                                <li><a href="/shop">Bedroom</a></li>
+                                <li><a href="/shop">Lighting</a></li>
+                                <li><a href="/shop">Decor</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <h6 class="ak-footer-title">Company</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/aboutus">Our story</a></li>
+                                <li><a href="#">Workshops</a></li>
+                                <li><a href="#">Journal</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <h6 class="ak-footer-title">Support</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/contactus">Contact us</a></li>
+                                <li><a href="/my/orders">Order status</a></li>
+                                <li><a href="#">Delivery</a></li>
+                                <li><a href="#">Returns</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <h6 class="ak-footer-title">Follow</h6>
+                            <t t-call="theme_akandel.ak_footer_social"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 3. Centered: centered brand, inline links and social -->
+<template id="template_footer_ak_centered" inherit_id="website.layout" name="Akandel Footer: Centered" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-centered" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt80 pb48" data-snippet="s_text_block" data-name="Footer Centered">
+                <div class="container text-center">
+                    <p class="ak-footer-brand display-6 mb-3">Akandel</p>
+                    <p class="ak-footer-lead mx-auto mb-4">Made to be lived with.</p>
+                    <ul class="list-inline ak-footer-inline-links mb-4">
+                        <li class="list-inline-item"><a href="/shop">Shop</a></li>
+                        <li class="list-inline-item"><a href="/aboutus">About</a></li>
+                        <li class="list-inline-item"><a href="#">Journal</a></li>
+                        <li class="list-inline-item"><a href="#">Delivery &amp; returns</a></li>
+                        <li class="list-inline-item"><a href="/contactus">Contact</a></li>
+                    </ul>
+                    <t t-call="theme_akandel.ak_footer_social" _ak_class.f="text-center"/>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 4. Minimal: one slim row -->
+<template id="template_footer_ak_minimal" inherit_id="website.layout" name="Akandel Footer: Minimal" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-minimal" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt32 pb32" data-snippet="s_text_block" data-name="Footer Minimal">
+                <div class="container">
+                    <div class="row align-items-center g-3">
+                        <div class="col-lg-3">
+                            <p class="ak-footer-brand h5 mb-0">Akandel</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-inline ak-footer-inline-links mb-0 text-lg-center">
+                                <li class="list-inline-item"><a href="/shop">Shop</a></li>
+                                <li class="list-inline-item"><a href="/aboutus">About</a></li>
+                                <li class="list-inline-item"><a href="/contactus">Contact</a></li>
+                                <li class="list-inline-item"><a href="/privacy">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <t t-call="theme_akandel.ak_footer_social" _ak_class.f="text-lg-end"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 5. Mega: five link columns + app badges -->
+<template id="template_footer_ak_mega" inherit_id="website.layout" name="Akandel Footer: Mega" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-mega" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt80 pb48" data-snippet="s_text_block" data-name="Footer Mega">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <p class="ak-footer-brand h3 mb-3">Akandel</p>
+                            <p class="small ak-muted mb-4">Independent design for every room. Free delivery over $150 and 30-day returns.</p>
+                            <p class="d-flex gap-2 mb-0">
+                                <a href="#" aria-label="Download on the App Store"><img class="img-fluid ak-store-badge" src="/website/static/src/img/snippets_demo/app_store.svg" alt="App Store" loading="lazy"/></a>
+                                <a href="#" aria-label="Get it on Google Play"><img class="img-fluid ak-store-badge" src="/website/static/src/img/snippets_demo/google_play.svg" alt="Google Play" loading="lazy"/></a>
+                            </p>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg">
+                            <h6 class="ak-footer-title">Living</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">Sofas</a></li>
+                                <li><a href="/shop">Armchairs</a></li>
+                                <li><a href="/shop">Coffee tables</a></li>
+                                <li><a href="/shop">Shelving</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg">
+                            <h6 class="ak-footer-title">Dining</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">Tables</a></li>
+                                <li><a href="/shop">Chairs</a></li>
+                                <li><a href="/shop">Sideboards</a></li>
+                                <li><a href="/shop">Tableware</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg">
+                            <h6 class="ak-footer-title">Bedroom</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">Beds</a></li>
+                                <li><a href="/shop">Bedding</a></li>
+                                <li><a href="/shop">Storage</a></li>
+                                <li><a href="/shop">Mirrors</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg">
+                            <h6 class="ak-footer-title">Lighting</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">Floor lamps</a></li>
+                                <li><a href="/shop">Table lamps</a></li>
+                                <li><a href="/shop">Pendants</a></li>
+                                <li><a href="/shop">Wall lights</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg">
+                            <h6 class="ak-footer-title">Help</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/contactus">Contact</a></li>
+                                <li><a href="/my/orders">Orders</a></li>
+                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 6. Trust: service promises above link columns -->
+<template id="template_footer_ak_trust" inherit_id="website.layout" name="Akandel Footer: Trust Signals" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-trust" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt48 pb48 ak-footer-trust-row" data-snippet="s_text_block" data-name="Trust Signals">
+                <div class="container">
+                    <div class="row g-4 text-center text-lg-start">
+                        <div class="col-6 col-lg-3 d-lg-flex gap-3 align-items-start">
+                            <i class="fa fa-truck fa-2x ak-feature-icon" aria-hidden="true"/>
+                            <div><p class="fw-semibold mb-1">Free delivery</p><p class="small ak-muted mb-0">On every order over $150</p></div>
+                        </div>
+                        <div class="col-6 col-lg-3 d-lg-flex gap-3 align-items-start">
+                            <i class="fa fa-refresh fa-2x ak-feature-icon" aria-hidden="true"/>
+                            <div><p class="fw-semibold mb-1">30-day returns</p><p class="small ak-muted mb-0">Changed your mind? No problem</p></div>
+                        </div>
+                        <div class="col-6 col-lg-3 d-lg-flex gap-3 align-items-start">
+                            <i class="fa fa-lock fa-2x ak-feature-icon" aria-hidden="true"/>
+                            <div><p class="fw-semibold mb-1">Secure checkout</p><p class="small ak-muted mb-0">Encrypted, trusted payments</p></div>
+                        </div>
+                        <div class="col-6 col-lg-3 d-lg-flex gap-3 align-items-start">
+                            <i class="fa fa-comments-o fa-2x ak-feature-icon" aria-hidden="true"/>
+                            <div><p class="fw-semibold mb-1">Real people</p><p class="small ak-muted mb-0">Design advice, 7 days a week</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_text_block pt48 pb32" data-snippet="s_text_block" data-name="Footer Links">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <p class="ak-footer-brand h4 mb-3">Akandel</p>
+                            <p class="small ak-muted">Thoughtfully made furniture &amp; objects for everyday living.</p>
+                            <t t-call="theme_akandel.ak_footer_social"/>
+                        </div>
+                        <div class="col-6 col-lg-2 offset-lg-2">
+                            <h6 class="ak-footer-title">Shop</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">New in</a></li>
+                                <li><a href="/shop">Living</a></li>
+                                <li><a href="/shop">Lighting</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <h6 class="ak-footer-title">Account</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/my">My account</a></li>
+                                <li><a href="/my/orders">Orders</a></li>
+                                <li><a href="/shop/wishlist">Wishlist</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <h6 class="ak-footer-title">Help</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/contactus">Contact</a></li>
+                                <li><a href="#">Delivery</a></li>
+                                <li><a href="#">Returns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 7. Statement: oversized editorial headline -->
+<template id="template_footer_ak_statement" inherit_id="website.layout" name="Akandel Footer: Statement" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-statement" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block o_cc o_cc5 pt96 pb64" data-snippet="s_text_block" data-name="Footer Statement">
+                <div class="container">
+                    <p class="ak-statement mb-5">Slow design for<br/><em>beautiful</em> everyday living.</p>
+                    <div class="row g-4 align-items-end">
+                        <div class="col-lg-5">
+                            <t t-call="theme_akandel.ak_footer_newsletter_form" _ak_btn_class.f="btn-primary"/>
+                        </div>
+                        <div class="col-lg-7">
+                            <ul class="list-inline ak-footer-inline-links text-lg-end mb-0">
+                                <li class="list-inline-item"><a href="/shop">Shop</a></li>
+                                <li class="list-inline-item"><a href="/aboutus">Story</a></li>
+                                <li class="list-inline-item"><a href="#">Journal</a></li>
+                                <li class="list-inline-item"><a href="/contactus">Contact</a></li>
+                                <li class="list-inline-item"><a href="/website/social/instagram" target="_blank">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 8. Contact: showroom details, hours and links -->
+<template id="template_footer_ak_contact" inherit_id="website.layout" name="Akandel Footer: Contact &amp; Showroom" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-contact" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt80 pb48" data-snippet="s_text_block" data-name="Footer Contact">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-4">
+                            <h6 class="ak-footer-title">Visit the showroom</h6>
+                            <p class="mb-3">250 Executive Park Blvd, Suite 3400<br/>San Francisco CA 94134</p>
+                            <p class="mb-0"><a href="/contactus" class="ak-link-arrow">Book an appointment <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <h6 class="ak-footer-title">Opening hours</h6>
+                            <ul class="list-unstyled ak-hours mb-0">
+                                <li><span>Monday – Friday</span><span>10:00 – 19:00</span></li>
+                                <li><span>Saturday</span><span>10:00 – 18:00</span></li>
+                                <li><span>Sunday</span><span>12:00 – 17:00</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h6 class="ak-footer-title">Talk to us</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><i class="fa fa-phone fa-fw me-2" aria-hidden="true"/><a href="tel:+15555555556"><span class="o_force_ltr">+1 555-555-5556</span></a></li>
+                                <li><i class="fa fa-envelope fa-fw me-2" aria-hidden="true"/><a href="mailto:hello@akandel.example.com">hello@akandel.example.com</a></li>
+                                <li><i class="fa fa-comment fa-fw me-2" aria-hidden="true"/><a href="/contactus">Send a message</a></li>
+                            </ul>
+                            <t t-call="theme_akandel.ak_footer_social"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 9. Split: colored brand panel + link columns -->
+<template id="template_footer_ak_split" inherit_id="website.layout" name="Akandel Footer: Split Brand" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-split" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt0 pb0" data-snippet="s_text_block" data-name="Footer Split">
+                <div class="container-fluid px-0">
+                    <div class="row g-0">
+                        <div class="col-lg-5 o_cc o_cc4 ak-split-panel">
+                            <p class="ak-footer-brand display-6 mb-3">Akandel</p>
+                            <p class="mb-4">Designed in small batches with independent makers. Built to last generations, not seasons.</p>
+                            <t t-call="theme_akandel.ak_footer_newsletter_form" _ak_btn_class.f="btn-dark"/>
+                        </div>
+                        <div class="col-lg-7 ak-split-links">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-4">
+                                    <h6 class="ak-footer-title">Shop</h6>
+                                    <ul class="list-unstyled ak-footer-links">
+                                        <li><a href="/shop">New in</a></li>
+                                        <li><a href="/shop">Furniture</a></li>
+                                        <li><a href="/shop">Decor</a></li>
+                                        <li><a href="/shop">Sale</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <h6 class="ak-footer-title">About</h6>
+                                    <ul class="list-unstyled ak-footer-links">
+                                        <li><a href="/aboutus">Our story</a></li>
+                                        <li><a href="#">Makers</a></li>
+                                        <li><a href="#">Sustainability</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <h6 class="ak-footer-title">Help</h6>
+                                    <ul class="list-unstyled ak-footer-links">
+                                        <li><a href="/contactus">Contact</a></li>
+                                        <li><a href="/my/orders">Orders</a></li>
+                                        <li><a href="#">Returns</a></li>
+                                    </ul>
+                                    <t t-call="theme_akandel.ak_footer_social"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 10. Payments: columns + accepted payment methods -->
+<template id="template_footer_ak_payments" inherit_id="website.layout" name="Akandel Footer: Payments" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-payments" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt80 pb32" data-snippet="s_text_block" data-name="Footer Links">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <p class="ak-footer-brand h4 mb-3">Akandel</p>
+                            <p class="small ak-muted mb-4">Questions about an order? Our team replies within one business day.</p>
+                            <a href="/contactus" class="btn btn-outline-primary btn-sm">Contact support</a>
+                        </div>
+                        <div class="col-6 col-lg-2 offset-lg-2">
+                            <h6 class="ak-footer-title">Shop</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/shop">Furniture</a></li>
+                                <li><a href="/shop">Lighting</a></li>
+                                <li><a href="/shop">Textiles</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <h6 class="ak-footer-title">Orders</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/my/orders">Track</a></li>
+                                <li><a href="#">Delivery</a></li>
+                                <li><a href="#">Returns</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <h6 class="ak-footer-title">Legal</h6>
+                            <ul class="list-unstyled ak-footer-links">
+                                <li><a href="/terms">Terms</a></li>
+                                <li><a href="/privacy">Privacy</a></li>
+                                <li><a href="#">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_text_block pt24 pb24 ak-footer-payment-row" data-snippet="s_text_block" data-name="Payment Methods">
+                <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+                    <p class="small ak-muted mb-0"><i class="fa fa-lock me-1" aria-hidden="true"/>Secure payments with</p>
+                    <p class="ak-payment-icons mb-0" aria-label="Accepted payment methods">
+                        <i class="fa fa-cc-visa" role="img" aria-label="Visa" title="Visa"/>
+                        <i class="fa fa-cc-mastercard" role="img" aria-label="Mastercard" title="Mastercard"/>
+                        <i class="fa fa-cc-amex" role="img" aria-label="American Express" title="American Express"/>
+                        <i class="fa fa-cc-paypal" role="img" aria-label="PayPal" title="PayPal"/>
+                        <i class="fa fa-cc-discover" role="img" aria-label="Discover" title="Discover"/>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 11. Gallery: image strip (social feed style) above columns -->
+<template id="template_footer_ak_gallery" inherit_id="website.layout" name="Akandel Footer: Gallery" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-gallery" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt64 pb0" data-snippet="s_text_block" data-name="Footer Gallery">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-4">
+                        <h4 class="mb-0">#AkandelAtHome</h4>
+                        <a href="/website/social/instagram" target="_blank" class="ak-link-arrow">Follow on Instagram <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+                    </div>
+                    <div class="row g-2 ak-gallery-strip">
+                        <div class="col-4 col-lg-2"><img class="img-fluid" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Vase with white flowers on a dining table" loading="lazy"/></div>
+                        <div class="col-4 col-lg-2"><img class="img-fluid" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Ceramic ring vase on marble" loading="lazy"/></div>
+                        <div class="col-4 col-lg-2"><img class="img-fluid" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk and chair" loading="lazy"/></div>
+                        <div class="col-4 col-lg-2"><img class="img-fluid" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Terracotta vases in an arched niche" loading="lazy"/></div>
+                        <div class="col-4 col-lg-2"><img class="img-fluid" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Curved plaster staircase" loading="lazy"/></div>
+                        <div class="col-4 col-lg-2"><img class="img-fluid" src="/website/static/src/img/library/shop_generic_2_lg.jpg" alt="Green velvet sofa" loading="lazy"/></div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_text_block pt48 pb32" data-snippet="s_text_block" data-name="Footer Links">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-4"><p class="ak-footer-brand h4 mb-0">Akandel</p></div>
+                        <div class="col-lg-8">
+                            <ul class="list-inline ak-footer-inline-links text-lg-end mb-0">
+                                <li class="list-inline-item"><a href="/shop">Shop</a></li>
+                                <li class="list-inline-item"><a href="/aboutus">About</a></li>
+                                <li class="list-inline-item"><a href="/contactus">Contact</a></li>
+                                <li class="list-inline-item"><a href="/my/orders">Orders</a></li>
+                                <li class="list-inline-item"><a href="/privacy">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<!-- 12. Cards: help, account and story as cards -->
+<template id="template_footer_ak_cards" inherit_id="website.layout" name="Akandel Footer: Cards" active="False">
+    <xpath expr="//div[@id='footer']" position="replace">
+        <div id="footer" class="oe_structure oe_structure_solo ak-footer ak-footer-cards" t-ignore="true" t-if="not no_footer">
+            <section class="s_text_block pt64 pb48" data-snippet="s_text_block" data-name="Footer Cards">
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-lg-4">
+                            <div class="ak-footer-card h-100">
+                                <i class="fa fa-life-ring ak-feature-icon mb-3" aria-hidden="true"/>
+                                <h6 class="ak-footer-title">Need help?</h6>
+                                <p class="small ak-muted">Delivery, returns, product care: we have you covered.</p>
+                                <a href="/contactus" class="ak-link-arrow">Visit help centre <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ak-footer-card h-100">
+                                <i class="fa fa-user-circle-o ak-feature-icon mb-3" aria-hidden="true"/>
+                                <h6 class="ak-footer-title">Your account</h6>
+                                <p class="small ak-muted">Track orders, save favorites and check out faster.</p>
+                                <a href="/my" class="ak-link-arrow">Go to my account <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ak-footer-card h-100">
+                                <i class="fa fa-envelope-open-o ak-feature-icon mb-3" aria-hidden="true"/>
+                                <h6 class="ak-footer-title">Stay in the loop</h6>
+                                <t t-call="theme_akandel.ak_footer_newsletter_form"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-5">
+                        <p class="ak-footer-brand h5 mb-0">Akandel</p>
+                        <t t-call="theme_akandel.ak_footer_social"/>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+</odoo>

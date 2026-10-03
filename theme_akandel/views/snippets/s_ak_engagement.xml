@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- ======================= Testimonials ======================= -->
+
+<!-- Reviews grid: three customer review cards -->
+<template id="s_ak_testimonials_grid" name="Akandel Reviews Grid">
+    <section class="s_ak_testimonials_grid o_cc o_cc2 pt96 pb96" data-snippet="s_ak_testimonials_grid" data-name="Reviews Grid">
+        <div class="container">
+            <div class="ak-section-head d-flex flex-wrap align-items-end justify-content-between gap-3 mb-5">
+                <div>
+                    <p class="ak-eyebrow">Reviews</p>
+                    <h2 class="mb-0">Loved in 18,000 homes</h2>
+                </div>
+                <p class="ak-rating mb-0" aria-label="Average rating 4.9 out of 5">
+                    <i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/>
+                    <span class="ms-2"><strong>4.9</strong> average from 2,300+ reviews</span>
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <figure class="ak-review h-100 mb-0">
+                        <p class="ak-rating small mb-3" aria-label="5 out of 5"><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/></p>
+                        <blockquote class="mb-4"><p class="mb-0">“The sofa is even more beautiful in person. Delivery was on time and they took all the packaging away.”</p></blockquote>
+                        <figcaption class="d-flex align-items-center gap-3">
+                            <span class="ak-avatar" aria-hidden="true">MR</span>
+                            <span><strong class="d-block">Maya R.</strong><span class="small ak-muted">Loma sofa · Verified buyer</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-4">
+                    <figure class="ak-review h-100 mb-0">
+                        <p class="ak-rating small mb-3" aria-label="5 out of 5"><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/></p>
+                        <blockquote class="mb-4"><p class="mb-0">“Solid, heavy, gorgeous oak. You can feel the craftsmanship. Our dining room finally feels finished.”</p></blockquote>
+                        <figcaption class="d-flex align-items-center gap-3">
+                            <span class="ak-avatar" aria-hidden="true">JT</span>
+                            <span><strong class="d-block">James T.</strong><span class="small ak-muted">Arlo table · Verified buyer</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-4">
+                    <figure class="ak-review h-100 mb-0">
+                        <p class="ak-rating small mb-3" aria-label="4 out of 5"><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star" aria-hidden="true"/><i class="fa fa-star-o" aria-hidden="true"/></p>
+                        <blockquote class="mb-4"><p class="mb-0">“Lovely lamp with a warm, soft glow. Customer service helped me pick the right bulb.”</p></blockquote>
+                        <figcaption class="d-flex align-items-center gap-3">
+                            <span class="ak-avatar" aria-hidden="true">SK</span>
+                            <span><strong class="d-block">Sofia K.</strong><span class="small ak-muted">Tilde lamp · Verified buyer</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Feature testimonial: one large quote with portrait image -->
+<template id="s_ak_testimonial_feature" name="Akandel Feature Testimonial">
+    <section class="s_ak_testimonial_feature o_cc o_cc5 pt96 pb96" data-snippet="s_ak_testimonial_feature" data-name="Feature Testimonial">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <i class="fa fa-quote-left ak-quote-mark" aria-hidden="true"/>
+                    <blockquote class="ak-quote-lg mb-4"><p class="mb-0">“Akandel pieces bring a calm to the home that is hard to describe. You notice the care in every joint and seam.”</p></blockquote>
+                    <p class="mb-0"><strong>Elena Moreau</strong> · <span class="ak-muted">Interior architect, Lyon</span></p>
+                </div>
+                <div class="col-lg-4 offset-lg-1">
+                    <img class="img-fluid w-100 ak-radius-xl ak-ratio-tall" src="/website/static/src/img/snippets_demo/s_parallax.jpg" alt="Calm bedroom styled with Akandel pieces" loading="lazy"/>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- ======================= Newsletter ======================= -->
+
+<!-- Newsletter band: centered signup (real website_mass_mailing form) -->
+<template id="s_ak_newsletter_band" name="Akandel Newsletter Band">
+    <section class="s_ak_newsletter_band o_cc o_cc4 pt80 pb80" data-snippet="s_ak_newsletter_band" data-name="Newsletter Band">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-7">
+                    <p class="ak-eyebrow">The Akandel letter</p>
+                    <h2 class="display-6 mb-3">Get 10% off your first order</h2>
+                    <p class="mb-4">Join 40,000 subscribers for new arrivals, styling ideas and members-only offers.</p>
+                    <t t-call="theme_akandel.ak_snippet_newsletter_form" _ak_btn_class.f="btn-dark"/>
+                    <p class="small mt-3 mb-0 ak-muted">You can unsubscribe at any time. See our <a href="/privacy">privacy policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Newsletter split: image + signup -->
+<template id="s_ak_newsletter_split" name="Akandel Newsletter Split">
+    <section class="s_ak_newsletter_split o_cc o_cc2 pt0 pb0" data-snippet="s_ak_newsletter_split" data-name="Newsletter Split">
+        <div class="container-fluid px-0">
+            <div class="row g-0 align-items-stretch">
+                <div class="col-lg-6">
+                    <img class="img-fluid w-100 h-100 ak-cover-img" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_1.jpg" alt="Dining table with fresh flowers" loading="lazy"/>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="ak-newsletter-panel">
+                        <p class="ak-eyebrow">Stay inspired</p>
+                        <h2 class="mb-3">Ideas for a home you love</h2>
+                        <p class="mb-4 ak-muted">Seasonal edits, care guides and first access to limited runs — once a week, never more.</p>
+                        <t t-call="theme_akandel.ak_snippet_newsletter_form"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Real newsletter form for snippets: the list is assigned on drop by the
+     website_mass_mailing builder option (and at homepage seeding time). -->
+<template id="ak_snippet_newsletter_form" name="Akandel Snippet Newsletter Form">
+    <t t-set="ak_mailing_list" t-value="res_company.env.ref('mass_mailing.mailing_list_data', raise_if_not_found=False)"/>
+    <div class="s_newsletter_subscribe_form s_newsletter_list js_subscribe ak-newsletter-form" data-vxml="001"
+         t-att-data-list-id="ak_mailing_list.id if ak_mailing_list else 0" data-name="Newsletter Form">
+        <div class="js_subscribed_wrap d-none">
+            <p class="ak-newsletter-success mb-0"><i class="fa fa-check-circle-o me-1" role="img" aria-hidden="true"/>Thanks for subscribing! Check your inbox.</p>
+        </div>
+        <div class="js_subscribe_wrap">
+            <div class="input-group input-group-lg">
+                <input type="email" name="email" class="js_subscribe_value form-control" placeholder="Your email address" aria-label="Email address"/>
+                <a role="button" href="#" t-attf-class="js_subscribe_btn o_submit btn #{_ak_btn_class or 'btn-primary'}">Subscribe</a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- ======================= Editorial ======================= -->
+
+<!-- Lookbook mosaic: images with captions -->
+<template id="s_ak_lookbook" name="Akandel Lookbook">
+    <section class="s_ak_lookbook o_cc o_cc1 pt96 pb96" data-snippet="s_ak_lookbook" data-name="Lookbook">
+        <div class="container">
+            <div class="ak-section-head d-flex flex-wrap align-items-end justify-content-between gap-3 mb-5">
+                <div>
+                    <p class="ak-eyebrow">Lookbook · Autumn</p>
+                    <h2 class="mb-0">At home with Akandel</h2>
+                </div>
+                <a href="/shop" class="ak-link-arrow">Shop the looks <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-5">
+                    <figure class="ak-look mb-0">
+                        <img class="img-fluid w-100 ak-ratio-tall" src="/website/static/src/img/snippets_demo/s_parallax.jpg" alt="Bedroom corner with mirror" loading="lazy"/>
+                        <figcaption>The bedroom, slowed down</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <figure class="ak-look mb-0">
+                                <img class="img-fluid w-100 ak-ratio-wide" src="/website/static/src/img/library/shop_generic_3_lg.webp" alt="Terracotta room with a table" loading="lazy"/>
+                                <figcaption>Sun-warmed dining</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6">
+                            <figure class="ak-look mb-0">
+                                <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Sculptural ceramic vase" loading="lazy"/>
+                                <figcaption>Sculptural ceramics</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6">
+                            <figure class="ak-look mb-0">
+                                <img class="img-fluid w-100" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_4.jpg" alt="Vases in a plaster niche" loading="lazy"/>
+                                <figcaption>Earthy accents</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Shop the look: large image with product hotspots -->
+<template id="s_ak_shop_the_look" name="Akandel Shop the Look">
+    <section class="s_ak_shop_the_look o_cc o_cc2 pt80 pb80" data-snippet="s_ak_shop_the_look" data-name="Shop the Look">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="ak-hotspot-stage">
+                        <img class="img-fluid w-100 ak-radius-xl" src="/website/static/src/img/library/shop_generic_1_lg.jpg" alt="Living room with sofa, side table and cushions" loading="lazy"/>
+                        <a href="/shop" class="ak-hotspot" style="top: 52%; left: 46%;" aria-label="Loma sofa"><span class="ak-hotspot-label">Loma sofa · $1,890</span></a>
+                        <a href="/shop" class="ak-hotspot" style="top: 49%; left: 16%;" aria-label="Pine side table"><span class="ak-hotspot-label">Pine side table · $240</span></a>
+                        <a href="/shop" class="ak-hotspot" style="top: 80%; left: 82%;" aria-label="Velvet cushion"><span class="ak-hotspot-label">Velvet cushion · $45</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <p class="ak-eyebrow">Shop the look</p>
+                    <h2 class="display-6 mb-3">Playful &amp; bright living</h2>
+                    <p class="ak-muted mb-4">Tap the dots to explore the pieces in this room, or shop the complete set.</p>
+                    <ul class="list-unstyled ak-look-list mb-4">
+                        <li><a href="/shop"><span>Loma three-seat sofa</span><span>$1,890</span></a></li>
+                        <li><a href="/shop"><span>Pine side table</span><span>$240</span></a></li>
+                        <li><a href="/shop"><span>Velvet cushion, mustard</span><span>$45</span></a></li>
+                        <li><a href="/shop"><span>Round jute rug</span><span>$320</span></a></li>
+                    </ul>
+                    <a href="/shop" class="btn btn-primary">Shop the complete look</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Journal: three editorial article cards -->
+<template id="s_ak_journal" name="Akandel Journal">
+    <section class="s_ak_journal o_cc o_cc1 pt96 pb96" data-snippet="s_ak_journal" data-name="Journal">
+        <div class="container">
+            <div class="ak-section-head d-flex flex-wrap align-items-end justify-content-between gap-3 mb-5">
+                <div>
+                    <p class="ak-eyebrow">The Journal</p>
+                    <h2 class="mb-0">Stories, guides &amp; ideas</h2>
+                </div>
+                <a href="#" class="ak-link-arrow">Read the journal <i class="fa fa-long-arrow-right ms-1" aria-hidden="true"/></a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="ak-article">
+                        <a href="#" class="d-block mb-3"><img class="img-fluid w-100 ak-radius-lg ak-ratio-photo" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_5.jpg" alt="Curved plaster staircase" loading="lazy"/></a>
+                        <p class="ak-eyebrow mb-2">Guide · 6 min read</p>
+                        <h3 class="h5"><a href="#">How to layer neutrals without the room feeling flat</a></h3>
+                        <p class="ak-muted small mb-0">Texture, light and a few honest materials do the heavy lifting.</p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="ak-article">
+                        <a href="#" class="d-block mb-3"><img class="img-fluid w-100 ak-radius-lg ak-ratio-photo" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_3.jpg" alt="Oak desk" loading="lazy"/></a>
+                        <p class="ak-eyebrow mb-2">Makers · 4 min read</p>
+                        <h3 class="h5"><a href="#">Inside the oak workshop behind our desks</a></h3>
+                        <p class="ak-muted small mb-0">Meet the joiners who build every piece by hand.</p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="ak-article">
+                        <a href="#" class="d-block mb-3"><img class="img-fluid w-100 ak-radius-lg ak-ratio-photo" src="/website/static/src/img/snippets_demo/s_images_mosaic_default_image_2.jpg" alt="Ceramic vase" loading="lazy"/></a>
+                        <p class="ak-eyebrow mb-2">Care · 3 min read</p>
+                        <h3 class="h5"><a href="#">Caring for natural materials, season by season</a></h3>
+                        <p class="ak-muted small mb-0">Simple rituals that keep wood, linen and clay beautiful.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Delivery & returns: practical FAQ using native, accessible disclosures -->
+<template id="s_ak_delivery_info" name="Akandel Delivery &amp; Returns">
+    <section class="s_ak_delivery_info o_cc o_cc1 pt96 pb96" data-snippet="s_ak_delivery_info" data-name="Delivery &amp; Returns">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <p class="ak-eyebrow">Delivery &amp; returns</p>
+                    <h2 class="mb-3">Good to know</h2>
+                    <p class="ak-muted mb-4">Everything about getting your order home, and sending it back if it isn't right.</p>
+                    <a href="/contactus" class="btn btn-outline-primary">Ask a question</a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ak-faq">
+                        <details class="ak-faq-item" open="open">
+                            <summary>How much does delivery cost?</summary>
+                            <p>Delivery is free on orders over $150. Below that, standard delivery is $9.95 and large-item white-glove delivery is $49.</p>
+                        </details>
+                        <details class="ak-faq-item">
+                            <summary>When will my order arrive?</summary>
+                            <p>In-stock items ship within 2 business days. Made-to-order furniture takes 2–6 weeks; the exact date is shown on each product page.</p>
+                        </details>
+                        <details class="ak-faq-item">
+                            <summary>How do I return an item?</summary>
+                            <p>Start a return from your account within 30 days. We collect large items for free and send a prepaid label for parcels.</p>
+                        </details>
+                        <details class="ak-faq-item">
+                            <summary>Do you deliver internationally?</summary>
+                            <p>We currently deliver across North America and the EU. Duties are calculated at checkout, so there are no surprises.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+</odoo>

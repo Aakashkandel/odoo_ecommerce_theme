@@ -1,0 +1,40 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Coverage and test reports
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Local virtual environments and environment files
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Agent instructions
+Agents.md
+
+# Odoo-generated local files
+*.log
+filestore/
+sessions/
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/

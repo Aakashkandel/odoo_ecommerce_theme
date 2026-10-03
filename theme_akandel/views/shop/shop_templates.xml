@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Light, additive extensions of website_sale templates. Odoo keeps full
+    ownership of routes, controllers, pricing, cart and checkout behavior;
+    Akandel only adds presentation hooks and helpful content.
+-->
+
+<!-- Product page: editable purchase assurance below the add-to-cart area -->
+<template id="ak_product_assurance" inherit_id="website_sale.product" name="Akandel Product Assurance">
+    <xpath expr="//div[hasclass('o_wsale_product_details_content_section_cta')]" position="after">
+        <div class="o_wsale_product_details_content_section ak-assurance mb-4">
+            <div class="oe_structure oe_structure_solo">
+                <section class="s_text_block" data-snippet="s_text_block" data-name="Purchase Assurance">
+                    <ul class="list-unstyled ak-assurance-list mb-0">
+                        <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong> on orders over $150</span></li>
+                        <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong>, collected from your door</span></li>
+                        <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong>, encrypted checkout</span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </xpath>
+</template>
+
+<!-- Shop: friendlier empty / no-result states -->
+<template id="ak_products_empty_state" inherit_id="website_sale.products" name="Akandel Shop Empty State">
+    <xpath expr="//div[hasclass('mt128')][hasclass('mb256')]" position="attributes">
+        <attribute name="class" add="ak-empty-state" separator=" "/>
+    </xpath>
+    <xpath expr="//div[hasclass('mt128')][hasclass('mb256')]" position="inside">
+        <div class="ak-empty-actions d-flex flex-wrap justify-content-center gap-2 mt-4">
+            <a t-if="search or category" href="/shop" class="btn btn-primary">Browse all products</a>
+            <a href="/contactus" class="btn btn-outline-secondary">Ask our team</a>
+        </div>
+    </xpath>
+</template>
+
+<!-- Cart: friendlier empty state (cart lines are re-rendered by Odoo's cart service) -->
+<template id="ak_cart_empty_state" inherit_id="website_sale.cart_lines" name="Akandel Empty Cart">
+    <xpath expr="//div[hasclass('js_cart_lines')][hasclass('w-100')]" position="attributes">
+        <attribute name="class" add="ak-empty-state" separator=" "/>
+    </xpath>
+    <xpath expr="//div[hasclass('js_cart_lines')][hasclass('w-100')]/h5" position="after">
+        <p class="ak-muted text-center mb-4">Nothing here yet. Explore our latest pieces or pick up where you left off in your wishlist.</p>
+    </xpath>
+    <xpath expr="//div[hasclass('js_cart_lines')][hasclass('w-100')]//a[@href='/shop']" position="after">
+        <a href="/shop/wishlist" class="btn btn-outline-secondary ms-2">View wishlist</a>
+    </xpath>
+</template>
+
+<!-- Checkout & cart summaries: reassurance block (editable, shared) -->
+<template id="ak_checkout_trust" name="Akandel Checkout Trust">
+    <div class="ak-checkout-trust oe_structure oe_structure_solo">
+        <section class="s_text_block" data-snippet="s_text_block" data-name="Checkout Reassurance">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fa fa-lock" aria-hidden="true"/><span>Secure, encrypted payment</span></li>
+                <li><i class="fa fa-truck" aria-hidden="true"/><span>Free shipping on orders over $50</span></li>
+                <li><i class="fa fa-undo" aria-hidden="true"/><span>Easy 30-day returns</span></li>
+            </ul>
+        </section>
+    </div>
+</template>
+
+<template id="ak_checkout_layout_trust" inherit_id="website_sale.checkout_layout" name="Akandel Checkout Reassurance">
+    <xpath expr="//div[hasclass('o_total_card')]/div[hasclass('card-body')]" position="inside">
+        <t t-call="theme_akandel.ak_checkout_trust"/>
+    </xpath>
+</template>
+
+<template id="ak_cart_summary_trust" inherit_id="website_sale.shorter_cart_summary" name="Akandel Cart Reassurance">
+    <xpath expr="//div[hasclass('o_total_card')]" position="after">
+        <t t-call="theme_akandel.ak_checkout_trust"/>
+    </xpath>
+</template>
+
+</odoo>

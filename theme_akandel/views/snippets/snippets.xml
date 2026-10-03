@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+    Register the Akandel building blocks in the Website Builder.
+    They appear in three dedicated categories of the "Blocks" panel and can be
+    dragged, reordered, duplicated and customized like any core block.
+-->
+<template id="snippets" inherit_id="website.snippets" name="Akandel Snippets">
+    <xpath expr="//snippets[@id='snippet_groups']/t[@snippet-group='intro']" position="before">
+        <t snippet-group="ak_intro" t-snippet="website.s_snippet_group" string="Akandel · Heroes &amp; Promos"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/group_ak_intro.svg"/>
+        <t snippet-group="ak_shop" t-snippet="website.s_snippet_group" string="Akandel · Shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/group_ak_shop.svg"/>
+        <t snippet-group="ak_story" t-snippet="website.s_snippet_group" string="Akandel · Story &amp; Trust"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/group_ak_story.svg"/>
+    </xpath>
+
+    <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+        <!-- Heroes & promotions -->
+        <t t-snippet="theme_akandel.s_ak_hero_split" string="Split Hero" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_hero_split.svg">
+            <keywords>hero, banner, intro, header, split, home, landing, shop, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_hero_cover" string="Cover Hero" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_hero_cover.svg">
+            <keywords>hero, cover, full width, background, image, banner, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_hero_editorial" string="Editorial Hero" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_hero_editorial.svg">
+            <keywords>hero, editorial, collage, magazine, headline, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_hero_framed" string="Framed Hero" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_hero_framed.svg">
+            <keywords>hero, framed, card, overlap, image, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_campaign_banner" string="Campaign Banner" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_campaign_banner.svg">
+            <keywords>campaign, seasonal, sale, gift, promotion, banner, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_promo_strip" string="Promo Strip" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_promo_strip.svg">
+            <keywords>announcement, promotion, code, discount, strip, bar, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_promo_marquee" string="Promo Marquee" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_promo_marquee.svg">
+            <keywords>marquee, ticker, scrolling, announcement, usp, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_promo_tiles" string="Offer Tiles" group="ak_intro"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_promo_tiles.svg">
+            <keywords>offers, deals, sale, tiles, promotion, gift card, akandel</keywords>
+        </t>
+
+        <!-- Shop -->
+        <t t-snippet="theme_akandel.s_ak_categories_grid" string="Category Grid" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_categories_grid.svg">
+            <keywords>categories, grid, shop by, departments, rooms, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_categories_bento" string="Category Bento" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_categories_bento.svg">
+            <keywords>categories, bento, collections, mosaic, grid, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_categories_circles" string="Category Circles" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_categories_circles.svg">
+            <keywords>categories, circles, round, popular, shortcuts, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_products_new" string="New Arrivals" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_products_new.svg">
+            <keywords>products, new, arrivals, latest, carousel, dynamic, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_products_best" string="Best Sellers" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_products_best.svg">
+            <keywords>products, best sellers, popular, trending, carousel, dynamic, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_products_viewed" string="Recently Viewed" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_products_viewed.svg">
+            <keywords>products, recently viewed, history, recommended, dynamic, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_product_spotlight" string="Product Spotlight" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_product_spotlight.svg">
+            <keywords>product, feature, spotlight, highlight, of the month, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_collection_duo" string="Collection Duo" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_collection_duo.svg">
+            <keywords>collections, banners, two, duo, seasonal, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_collection_trio" string="Collection Trio" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_collection_trio.svg">
+            <keywords>collections, three, cards, seasonal, moods, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_shop_the_look" string="Shop the Look" group="ak_shop"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_shop_the_look.svg">
+            <keywords>shop the look, hotspots, shoppable, image, room, akandel</keywords>
+        </t>
+
+        <!-- Story & trust -->
+        <t t-snippet="theme_akandel.s_ak_about_trust" string="Who We Are" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_story_split.svg">
+            <keywords>about, who we are, story, trust, quality, checklist, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_story_split" string="Brand Story" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_story_split.svg">
+            <keywords>story, about, brand, mission, numbers, stats, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_story_values" string="Brand Values" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_story_values.svg">
+            <keywords>values, principles, promise, columns, numbered, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_benefits_bar" string="Benefits Bar" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_benefits_bar.svg">
+            <keywords>benefits, usp, delivery, returns, trust, guarantee, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_benefits_cards" string="Service Cards" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_benefits_cards.svg">
+            <keywords>services, delivery, benefits, cards, trust, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_press" string="Press Mentions" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_press.svg">
+            <keywords>press, featured, logos, media, trust, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_testimonials_grid" string="Reviews Grid" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_testimonials_grid.svg">
+            <keywords>reviews, testimonials, ratings, stars, customers, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_testimonial_feature" string="Feature Testimonial" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_testimonial_feature.svg">
+            <keywords>testimonial, quote, review, featured, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_newsletter_band" string="Newsletter Band" group="ak_story" t-forbid-sanitize="form"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_newsletter_band.svg">
+            <keywords>newsletter, subscribe, email, signup, mailing list, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_newsletter_split" string="Newsletter Split" group="ak_story" t-forbid-sanitize="form"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_newsletter_split.svg">
+            <keywords>newsletter, subscribe, email, signup, image, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_lookbook" string="Lookbook" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_lookbook.svg">
+            <keywords>lookbook, gallery, editorial, inspiration, mosaic, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_journal" string="Journal" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_journal.svg">
+            <keywords>journal, blog, articles, editorial, stories, guides, akandel</keywords>
+        </t>
+        <t t-snippet="theme_akandel.s_ak_delivery_info" string="Delivery &amp; Returns" group="ak_story"
+            t-thumbnail="/theme_akandel/static/src/img/snippets_thumbs/s_ak_delivery_info.svg">
+            <keywords>delivery, shipping, returns, faq, questions, akandel</keywords>
+        </t>
+    </xpath>
+</template>
+
+<!--
+    Default homepage composition. Rendered once when the theme is applied to a
+    website whose homepage has not been designed yet (see theme.utils), then
+    saved as regular editable content.
+-->
+<template id="ak_homepage_sections" name="Akandel Homepage Sections">
+    <t t-snippet-call="theme_akandel.s_ak_hero_slider_01"/>
+    <t t-snippet-call="theme_akandel.s_ak_benefits_bar"/>
+    <t t-snippet-call="theme_akandel.s_ak_categories_10"/>
+    <t t-snippet-call="theme_akandel.s_ak_product_carousel_01"/>
+    <t t-snippet-call="theme_akandel.s_ak_offers_01"/>
+    <t t-snippet-call="theme_akandel.s_ak_about_trust"/>
+    <t t-snippet-call="theme_akandel.s_ak_product_carousel_02"/>
+    <t t-snippet-call="theme_akandel.s_ak_gallery_03"/>
+    <t t-snippet-call="theme_akandel.s_ak_testimonials_grid"/>
+    <t t-snippet-call="theme_akandel.s_ak_newsletter_band"/>
+</template>
+
+</odoo>
