@@ -53,7 +53,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
     .ak-hero-badge-label {
         font-size: .6875rem;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: .14em;
         text-transform: uppercase;
         color: $ak-accent;
@@ -92,7 +92,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 }
 
 .s_ak_hero_editorial .display-1 {
-    font-size: clamp(3rem, 7.5vw, 6.5rem);
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     line-height: .98;
 }
 
@@ -145,7 +145,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         padding: .05rem .55rem;
         border: 1px dashed currentColor;
         border-radius: .35rem;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: .08em;
     }
 }
@@ -470,7 +470,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
 .s_ak_press .ak-press-mark {
     font-size: 1.35rem;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: -.02em;
     opacity: .5;
     transition: opacity .2s;
@@ -524,7 +524,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     background-color: $ak-accent;
     color: color-contrast($ak-accent);
     font-size: .8125rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .s_ak_testimonial_feature {

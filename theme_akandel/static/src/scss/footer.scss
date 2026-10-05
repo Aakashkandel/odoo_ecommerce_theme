@@ -24,7 +24,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         margin-bottom: 1.1rem;
         font-family: inherit;
         font-size: .75rem;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: .14em;
         text-transform: uppercase;
         opacity: .9;
@@ -103,7 +103,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     // Statement headline
     .ak-statement {
         font-family: var(--ak-headings-font);
-        font-size: clamp(2.5rem, 6.5vw, 5.75rem);
+        font-size: clamp(2rem, 5vw, 4rem);
         line-height: .98;
         letter-spacing: -.035em;
 
@@ -239,7 +239,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-bigbrand {
         font-family: var(--ak-headings-font);
         font-size: clamp(3rem, 14vw, 11rem);
-        font-weight: 800;
+        font-weight: 600;
         line-height: .85;
         letter-spacing: -.05em;
         opacity: .12;

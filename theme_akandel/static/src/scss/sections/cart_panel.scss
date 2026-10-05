@@ -31,7 +31,7 @@ html.ak-cp-lock body {
     --cp-img: 4.5rem;
     --cp-img-radius: .8rem;
     --cp-pad: 1.25rem;
-    --cp-btn-radius: 999px;
+    --cp-btn-radius: .5rem;
     --cp-backdrop: rgba(10, 16, 28, .45);
     --cp-duration: .45s;
 
@@ -125,7 +125,7 @@ html.ak-cp-lock body {
     margin: 0;
     color: inherit;
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -.01em;
 }
 
@@ -327,7 +327,7 @@ html.ak-cp-lock body {
 }
 
 .ak-cp-line-price {
-    font-weight: 700;
+    font-weight: 600;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
@@ -412,7 +412,7 @@ html.ak-cp-lock body {
     .ak-cp-empty-title {
         margin-bottom: .25rem;
         font-size: 1.1rem;
-        font-weight: 700;
+        font-weight: 600;
     }
 }
 
@@ -425,7 +425,7 @@ html.ak-cp-lock body {
 .ak-cp-reco-title {
     margin-bottom: .75rem;
     font-size: .75rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: .14em;
     text-transform: uppercase;
     color: var(--cp-muted);
@@ -503,9 +503,10 @@ html.ak-cp-lock body {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 3rem;
+        min-height: 2.5rem;
         padding-inline: .75rem;
-        font-weight: 600;
+        font-size: .875rem;
+        font-weight: 500;
         white-space: nowrap;
     }
 }

@@ -65,7 +65,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
     .ak-nav-bold > .nav-item > .nav-link {
         font-size: 1.0625rem;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: -.01em;
     }
 
@@ -667,7 +667,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-header-caps {
         border-bottom: 3px solid o-color('o-color-1');
 
-        .ak-nav-caps > .nav-item > .nav-link { font-weight: 700; }
+        .ak-nav-caps > .nav-item > .nav-link { font-weight: 600; }
     }
 
     .ak-header-slim {
@@ -732,4 +732,12 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     }
 
     &.ak-m-clean { box-shadow: none !important; border-bottom: 1px solid var(--ak-line); }
+}
+
+// Refined account link: compact, soft-cornered instead of a large pill.
+#wrapwrap > header .ak-signin-link {
+    padding: .3125rem .75rem;
+    font-size: .8125rem;
+    font-weight: 500;
+    border-radius: var(--ak-radius) !important;
 }

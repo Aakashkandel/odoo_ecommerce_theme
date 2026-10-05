@@ -112,13 +112,13 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         color: #fff;
         font-family: var(--ak-headings-font);
         font-size: .8rem;
-        font-weight: 700;
+        font-weight: 600;
     }
 
     .ak-of-name {
         margin: 0;
         font-size: clamp(1.4rem, 2vw, 1.85rem);
-        font-weight: 700;
+        font-weight: 600;
     }
 
     .ak-of-text,
@@ -550,7 +550,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         background: none;
         color: darken($ak-gold, 10%);
         font-size: clamp(3.5rem, 6vw, 5rem);
-        font-weight: 800;
+        font-weight: 600;
         line-height: 1;
         letter-spacing: -.04em;
     }

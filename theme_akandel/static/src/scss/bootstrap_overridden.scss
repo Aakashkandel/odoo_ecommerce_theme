@@ -5,24 +5,24 @@
 
 // Spacing & radius
 $spacer:                        1.25rem !default;
-$border-radius:                 .75rem !default;
-$border-radius-sm:              .5rem !default;
-$border-radius-lg:              1.25rem !default;
-$border-radius-xl:              1.75rem !default;
+$border-radius:                 .5rem !default;
+$border-radius-sm:              .375rem !default;
+$border-radius-lg:              .75rem !default;
+$border-radius-xl:              1rem !default;
 $border-radius-pill:            50rem !default;
 
 // Shadows: soft, warm and layered
 $box-shadow-sm:                 0 1px 2px rgba(23, 25, 27, .06), 0 1px 1px rgba(23, 25, 27, .04) !default;
-$box-shadow:                    0 8px 24px -8px rgba(23, 25, 27, .16), 0 2px 6px rgba(23, 25, 27, .06) !default;
-$box-shadow-lg:                 0 24px 60px -16px rgba(23, 25, 27, .24), 0 6px 16px rgba(23, 25, 27, .08) !default;
+$box-shadow:                    0 6px 20px -8px rgba(23, 25, 27, .14), 0 1px 4px rgba(23, 25, 27, .05) !default;
+$box-shadow-lg:                 0 16px 40px -12px rgba(23, 25, 27, .18), 0 4px 12px rgba(23, 25, 27, .06) !default;
 
 // Typography rhythm
-$headings-line-height:          1.12 !default;
+$headings-line-height:          1.2 !default;
 $headings-margin-bottom:        $spacer * .6 !default;
 $lead-font-weight:              400 !default;
 $small-font-size:               .8125em !default;
-$display-font-weight:           500 !default;
-$display-line-height:           1.04 !default;
+$display-font-weight:           600 !default;
+$display-line-height:           1.1 !default;
 
 // Focus ring (visible, accessible, on-brand)
 $focus-ring-width:              .1875rem !default;
@@ -30,10 +30,10 @@ $focus-ring-opacity:            .35 !default;
 
 // Cards
 $card-border-radius:            $border-radius-lg !default;
-$card-border-color:             rgba(23, 25, 27, .08) !default;
+$card-border-color:             rgba(23, 25, 27, .07) !default;
 $card-cap-bg:                   transparent !default;
-$card-spacer-y:                 1.25rem !default;
-$card-spacer-x:                 1.25rem !default;
+$card-spacer-y:                1rem !default;
+$card-spacer-x:                1rem !default;
 
 // Dropdowns
 $dropdown-border-radius:        $border-radius !default;
@@ -44,9 +44,9 @@ $dropdown-item-padding-y:       .5rem !default;
 $dropdown-item-padding-x:       1rem !default;
 
 // Badges
-$badge-font-weight:             600 !default;
-$badge-padding-y:               .35em !default;
-$badge-padding-x:               .65em !default;
+$badge-font-weight:             500 !default;
+$badge-padding-y:               .3em !default;
+$badge-padding-x:               .55em !default;
 $badge-border-radius:           $border-radius-pill !default;
 
 // Forms
@@ -62,7 +62,7 @@ $offcanvas-horizontal-width:    unquote("min(24rem, 88vw)") !default;
 $alert-border-radius:           $border-radius !default;
 
 // Pagination
-$pagination-border-radius:      $border-radius-pill !default;
+$pagination-border-radius:      $border-radius !default;
 
 // Tables
 $table-cell-padding-y:          .75rem !default;

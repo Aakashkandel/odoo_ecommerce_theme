@@ -22,7 +22,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .o_wsale_offcanvas {
         h6, .h6, .o_wsale_offcanvas_title {
             font-size: .75rem;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: .14em;
             text-transform: uppercase;
         }
@@ -66,7 +66,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     // Toolbar (search, sort, layout)
     .o_wsale_products_searchbar_form .form-control,
     .dropdown-toggle {
-        min-height: 2.75rem;
+        min-height: 2.5rem;
     }
 }
 
@@ -75,9 +75,10 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     gap: .35rem;
 
     .page-link {
-        min-width: 2.5rem;
+        min-width: 2.25rem;
         text-align: center;
-        border-radius: 999px !important;
+        font-size: .875rem;
+        border-radius: var(--ak-radius) !important;
     }
 
     .page-item.active .page-link {
@@ -92,19 +93,19 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 //------------------------------------------------------------------------------
 
 .ak-empty-state {
-    margin-top: 4rem !important;
-    margin-bottom: 6rem !important;
+    margin-top: 3rem !important;
+    margin-bottom: 4rem !important;
 
     svg, img {
-        max-width: 9rem;
+        max-width: 6rem;
         height: auto;
         opacity: .9;
     }
 
     h3, h5 {
         font-family: var(--ak-headings-font);
-        font-size: 1.75rem;
-        font-weight: 500;
+        font-size: 1.25rem;
+        font-weight: 600;
         color: inherit;
     }
 
@@ -169,7 +170,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     // Quantity selector
     .css_quantity {
         border: 1px solid var(--ak-line);
-        border-radius: 999px;
+        border-radius: var(--ak-radius);
         overflow: hidden;
 
         .btn,
@@ -182,8 +183,8 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     // Main call to action
     #add_to_cart,
     .o_we_buy_now {
-        padding-top: .9rem;
-        padding-bottom: .9rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
     }
 }
 
@@ -215,7 +216,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 .oe_website_sale {
     .o_wizard {
         padding: .85rem 1.25rem;
-        border-radius: 999px;
+        border-radius: var(--ak-radius);
         background-color: var(--ak-surface);
 
         .fw-bold {
@@ -307,7 +308,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
     .o_portal_navbar .breadcrumb {
         padding: .65rem 1rem;
-        border-radius: 999px;
+        border-radius: var(--ak-radius);
         background-color: var(--ak-surface);
     }
 
@@ -391,8 +392,8 @@ $ak-light: o-color('o-color-3');
 
     #product_details {
         h1 {
-            font-size: clamp(1.75rem, 2.6vw, 2.4rem);
-            font-weight: 700;
+            font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+            font-weight: 600;
         }
 
         .o_wsale_product_details_content_section + .o_wsale_product_details_content_section {
@@ -403,22 +404,23 @@ $ak-light: o-color('o-color-3');
         .product_price .oe_price,
         .oe_price_h4 .oe_price {
             color: $ak-accent;
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
     }
 
     // Variant pills & radios
     .js_product .variant_attribute {
         .attribute_name, strong:first-child {
-            font-size: .85rem;
+            font-size: .75rem;
+            font-weight: 500;
             letter-spacing: .06em;
             text-transform: uppercase;
         }
 
         .o_variant_pills,
         .btn-check + .btn {
-            border-radius: 999px;
+            border-radius: var(--ak-radius);
         }
     }
 
@@ -426,13 +428,13 @@ $ak-light: o-color('o-color-3');
     .o_wsale_product_details_content_section_cta {
         #add_to_cart,
         .o_we_buy_now {
-            min-height: 3.25rem;
-            font-size: 1rem;
-            letter-spacing: .02em;
+            min-height: 2.75rem;
+            font-size: .9375rem;
+            letter-spacing: 0;
         }
 
-        .css_quantity { min-height: 3.25rem; }
-        .o_add_wishlist_dyn, .o_add_compare_dyn { border-radius: 999px; }
+        .css_quantity { min-height: 2.75rem; }
+        .o_add_wishlist_dyn, .o_add_compare_dyn { border-radius: var(--ak-radius); }
     }
 
     // Accordion (description, specs...)
@@ -560,8 +562,8 @@ $ak-light: o-color('o-color-3');
     }
 
     .form-label, label.col-form-label {
-        font-size: .85rem;
-        font-weight: 600;
+        font-size: .8125rem;
+        font-weight: 500;
     }
 
     // Address / delivery / payment choice cards
@@ -594,7 +596,7 @@ $ak-light: o-color('o-color-3');
         tr:last-child th {
             font-family: var(--ak-headings-font);
             font-size: 1.2rem;
-            font-weight: 700;
+            font-weight: 600;
         }
     }
 }
@@ -631,4 +633,41 @@ $ak-light: o-color('o-color-3');
 .o_website_sale_checkout .alert-success {
     border: 0;
     border-radius: var(--ak-radius-lg);
+}
+
+//------------------------------------------------------------------------------
+// Refinement pass: lighter weights and tighter controls for forms & checkout
+//------------------------------------------------------------------------------
+
+.oe_website_sale {
+    .form-label, .col-form-label, label.fw-bold, .o_wsale_address_fill label {
+        margin-bottom: .25rem;
+        font-size: .8125rem;
+        font-weight: 500;
+    }
+
+    .form-control, .form-select {
+        min-height: 2.5rem;
+        font-size: .875rem;
+    }
+
+    // Order summary lines (cart & checkout side panel)
+    .o_wsale_cart_summary, .o_total_card, .o_cart_product {
+        h6, .h6, .fw-bold, strong, b { font-weight: 500; }
+    }
+
+    .o_total_card .btn, .o_wsale_cart_summary .btn,
+    a.btn.btn-primary.w-100, button.btn.btn-primary.w-100 {
+        min-height: 2.75rem;
+        font-size: .9375rem;
+    }
+
+    h3, .h3 { font-size: 1.25rem; }
+    h4, .h4 { font-size: 1.125rem; }
+}
+
+.oe_website_sale .td-product_name, .oe_website_sale .td-product_name span {
+    font-size: .9375rem;
+    font-weight: 500;
+    line-height: 1.35;
 }

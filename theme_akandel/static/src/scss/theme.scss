@@ -40,7 +40,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
 h1, h2, .h1, .h2,
 .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -.025em;
     text-wrap: balance;
 }
@@ -76,11 +76,11 @@ h3, h4, .h3, .h4 {
     display: inline-flex;
     align-items: center;
     gap: .75rem;
-    margin-bottom: .9rem;
+    margin-bottom: .75rem;
     font-family: var(--ak-headings-font);
     font-size: .78rem;
-    font-weight: 700;
-    letter-spacing: .2em;
+    font-weight: 600;
+    letter-spacing: .12em;
     line-height: 1.4;
     text-transform: uppercase;
     color: $ak-gold-text;
@@ -88,16 +88,16 @@ h3, h4, .h3, .h4 {
     &::before {
         content: "";
         flex: 0 0 auto;
-        width: 2.25rem;
+        width: 1.5rem;
         height: 1px;
         background-color: currentColor;
-        opacity: .7;
+        opacity: .6;
     }
 
     .text-center > &, .ak-center &, [style*="text-align: center"] > & {
         &::after {
             content: "";
-            width: 2.25rem;
+            width: 1.5rem;
             height: 1px;
             background-color: currentColor;
             opacity: .7;
@@ -124,7 +124,7 @@ h3, h4, .h3, .h4 {
 
 // Secondary "ghost" button used next to primary calls to action.
 .btn.ak-btn-ghost {
-    border-width: 1.5px;
+    border-width: 1px;
 
     .o_cc5 &, .o_cc4 &, .oe_img_bg & {
         color: inherit;
@@ -168,9 +168,15 @@ h3, h4, .h3, .h4 {
 }
 
 .btn {
-    font-weight: 600;
-    letter-spacing: .01em;
+    --ak-btn-fs: .875rem;
+    font-size: var(--ak-btn-fs);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
     transition: color .2s, background-color .2s, border-color .2s, box-shadow .2s, transform .2s $ak-ease;
+
+    &.btn-lg { --ak-btn-fs: .9375rem; }
+    &.btn-sm { --ak-btn-fs: .8125rem; }
 
     &:not(.btn-link):not(.dropdown-toggle):hover {
         transform: translateY(-1px);
@@ -180,6 +186,24 @@ h3, h4, .h3, .h4 {
         transform: translateY(0);
     }
 }
+
+.btn-primary, .btn-secondary {
+    box-shadow: 0 1px 2px rgba(20, 32, 51, .12);
+
+    &:hover { box-shadow: 0 4px 12px -4px rgba(20, 32, 51, .25); }
+}
+
+.btn-outline-primary, .btn-outline-secondary, .btn-light {
+    border-width: 1px;
+}
+
+// Calmer heading scale on small screens
+@include media-breakpoint-down(md) {
+    h1, .h1 { font-size: 1.875rem; }
+    h2, .h2 { font-size: 1.5rem; }
+}
+
+b, strong, .fw-bold { font-weight: 600; }
 
 // Clear, consistent keyboard focus everywhere (programmatic focus targets,
 // tabindex="-1", such as dialogs, do not need a ring).
@@ -257,7 +281,7 @@ a, button, summary, [tabindex]:not([tabindex="-1"]), .btn, .form-control, .form-
     padding: 0 .3rem;
     font-size: .625rem;
     line-height: 1.15rem;
-    font-weight: 700;
+    font-weight: 600;
     background-color: $ak-accent !important;
     color: color-contrast($ak-accent) !important;
 }
