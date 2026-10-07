@@ -16,10 +16,10 @@ $o-website-values-palettes: (
 
         // Typography: modern sans-serif pairing (Poppins + Roboto).
         // Serif alternatives (Fraunces, Playfair Display...) stay selectable.
-        'font':                         'Roboto',
-        'headings-font':                'Poppins',
-        'navbar-font':                  'Poppins',
-        'buttons-font':                 'Poppins',
+        'font':                         'Inter',
+        'headings-font':                'Inter',
+        'navbar-font':                  'Inter',
+        'buttons-font':                 'Inter',
         'font-size-base':               .9375rem,
         'header-font-size':             .875rem,
 
@@ -139,12 +139,12 @@ $o-selected-color-palettes-names: join((
 // Fonts
 //------------------------------------------------------------------------------
 
-$o-theme-h1-font-size-multiplier: (42 / 16);
-$o-theme-h2-font-size-multiplier: (32 / 16);
-$o-theme-h3-font-size-multiplier: (24 / 16);
-$o-theme-h4-font-size-multiplier: (20 / 16);
-$o-theme-h5-font-size-multiplier: (17 / 16);
-$o-theme-h6-font-size-multiplier: (15 / 16);
+$o-theme-h1-font-size-multiplier: (36 / 16);
+$o-theme-h2-font-size-multiplier: (26 / 16);
+$o-theme-h3-font-size-multiplier: (20 / 16);
+$o-theme-h4-font-size-multiplier: (17 / 16);
+$o-theme-h5-font-size-multiplier: (15 / 16);
+$o-theme-h6-font-size-multiplier: (14 / 16);
 
 $o-theme-headings-font-weight: 600;
 
@@ -183,6 +183,6 @@ $o-theme-font-configs: (
     ),
     'Inter': (
         'family': ('Inter', sans-serif),
-        'url': 'Inter:300,400,500,600,700',
+        'url': 'Inter:300,400,500,600',
     ),
 );

@@ -526,3 +526,35 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         border-radius: 50%;
     }
 }
+
+//------------------------------------------------------------------------------
+// Compact storefront density
+//------------------------------------------------------------------------------
+
+.ak-cc-card {
+    border-radius: var(--ak-radius);
+
+    &:hover { transform: translateY(-2px); }
+    .ak-cc-img { aspect-ratio: 1; padding: .75rem; object-fit: contain; mix-blend-mode: multiply; }
+
+    .ak-cc-body {
+        gap: .125rem;
+        padding: .625rem .75rem .75rem;
+    }
+
+    .ak-cc-link { font-size: .75rem; font-weight: 500; }
+}
+
+.ak-cc-name { font-size: .875rem; font-weight: 500 !important; }
+.ak-cc-over .ak-cc-name { font-size: 1rem; font-weight: 600 !important; }
+.ak-cc-below .ak-cc-body { margin-top: .5rem; }
+
+// Six-up grid on desktop for card tiles (instead of four giant tiles)
+@include media-breakpoint-up(lg) {
+    .s_ak_categories .row > .col-lg-3:has(> .ak-cc-card),
+    .s_ak_categories .row > .col-lg-3:has(> .ak-cc-below),
+    .s_ak_categories .row > .col-lg-3:has(> .ak-cc-circle) {
+        flex: 0 0 auto;
+        width: 16.6667%;
+    }
+}

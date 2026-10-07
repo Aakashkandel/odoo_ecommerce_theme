@@ -65,6 +65,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -131,6 +141,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -199,6 +219,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -265,6 +295,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -333,6 +373,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -399,6 +449,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -467,6 +527,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -533,6 +603,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -601,6 +681,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -667,6 +757,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -735,6 +835,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -801,6 +911,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -869,6 +989,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -935,6 +1065,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -1003,6 +1143,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -1069,6 +1219,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -1137,6 +1297,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -1203,6 +1373,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -1271,6 +1451,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -1337,6 +1527,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -1405,6 +1605,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -1471,6 +1681,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -1539,6 +1759,16 @@
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
         </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -1605,6 +1835,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
             <div class="carousel-indicators o_not_editable"><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="1" aria-label="Carousel indicator"/><button type="button" t-attf-data-bs-target="#akHero{{uniq}}" data-bs-slide-to="2" aria-label="Carousel indicator"/></div>
+        </div>
+        <div class="ak-hero-bar" data-name="Hero Info Bar">
+            <div class="container">
+                <ul class="ak-hero-bar-list list-unstyled mb-0">
+                    <li><i class="fa fa-truck" aria-hidden="true"/><span><strong>Free delivery</strong><small>On orders over $50</small></span></li>
+                    <li><i class="fa fa-refresh" aria-hidden="true"/><span><strong>30-day returns</strong><small>Free and easy</small></span></li>
+                    <li><i class="fa fa-lock" aria-hidden="true"/><span><strong>Secure payment</strong><small>Encrypted checkout</small></span></li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"/><span><strong>Support 7 days</strong><small>We are here to help</small></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>

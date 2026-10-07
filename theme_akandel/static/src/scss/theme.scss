@@ -86,6 +86,7 @@ h3, h4, .h3, .h4 {
     color: $ak-gold-text;
 
     &::before {
+        display: none;
         content: "";
         flex: 0 0 auto;
         width: 1.5rem;
@@ -96,6 +97,7 @@ h3, h4, .h3, .h4 {
 
     .text-center > &, .ak-center &, [style*="text-align: center"] > & {
         &::after {
+            display: none;
             content: "";
             width: 1.5rem;
             height: 1px;
@@ -313,4 +315,38 @@ input[type="range"], input[type="checkbox"], input[type="radio"] {
     .btn:hover {
         transform: none !important;
     }
+}
+
+//------------------------------------------------------------------------------
+// Storefront rhythm: compact sections and section headers
+//------------------------------------------------------------------------------
+
+#wrapwrap {
+    section[class*="s_ak_"], section.s_dynamic_snippet_products {
+        &.pt96 { padding-top: 3.5rem !important; }
+        &.pb96 { padding-bottom: 3.5rem !important; }
+        &.pt80 { padding-top: 3rem !important; }
+        &.pb80 { padding-bottom: 3rem !important; }
+        &.pt64 { padding-top: 2.25rem !important; }
+        &.pb64 { padding-bottom: 2.25rem !important; }
+        &.pt48 { padding-top: 2rem !important; }
+        &.pb48 { padding-bottom: 2rem !important; }
+        &.pt40 { padding-top: 1.5rem !important; }
+        &.pb40 { padding-bottom: 1.5rem !important; }
+    }
+
+    // Section titles: calm, left-aligned storefront headings
+    section[class*="s_ak_"] :is(h2, .h2):not(.o_wsale_products_item_title),
+    section.s_dynamic_snippet_products :is(h2, .h2):not(.o_wsale_products_item_title) {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -.02em;
+    }
+
+    .ak-section-head, .s_dynamic_snippet_title {
+        h2 { margin-bottom: .25rem; }
+        p { font-size: .9375rem; }
+    }
+
+    .lead { font-size: 1rem; }
 }

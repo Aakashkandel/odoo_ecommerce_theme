@@ -18,8 +18,8 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-slide-inner {
         position: static;
         grid-template-columns: minmax(0, 1fr);
-        padding-top: 6rem;
-        padding-bottom: 6.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
     }
 
     .ak-slide-media {
@@ -52,19 +52,19 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 }
 
 .s_ak_hero_slider {
-    --ak-hs-min: 34rem;
+    --ak-hs-min: 22rem;
     position: relative;
     overflow: hidden;
 
     .ak-slide {
-        padding: 3.5rem 0 4.75rem;
+        padding: 2rem 0 3.25rem;
     }
 
     .ak-slide-inner {
         position: relative;
         display: grid;
         grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-        gap: 3.5rem;
+        gap: 2.5rem;
         align-items: center;
         min-height: var(--ak-hs-min);
 
@@ -87,35 +87,37 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     }
 
     .ak-slide-title {
-        margin-bottom: 1.1rem;
-        font-size: clamp(2rem, 3.6vw, 3rem);
+        margin-bottom: .75rem;
+        font-size: clamp(1.625rem, 2.6vw, 2.25rem);
         font-weight: 600;
-        line-height: 1.07;
-        letter-spacing: -.03em;
+        line-height: 1.15;
+        letter-spacing: -.025em;
     }
 
     .ak-slide-text {
-        max-width: 33rem;
+        max-width: 30rem;
         margin-bottom: 0;
-        font-size: 1.125rem;
-        line-height: 1.65;
-        opacity: .78;
+        font-size: .9375rem;
+        line-height: 1.6;
+        opacity: .72;
     }
 
     .ak-slide-actions {
         display: flex;
         flex-wrap: wrap;
         gap: .75rem;
-        margin: 2rem 0 0;
+        margin: 1.25rem 0 0;
+
+        .btn { --btn-padding-y: .5rem; --btn-padding-x: 1.125rem; --btn-font-size: .875rem; font-size: .875rem; }
     }
 
     .ak-slide-points {
         display: none;
         flex-wrap: wrap;
         gap: .6rem 1.5rem;
-        margin: 1.75rem 0 0;
+        margin: 1rem 0 0;
         font-weight: 500;
-        font-size: .95rem;
+        font-size: .8125rem;
 
         li {
             display: inline-flex;
@@ -127,12 +129,12 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.125rem;
+            height: 1.125rem;
             border-radius: 50%;
-            background-color: rgba($ak-gold, .16);
-            color: darken($ak-gold, 12%);
-            font-size: .7rem;
+            background-color: rgba($ak-primary, .12);
+            color: $ak-primary;
+            font-size: .55rem;
         }
     }
 
@@ -144,23 +146,25 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-slide-img {
         display: block;
         width: 100%;
-        aspect-ratio: 5 / 4;
+        aspect-ratio: 16 / 10;
         object-fit: cover;
-        border-radius: var(--ak-radius-xl);
+        border-radius: var(--ak-radius-lg);
     }
 
     .ak-slide-tag {
         position: absolute;
-        top: 1.5rem;
-        right: -1rem;
+        top: .875rem;
+        left: .875rem;
         z-index: 3;
         display: none;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: baseline;
         justify-content: center;
-        width: 7rem;
-        height: 7rem;
-        border-radius: 50%;
+        gap: .35rem;
+        width: auto;
+        height: auto;
+        padding: .3rem .65rem;
+        border-radius: .375rem;
         background-color: $ak-gold;
         color: #fff;
         font-family: var(--ak-headings-font);
@@ -169,16 +173,15 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     }
 
     .ak-slide-tag-label {
-        font-size: .7rem;
-        letter-spacing: .14em;
-        text-transform: uppercase;
+        font-size: .6875rem;
+        font-weight: 500;
         opacity: .9;
     }
 
     .ak-slide-tag-value {
-        font-size: 1.3rem;
+        font-size: .875rem;
         font-weight: 600;
-        line-height: 1.05;
+        line-height: 1.2;
     }
 
     // Controls
@@ -187,9 +190,9 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         top: 50%;
         bottom: auto;
         z-index: 6;
-        width: 3rem;
-        height: 3rem;
-        margin: 0 1.25rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 0 1rem;
         border-radius: 50%;
         background-color: #fff;
         opacity: 1;
@@ -211,11 +214,11 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
     .carousel-indicators {
         z-index: 6;
-        margin-bottom: 1.4rem;
+        margin-bottom: .75rem;
 
         [data-bs-slide-to] {
-            width: .55rem;
-            height: .55rem;
+            width: .4rem;
+            height: .4rem;
             margin: 0 .3rem;
             border: 0;
             border-radius: 1rem;
@@ -225,7 +228,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         }
 
         .active {
-            width: 2rem;
+            width: 1.25rem;
             background-color: $ak-primary;
             opacity: 1;
         }
@@ -247,9 +250,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         }
 
         .ak-slide-tag {
-            right: .75rem;
-            width: 5.5rem;
-            height: 5.5rem;
+            left: .625rem;
         }
 
         .carousel-control-prev,
@@ -268,6 +269,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-slide-tag { display: flex; }
 
     &::before {
+        display: none;
         content: "";
         position: absolute;
         top: -10rem;
@@ -289,13 +291,13 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
 // 03 Full cover
 .s_ak_hero_slider.ak-hs-cover {
-    --ak-hs-min: 38rem;
+    --ak-hs-min: 27rem;
     @include ak-hs-cover;
 }
 
 // 04 Centered cover
 .s_ak_hero_slider.ak-hs-center {
-    --ak-hs-min: 38rem;
+    --ak-hs-min: 27rem;
     @include ak-hs-cover(linear-gradient(180deg, rgba(10, 16, 28, .35), rgba(10, 16, 28, .7)));
 
     .ak-slide-content {
@@ -318,7 +320,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
 // 05 Cover with card
 .s_ak_hero_slider.ak-hs-cardcover {
-    --ak-hs-min: 36rem;
+    --ak-hs-min: 26rem;
     @include ak-hs-cover(linear-gradient(90deg, rgba(10, 16, 28, .25), rgba(10, 16, 28, 0)));
 
     .ak-slide-content {
@@ -459,9 +461,9 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-slide-content { max-width: 62rem; }
 
     .ak-slide-title {
-        font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-        line-height: .98;
-        letter-spacing: -.045em;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.05;
+        letter-spacing: -.035em;
     }
 
     .ak-hl {
@@ -553,13 +555,13 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-slide-media::before {
         content: "";
         position: absolute;
-        inset: 1.5rem -1.5rem -1.5rem 1.5rem;
-        border: 1px solid rgba($ak-gold, .7);
-        border-radius: var(--ak-radius-xl);
+        inset: .75rem -.75rem -.75rem .75rem;
+        border: 1px solid rgba($ak-gold, .5);
+        border-radius: var(--ak-radius-lg);
         z-index: -1;
     }
 
-    .ak-slide-img { aspect-ratio: 4 / 4.3; filter: saturate(.85) contrast(1.05); }
+    .ak-slide-img { aspect-ratio: 16 / 10; filter: saturate(.85) contrast(1.05); }
     .btn-primary { background-color: $ak-gold; border-color: $ak-gold; color: #fff; }
 }
 
@@ -649,8 +651,8 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         display: block;
         margin-bottom: .5rem;
         font-family: var(--ak-headings-font);
-        font-size: clamp(3rem, 6vw, 4.5rem);
-        font-weight: 600;
+        font-size: 1.5rem;
+        font-weight: 500;
         line-height: 1;
         color: transparent;
         -webkit-text-stroke: 1.5px rgba($ak-gold, .75);
@@ -684,7 +686,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
 // 19 Glass card
 .s_ak_hero_slider.ak-hs-glass {
-    --ak-hs-min: 38rem;
+    --ak-hs-min: 27rem;
     @include ak-hs-cover(linear-gradient(180deg, rgba(10, 16, 28, .2), rgba(10, 16, 28, .45)));
 
     .ak-slide-inner { place-items: center; }
@@ -806,7 +808,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
 // 24 Progress bars
 .s_ak_hero_slider.ak-hs-progress {
-    --ak-hs-min: 38rem;
+    --ak-hs-min: 27rem;
     @include ak-hs-cover;
 
     .carousel-indicators {
@@ -847,3 +849,105 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     from { transform: scaleX(0); }
     to { transform: scaleX(1); }
 }
+
+
+//------------------------------------------------------------------------------
+// Hero info bar: compact service strip attached to the bottom of every hero
+//------------------------------------------------------------------------------
+
+.s_ak_hero_slider .ak-hero-bar {
+    position: relative;
+    z-index: 5;
+    border-top: 1px solid var(--ak-line);
+    background-color: rgba(127, 127, 127, .06);
+    font-size: .8125rem;
+
+    .ak-hero-bar-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: .5rem 1rem;
+        padding: .75rem 0;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: .625rem;
+        min-width: 0;
+
+        > .fa {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: .5rem;
+            background-color: rgba($ak-primary, .1);
+            color: $ak-primary;
+            font-size: .875rem;
+        }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            line-height: 1.25;
+        }
+
+        strong { font-weight: 600; }
+        small { font-size: .75rem; opacity: .65; }
+    }
+
+    // Dark / image heroes
+    .o_cc5 &, .o_cc4 &, &.o_cc5, &.o_cc4 {
+        background-color: rgba(0, 0, 0, .28);
+        border-top-color: rgba(255, 255, 255, .16);
+
+        li > .fa { background-color: rgba(255, 255, 255, .14); color: inherit; }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .ak-hero-bar-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @include media-breakpoint-down(sm) {
+        li small { display: none; }
+    }
+}
+
+.s_ak_hero_slider.o_cc5 .ak-hero-bar,
+.s_ak_hero_slider.o_cc4 .ak-hero-bar {
+    background-color: rgba(0, 0, 0, .28);
+    border-top-color: rgba(255, 255, 255, .16);
+
+    li > .fa { background-color: rgba(255, 255, 255, .14); color: inherit; }
+}
+
+// Hero eyebrow as a small chip
+.s_ak_hero_slider .ak-slide-content .ak-eyebrow {
+    gap: 0;
+    margin-bottom: .875rem;
+    padding: .25rem .625rem;
+    border-radius: 50rem;
+    background-color: rgba($ak-primary, .1);
+    color: $ak-primary;
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+
+    &::before, &::after { display: none !important; }
+}
+
+.s_ak_hero_slider.o_cc5 .ak-slide-content .ak-eyebrow,
+.s_ak_hero_slider.o_cc4 .ak-slide-content .ak-eyebrow {
+    background-color: rgba(255, 255, 255, .16);
+    color: #fff;
+}
+
+
+// Keep banners short everywhere: crop tall photos instead of growing the hero.
+.s_ak_hero_slider .ak-slide-media .ak-slide-img { max-height: 24rem; }
+.s_ak_hero_slider.ak-hs-cover .ak-slide-media .ak-slide-img,
+.s_ak_hero_slider.ak-hs-center .ak-slide-media .ak-slide-img,
+.s_ak_hero_slider.ak-hs-cardcover .ak-slide-media .ak-slide-img { max-height: none; }

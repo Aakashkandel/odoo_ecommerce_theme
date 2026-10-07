@@ -46,7 +46,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
     .ak-of-title {
         margin-bottom: .6rem;
-        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-size: clamp(1.5rem, 2.4vw, 2rem);
     }
 
     .ak-of-sub {
@@ -84,7 +84,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
     .ak-of-img {
         display: block;
         width: 100%;
-        aspect-ratio: 1 / 1.05;
+        aspect-ratio: 16 / 9;
         object-fit: cover;
         transition: transform .7s $ak-ease;
     }
@@ -99,7 +99,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         flex-direction: column;
         align-items: center;
         gap: .45rem;
-        padding: 1.75rem 1.5rem 2rem;
+        padding: 1.125rem 1.25rem 1.375rem;
         text-align: center;
     }
 
@@ -117,7 +117,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
 
     .ak-of-name {
         margin: 0;
-        font-size: clamp(1.4rem, 2vw, 1.85rem);
+        font-size: 1.125rem;
         font-weight: 600;
     }
 
@@ -196,7 +196,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         @include ak-of-overlay;
 
         .ak-of-body { min-height: 30rem; padding: 2.5rem; }
-        .ak-of-name { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+        .ak-of-name { font-size: clamp(1.5rem, 2.4vw, 2rem); }
         .ak-of-badge, .ak-of-text { display: block; }
     }
 
@@ -368,7 +368,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         .ak-of-img { height: 100%; aspect-ratio: auto; }
         .ak-of-body { align-items: flex-start; justify-content: center; padding: 2.5rem; text-align: left; }
         .ak-of-badge, .ak-of-text, .ak-of-code { display: block; }
-        .ak-of-name { font-size: clamp(1.8rem, 2.8vw, 2.4rem); }
+        .ak-of-name { font-size: clamp(1.5rem, 2.4vw, 2rem); }
     }
 
     .ak-of-item:not(:first-child) {
@@ -549,7 +549,7 @@ $ak-ease: cubic-bezier(.2, .7, .2, 1);
         padding: 0;
         background: none;
         color: darken($ak-gold, 10%);
-        font-size: clamp(3.5rem, 6vw, 5rem);
+        font-size: clamp(2.5rem, 4vw, 3.25rem);
         font-weight: 600;
         line-height: 1;
         letter-spacing: -.04em;

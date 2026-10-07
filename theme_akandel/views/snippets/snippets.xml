@@ -156,7 +156,6 @@
 -->
 <template id="ak_homepage_sections" name="Akandel Homepage Sections">
     <t t-snippet-call="theme_akandel.s_ak_hero_slider_01"/>
-    <t t-snippet-call="theme_akandel.s_ak_benefits_bar"/>
     <t t-snippet-call="theme_akandel.s_ak_categories_10"/>
     <t t-snippet-call="theme_akandel.s_ak_product_carousel_01"/>
     <t t-snippet-call="theme_akandel.s_ak_offers_01"/>
