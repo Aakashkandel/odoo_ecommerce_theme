@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="payment_provider_esewa" model="payment.provider">
+        <field name="name">eSewa</field>
+        <field name="code">esewa</field>
+        <field
+            name="image_128"
+            type="base64"
+            file="payment_esewa/static/description/icon.png"
+        />
+        <field name="module_id" ref="base.module_payment_esewa" />
+        <field name="redirect_form_view_id" ref="redirect_form" />
+        <field name="available_country_ids" eval="[Command.set([ref('base.np')])]" />
+        <field
+            name="payment_method_ids"
+            eval="[Command.set([ref('payment_esewa.payment_method_esewa')])]"
+        />
+    </record>
+
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="payment_provider_connectips" model="payment.provider">
+        <field name="name">connectIPS</field>
+        <field name="code">connectips</field>
+        <field
+            name="image_128"
+            type="base64"
+            file="payment_connectips/static/description/icon.png"
+        />
+        <field name="module_id" ref="base.module_payment_connectips" />
+        <field name="redirect_form_view_id" ref="redirect_form" />
+        <field name="available_country_ids" eval="[Command.set([ref('base.np')])]" />
+        <field
+            name="payment_method_ids"
+            eval="[Command.set([ref('payment_connectips.payment_method_connectips')])]"
+        />
+    </record>
+
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="payment_provider_form" model="ir.ui.view">
+        <field name="name">Fonepay Provider Form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form" />
+        <field name="arch" type="xml">
+            <group name="provider_credentials" position="inside">
+                <group invisible="code != 'fonepay'">
+                    <field
+                        name="fonepay_merchant_code"
+                        string="Merchant Code"
+                        required="code == 'fonepay' and state != 'disabled'"
+                    />
+                    <field
+                        name="fonepay_secret_key"
+                        string="Secret Key"
+                        required="code == 'fonepay' and state != 'disabled'"
+                        password="True"
+                    />
+                    <field
+                        name="fonepay_test_base_url"
+                        string="Test Base URL"
+                        placeholder="https://..."
+                        required="code == 'fonepay' and state == 'test'"
+                    />
+                    <field
+                        name="fonepay_production_base_url"
+                        string="Production Base URL"
+                        placeholder="https://..."
+                        required="code == 'fonepay' and state == 'enabled'"
+                    />
+                </group>
+            </group>
+        </field>
+    </record>
+
+</odoo>
