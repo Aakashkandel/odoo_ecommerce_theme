@@ -25,8 +25,8 @@ class PaymentTransaction(models.Model):
         """Override of `payment` to generate unique Khalti purchase order identifiers.
 
         Khalti requires the purchase order identifier to be unique for the merchant,
-        including across databases. The prefix is therefore suffixed with the current date
-        and time.
+        including across databases. The prefix is therefore suffixed with the current
+        date and time.
         """
         if provider_code == "khalti":
             if not prefix:

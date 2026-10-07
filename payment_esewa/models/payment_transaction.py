@@ -25,9 +25,9 @@ class PaymentTransaction(models.Model):
         """Override of `payment` to generate transaction UUIDs accepted by eSewa.
 
         eSewa only accepts alphanumeric characters and hyphens, and rejects any UUID it
-        already received for the merchant ("Duplicate transaction UUID"), including UUIDs
-        sent from another database or, in test mode, by other users of the shared test
-        merchant. The prefix is therefore suffixed with the current date and time.
+        already received for the merchant ("Duplicate transaction UUID"), including
+        UUIDs sent from another database or, in test mode, by other users of the shared
+        test merchant. The prefix is therefore suffixed with the current date and time.
         """
         if provider_code == "esewa":
             if not prefix:
@@ -39,7 +39,8 @@ class PaymentTransaction(models.Model):
             )
             prefix = re.sub(const.REFERENCE_FORBIDDEN_CHARS_PATTERN, "-", prefix)
             prefix = prefix.strip("-") or "tx"
-            prefix = f"{prefix}-{fields.Datetime.now().strftime(const.REFERENCE_DATE_FORMAT)}"
+            timestamp = fields.Datetime.now().strftime(const.REFERENCE_DATE_FORMAT)
+            prefix = f"{prefix}-{timestamp}"
             separator = "-"
         return super()._compute_reference(
             provider_code, prefix=prefix, separator=separator, **kwargs

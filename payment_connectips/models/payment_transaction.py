@@ -27,15 +27,16 @@ class PaymentTransaction(models.Model):
         """Override of `payment` to generate references accepted as connectIPS TXNID.
 
         The TXNID is limited to 20 characters and must be unique for the application,
-        including across databases; only alphanumeric characters and hyphens are used. The
-        prefix is therefore suffixed with the current time, in base 36 to fit the limit.
+        including across databases; only alphanumeric characters and hyphens are used.
+        The prefix is therefore suffixed with the current time, in base 36 to fit the
+        limit.
         """
         if provider_code == "connectips":
             if not prefix:
                 prefix = self.sudo()._compute_reference_prefix(separator, **kwargs)
             timestamp = self._connectips_compact_timestamp()
-            # Keep room for the timestamp and for the sequence number that is appended to
-            # duplicated prefixes.
+            # Keep room for the timestamp and for the sequence number that is appended
+            # to duplicated prefixes.
             max_prefix_length = const.FIELD_MAX_LENGTHS["TXNID"] - len(timestamp) - 4
             prefix = self._connectips_sanitize(prefix or "")[:max_prefix_length].strip(
                 "-"

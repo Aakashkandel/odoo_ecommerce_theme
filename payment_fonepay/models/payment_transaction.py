@@ -33,16 +33,16 @@ class PaymentTransaction(models.Model):
     def _compute_reference(self, provider_code, prefix=None, separator="-", **kwargs):
         """Override of `payment` to generate references accepted as Fonepay PRN.
 
-        The PRN is 3 to 25 characters long and must be unique for the merchant, including
-        across databases; only alphanumeric characters and hyphens are used. The prefix is
-        therefore suffixed with the current date and time.
+        The PRN is 3 to 25 characters long and must be unique for the merchant,
+        including across databases; only alphanumeric characters and hyphens are used.
+        The prefix is therefore suffixed with the current date and time.
         """
         if provider_code == "fonepay":
             if not prefix:
                 prefix = self.sudo()._compute_reference_prefix(separator, **kwargs)
             timestamp = fields.Datetime.now().strftime(const.REFERENCE_DATE_FORMAT)
-            # Keep room for the timestamp and for the sequence number that is appended to
-            # duplicated prefixes.
+            # Keep room for the timestamp and for the sequence number that is appended
+            # to duplicated prefixes.
             max_prefix_length = const.PRN_MAX_LENGTH - len(timestamp) - 4
             prefix = self._fonepay_sanitize(prefix or "")[:max_prefix_length].strip("-")
             prefix = f"{prefix or 'tx'}-{timestamp}"
